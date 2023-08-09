@@ -1,0 +1,398 @@
+@import "common.css";
+
+
+/*BookSearch Section*/
+.bookSearch{
+    margin-top: 150px;
+    height: 438px;
+    background-image: url("../images/background_img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+.bookSearch .inner{}
+.bookSearch .textArea{}
+.bookSearch .textArea h2{
+    font-size: 44px;
+    color: #fff;
+    margin-bottom: 39px;
+}
+.bookSearch .textArea p{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 39px;
+}
+.bookSearch .searchArea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bookSearch .searchArea input{
+    width: 611px;
+    height: 75px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 5px solid #FF9500;
+    border-radius: 20px;
+    margin-right: 14px;
+}
+.bookSearch .searchArea input::placeholder{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+    color: #444444;
+}
+.bookSearch .searchArea button{
+    width: 98px;
+    height: 75px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 5px solid #FF9500;
+    border-radius: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+    color: #444444;
+}
+
+
+/*OpenInfo Section*/
+.openInfo{
+    width: 100%;
+    display: flex;
+}
+.openInfo .left,
+.openInfo .right{
+    width: 50%;
+    height: 100px;
+    padding-left: 200px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.openInfo .left .ico,
+.openInfo .right .ico{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.openInfo .left{
+    background: #ffd024;
+}
+.openInfo .left .ico-time{
+    background-image: url("../images/ico-clock.png");
+}
+.openInfo .txtBox strong{
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 11px;
+}
+.openInfo .txtBox p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.openInfo .right{
+    background: #FFE482;
+}
+.openInfo .right .ico-schedule{
+    background-image: url("../images/ico-schedule.png");
+}
+
+
+/*Event Section*/
+.event{
+    padding: 80px 0;
+}
+.event .inner{
+    width: 1400px;
+}
+.event .slideArea{
+    position: relative;
+}
+.event .slideArea .eventSlider{
+    cursor: grab;
+}
+.event .slideArea .eventSlider .slick-slide{}
+.event .slideArea .eventSlider div img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.event .arrowWrap .prevArrow,
+.event .arrowWrap .pauseBtn,
+.event .arrowWrap .nextArrow{
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.event .arrowWrap{
+    position: absolute;
+    right: 45px;
+    bottom: 20px;
+    display: flex;
+}
+.event .arrowWrap .prevArrow{
+    background-image: url("../images/chevron-left.png");
+}
+.event .arrowWrap .pauseBtn{
+    background-image: url("../images/pause-circle.png");
+    margin: 0 5px;
+}
+.event .arrowWrap .nextArrow{
+    background-image: url("../images/chevron-right.png");
+}
+.event .paging{
+    position: absolute;
+    right: 150px;
+    bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/*QuickMenu Section*/
+.quickMenu{
+    background: #eeeeb4;
+    padding: 68px 0;
+}
+.quickMenu .inner{}
+.quickMenu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quickMenu ul li{
+    text-align: center;
+    margin-right: 100px;
+    cursor: pointer;
+}
+.quickMenu ul li:last-child{
+    margin-right: 0;
+}
+.quickMenu ul li:hover img{
+    transform: translateY(-5px);
+}
+.quickMenu ul li img{
+    width: 150px;
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+.quickMenu ul li strong{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/*Recommend Section*/
+.recommend{
+    width: 100%;
+    padding: 100px 0;
+}
+.recommend .inner{}
+.recommend h2{
+    text-align: center;
+    font-size: 44px;
+    color: #FF9500;
+    margin-bottom: 45px;
+}
+.recommend .btnWrap{
+    border-bottom: 2px solid #ff7500;
+    position: relative;
+    margin-bottom: 69px;
+}
+.recommend .btnWrap button{
+    border: none;
+    background: #ffda4e;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 15px 15px 0 0;
+    font-weight: 700;
+    cursor: pointer;
+}
+.recommend .btnWrap button:hover{
+    background: #FF9500;
+    color: #fff;
+}
+.recommend .more{
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/ico-plus.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.recommend .slideArea{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.recommend .bookSlider{
+    width: 1180px;
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+.recommend .bookSlider .slick-slide{
+    width: 195px;
+}
+.recommend .bookSlider .box{
+    text-align: center;
+    margin: 0 40px;
+}
+.recommend .bookSlider .imgBox{}
+.recommend .bookSlider .imgBox img{
+    width: auto;
+    height: 288px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.recommend .bookSlider .txtBox{}
+.recommend .bookSlider .txtBox p,
+.recommend .bookSlider .txtBox span{
+    width: 100%;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+
+    font-size: 14px;
+}
+.recommend .bookSlider .txtBox p{
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.recommend .bookSlider .txtBox span{
+    font-weight: 400;
+}
+.recommend .slideArea .prevArrow,
+.recommend .slideArea .nextArrow{
+    width: 30px;
+    height: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.recommend .slideArea .prevArrow{
+    background-image: url("../images/ico-prev.png");
+    left: 170px;
+}
+.recommend .slideArea .nextArrow{
+    background-image: url("../images/ico-next.png");
+    right: 170px;
+}
+
+
+/*libraryInfo Section*/
+.libraryInfo{
+    padding: 100px 0;
+}
+.libraryInfo .inner{
+    display: flex;
+    justify-content: space-between;
+}
+.libraryInfo .notice,
+.libraryInfo .faq{
+    width: 740px;
+    height: 400px;
+    padding: 30px 60px;
+    box-sizing: border-box;
+    background: #feeeb4;
+}
+.libraryInfo .notice{
+    border-radius: 50px 0 0 0;
+}
+.libraryInfo .btnWrap{
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #ff9500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.libraryInfo .btnWrap button{
+    width: 109px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    background: #ffda4e;
+    font-weight: 700;
+}
+.libraryInfo .btnWrap button:hover{
+    background: #FF9500;
+    color: #fff;
+}
+.libraryInfo .btnWrap .more{
+    width: 21px;
+    height: 21px;
+    background-image: url("../images/ico-plus.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.libraryInfo .txtWrap{
+    width: 100%;
+    height: 267px;
+    background: #fff;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.libraryInfo .notice .txtWrap ul{}
+.libraryInfo .txtWrap ul li{
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e2e2;
+    vertical-align: center;
+    height: 30px;
+}
+.libraryInfo .txtWrap ul li p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.libraryInfo .notice .txtWrap ul li{
+    display: flex;
+}
+.libraryInfo .notice .txtWrap ul li p{
+    width: 482px;
+}
+.libraryInfo .notice .txtWrap ul li p a{}
+.libraryInfo .notice .txtWrap ul li span{
+    text-align: right;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 30px;
+}
+.libraryInfo .faq{
+    border-radius: 0 0 50px 0;
+}
+.libraryInfo .faq .txtWrap ul li{
+    width: 100%;
+}

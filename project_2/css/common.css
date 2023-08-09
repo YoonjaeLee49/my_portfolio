@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #232323;
+}
+
+.inner{
+    width: 1520px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+section h2{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 44px;
+    font-weight: 400;
+}
+
+
+
+/*Header*/
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+.header .headerWrap{}
+.header .headerWrap .headerTop{
+    height: 70px;
+    background: #ffda4e;
+}
+.header .headerWrap .headerTop .inner.top{
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+}
+.header .headerWrap .headerTop .logo{
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+.header .headerWrap .headerTop .logo a{
+    display: block;
+    width: 200px;
+    height: 60px;
+    background-image: url("../images/logo-img.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100% auto;
+}
+.header .headerWrap .headerTop .utilList{
+    display: inline-block;
+    text-align: center;
+    font-size: 0;
+}
+.header .headerWrap .headerTop .utilList li{
+    display: inline-block;
+}
+.header .headerWrap .headerTop .utilList li a{
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100px;
+    height: 44px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.header .headerWrap .headerBtm{
+    height: 80px;
+    background: #fff;
+}
+.header .headerWrap .headerBtm .inner.btm{
+    height: 100%;
+    position: relative;
+}
+.header .headerWrap .headerBtm nav{
+    position: absolute;
+    left: 0;
+    top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.header .headerWrap .headerBtm nav .gnb{
+    font-size: 0;
+}
+.header .headerWrap .headerBtm nav .gnb li{
+    display: inline-block;
+}
+.header .headerWrap .headerBtm nav .gnb li .depth1{
+    display: block;
+    width: 350px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #FF9500;
+}
+.header .headerWrap .headerBtm nav .gnb .depth2{
+    position: absolute;
+    width: 350px;
+    height: 440px;
+    overflow: hidden;
+    padding-top: 30px;
+    box-sizing: border-box;
+    background: #fff;
+    transition: height 0.3s 0.02s;
+    display: none;
+}
+.header .headerWrap .headerBtm nav .gnb .depth2 li{
+    text-align: center;
+    padding: 12px 0;
+    display: block;
+}
+.header .headerWrap .headerBtm nav .gnb .depth2 li a{
+    font-size: 16px;
+    color: #2b2b2b;
+    font-weight: 400;
+}
+.header .headerWrap .headerBtm .menuIco{
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/menu-01.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+/*Header Hover*/
+.header .headerWrap .headerBtm.active nav .gnb .depth2{
+    display: block;
+}
+.header .headerWrap .headerBtm nav .gnb .depth2 li:hover a{
+    color: #F95700;
+}
+
+
+/*Footer*/
+.footer{
+    background: #ffda4e;
+    height: 246px;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+.footer .inner{
+    height: 100%;
+}
+.footer .footerWrap{
+    height: 100%;
+    position: relative;
+}
+.footer .footerWrap .footerTop{
+    margin-bottom: 23px;
+}
+.footer .footerWrap .footerTop .logo img{
+    width: 170px;
+    height: 45px;
+    object-fit: cover;
+}
+.footer .footerWrap .footerBtm{
+    font-size: 12px;
+}
+.footer .footerWrap .footerBtm ul{}
+.footer .footerWrap .footerBtm ul li{
+    font-weight: 400;
+    margin-bottom: 13px;
+}
+.footer .footerWrap .footerBtm span{
+    font-weight: 700;
+    cursor: pointer;
+}
+.footer .footerWrap .footerBtm span.link1:after{
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #444;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+.footer .footerWrap .footerBtm span a{}
+.footer .footerWrap form{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.footer .footerWrap form select{
+    width: 378px;
+    height: 55px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #636363;
+    cursor: pointer;
+}
+.footer .footerWrap .icoWrap{
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.footer .footerWrap .icoWrap div{
+    width: 55px;
+    height: 55px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.footer .footerWrap .icoWrap .facebook{
+    background-image: url("../images/facebook-icon.png");
+}
+.footer .footerWrap .icoWrap .youtube{
+    background-image: url("../images/youtube-icon.png");
+    margin: 0 20px;
+}
+.footer .footerWrap .icoWrap .instagram{
+    background-image: url("../images/instagram-icon.png");
+}

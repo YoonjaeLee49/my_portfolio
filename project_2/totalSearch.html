@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>통합검색</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/totalSearch.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+</head>
+<body>
+<div class="layout">
+    <!--Header-->
+    <header class="header">
+        <div class="headerWrap">
+            <div class="headerTop">
+                <div class="inner top">
+                    <h1 class="logo"><a href="#"></a></h1>
+                    <ul class="utilList">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">내서재</a></li>
+                        <li><a href="#">한국어</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="headerBtm">
+                <div class="inner btm">
+                    <nav>
+                        <ul class="gnb">
+                            <li>
+                                <a class="depth1" href="#">자료검색</a>
+                                <ul class="depth2">
+                                    <li><a href="#">서울도서관 소장 자료</a></li>
+                                    <li><a href="#">DVD 자료</a></li>
+                                    <li><a href="#">연속 간행물</a></li>
+                                    <li><a href="#">테마별 자료</a></li>
+                                    <li><a href="#">AI 추천 도서</a></li>
+                                    <li><a href="#">스마트도서관 도서</a></li>
+                                    <li><a href="#">서울시 발간물</a></li>
+                                    <li><a href="#">OAK 리포지터리</a></li>
+                                    <li><a href="#">서울시 관련 웹사이트</a></li>
+                                    <li><a href="#">서울시 도서관 자료 통합 검색</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="depth1" href="#">전자도서관</a>
+                                <ul class="depth2">
+                                    <li><a href="#">전자책/오디오북</a></li>
+                                    <li><a href="#">전자잡지</a></li>
+                                    <li><a href="#">구독학술 DB</a></li>
+                                    <li><a href="#">협력기관 DB</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="depth1" href="#">신청‧참여</a>
+                                <ul class="depth2">
+                                    <li><a href="#">희망도서 신청</a></li>
+                                    <li><a href="#">자료기증/납본</a></li>
+                                    <li><a href="#">프로그램 신청</a></li>
+                                    <li><a href="#">단체방문 신청</a></li>
+                                    <li><a href="#">자원봉사 신청</a></li>
+                                    <li><a href="#">설문조사 참여</a></li>
+                                    <li><a href="#">분실물 신고</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="depth1" href="#">도서관 이용</a>
+                                <ul class="depth2">
+                                    <li><a href="#">도서관 운영 시간/운영 일정</a></li>
+                                    <li><a href="#">회원증 발급</a></li>
+                                    <li><a href="#">대출/반납/연장/예약</a></li>
+                                    <li><a href="#">보존서고 자료 신청</a></li>
+                                    <li><a href="#">시설/기기 이용</a></li>
+                                    <li><a href="#">문의/건의하기</a></li>
+                                    <li><a href="#">공지사항</a></li>
+                                    <li><a href="#">자주 묻는 질문</a></li>
+                                    <li><a href="#">도서관 소식</a></li>
+                                    <li><a href="#">자료실 위치 안내</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="menuIco"></div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--TotalSearch Section-->
+    <section class="totalSearch">
+        <div class="inner">
+            <div class="sideMenu">
+                <div class="currentMenu">자료검색</div>
+
+                <ul class="menuAccordion">
+                    <li>
+                        <div class="menu">
+                            <strong>자료검색</strong>
+                        </div>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="#">서울도서관 소장 자료</a></li>
+                                <li><a href="#">DVD 자료</a></li>
+                                <li><a href="#">연속 간행물</a></li>
+                                <li><a href="#">테마별 자료</a></li>
+                                <li><a href="#">AI 추천 도서</a></li>
+                                <li><a href="#">스마트도서관 도서</a></li>
+                                <li><a href="#">서울시 발간물</a></li>
+                                <li><a href="#">OAK 리포지터리</a></li>
+                                <li><a href="#">서울시 관련 웹사이트</a></li>
+                                <li><a href="#">서울시 도서관 자료 통합 검색</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="menu">
+                            <strong>전자도서관</strong>
+                        </div>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="#">전자책/오디오북</a></li>
+                                <li><a href="#">전자잡지</a></li>
+                                <li><a href="#">구독학술 DB</a></li>
+                                <li><a href="#">협력기관 DB</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="menu">
+                            <strong>신청‧참여</strong>
+                        </div>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="#">희망도서 신청</a></li>
+                                <li><a href="#">자료기증/납본</a></li>
+                                <li><a href="#">프로그램 신청</a></li>
+                                <li><a href="#">단체방문 신청</a></li>
+                                <li><a href="#">자원봉사 신청</a></li>
+                                <li><a href="#">설문조사 참여</a></li>
+                                <li><a href="#">분실물 신고</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="menu">
+                            <strong>도서관 이용</strong>
+                        </div>
+                        <div class="subMenu">
+                            <ul>
+                                <li><a href="#">도서관 운영 시간/운영 일정</a></li>
+                                <li><a href="#">회원증 발급</a></li>
+                                <li><a href="#">대출/반납/연장/예약</a></li>
+                                <li><a href="#">보존서고 자료 신청</a></li>
+                                <li><a href="#">시설/기기 이용</a></li>
+                                <li><a href="#">문의/건의하기</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주 묻는 질문</a></li>
+                                <li><a href="#">도서관 소식</a></li>
+                                <li><a href="#">자료실 위치 안내</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="inner">
+            <div class="footerWrap">
+                <div class="footerTop">
+                    <div class="logo">
+                        <img src="images/logo-img.png" alt="">
+                    </div>
+                </div>
+                <div class="footerBtm">
+                    <ul>
+                        <li>주소: 서울특별시 중구 세종대로 110</li>
+                        <li>전화번호: 02-120, 02-2133-0333</li>
+                        <li>이용시간 : 화~금 09:00~21:00 / 토, 일 09:00~18:00 / 월요일, 공휴일 휴관</li>
+                    </ul>
+                    <span class="link1"><a href="#"></a>개인정보처리방침</span>
+                    <span><a href="#"></a>영상정보처리기기 운영·관리 방침</span>
+                </div>
+
+                <form action="#">
+                    <label for="siteLink"></label>
+                    <select name="siteLink" id="siteLink">
+                        <option value="유관사이트" selected="selected" disabled>유관사이트</option>
+                        <option value="서울시홈페이지">서울시홈페이지</option>
+                        <option value="국립중앙도서관">국립중앙도서관</option>
+                        <option value="국회도서관">국회도서관</option>
+                        <option value="서울시의회 전문도서관">서울시의회 전문도서관</option>
+                        <option value="서울의 도서관 찾기">서울의 도서관 찾기</option>
+                    </select>
+                </form>
+
+                <div class="icoWrap">
+                    <div class="facebook"></div>
+                    <div class="youtube"></div>
+                    <div class="instagram"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
