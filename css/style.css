@@ -606,8 +606,7 @@ section .infoBtm.ani.on{
 .works .textArea .box .tool,
 .works .textArea .box .process,
 .works .textArea .box .design{
-    /*transform: translateY(30px);*/
-    opacity: 0;
+    display: none;
 }
 
 .works .textArea .box.active strong,
@@ -616,9 +615,11 @@ section .infoBtm.ani.on{
 .works .textArea .box.active .tool,
 .works .textArea .box.active .process,
 .works .textArea .box.active .design{
-    /*transform: translateY(0);*/
-    opacity: 1;
+    display: block;
     transition: 0.5s;
+}
+.works .textArea .box .btnWrap{
+    display: flex;
 }
 .works .textArea .box .btnWrap div{
     width: 90px;
@@ -627,8 +628,6 @@ section .infoBtm.ani.on{
     box-sizing: border-box;
     border: none;
     background: #F95700;
-    display: inline-block;
-    z-index: 99999999;
 }
 .works .textArea .box .btnWrap div a{
     color: #fff;
