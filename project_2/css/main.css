@@ -290,6 +290,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 .recommend .slideArea .prevArrow{
     background-image: url("../images/ico-prev.png");
