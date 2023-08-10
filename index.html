@@ -17,10 +17,10 @@
         <h1 class="logo"><a href="#">Yoon.</a></h1>
         <nav>
             <ul class="gnb">
-                <li><a href="#">INTRO</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">WORKS</a></li>
-                <li><a href="#">CONTENTS</a></li>
+                <li><a href="#intro">INTRO</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contents">CONTENTS</a></li>
             </ul>
         </nav>
 
@@ -38,7 +38,7 @@
 
 <main class="main">
     <!--Intro Section-->
-    <section class="intro">
+    <section class="intro" id="intro">
         <img class="introBg" src="images/intro-bg.png" alt="">
         <div class="textWrap">
             <span>2023</span>
@@ -52,7 +52,7 @@
     </section>
 
     <!--About Section-->
-    <section class="about">
+    <section class="about" id="about">
         <div class="aboutContents">
             <div class="profileImgBox ani">
                 <img src="images/profile.png" alt="">
@@ -72,7 +72,7 @@
     </section>
 
     <!--infoArea Section-->
-    <section class="infoArea">
+    <section class="infoArea" id="infoArea">
         <div class="inner">
             <div class="infoTop ani">
                 <div class="experience">
@@ -111,7 +111,7 @@
     </section>
 
     <!--TextCard Section-->
-    <section class="textCard">
+    <section class="textCard" id="textCard">
         <div class="cardWrap">
             <div class="card">
                 <div class="cardImg"></div>
@@ -146,12 +146,12 @@
     </section>
 
     <!--Works Section-->
-    <section class="works">
-        
+    <section class="works" id="works">
+
         <div class="textArea">
             <div class="box">
                 <div class="title">WORKS</div>
-                <strong>프로젝트01</strong>
+                <strong>나무기술</strong>
                 <div class="percentage">
                     <span>프로젝트 참여도</span>
                     <p>개인 작업 100%</p>
@@ -162,17 +162,17 @@
                 </div>
                 <div class="tool">
                     <span>Tool</span>
-                    <p>tool1, tool2, tool3, tool4</p>
+                    <p>HTML, CSS, jQuery, Figma</p>
                 </div>
                 <div class="btnWrap">
-                    <button class="process">PROCESS</button>
-                    <button class="design">DESIGN</button>
+                    <div class="process"><a>PROCESS</a></div>
+                    <div class="design"><a href="project_1/namu_main.html">DESIGN</a></div>
                 </div>
             </div>
 
             <div class="box">
                 <div class="title">WORKS</div>
-                <strong>프로젝트02</strong>
+                <strong>서울도서관</strong>
                 <div class="percentage">
                     <span>프로젝트 참여도</span>
                     <p>개인 작업 100%</p>
@@ -183,17 +183,17 @@
                 </div>
                 <div class="tool">
                     <span>Tool</span>
-                    <p>tool1, tool2, tool3, tool4</p>
+                    <p>HTML, CSS, jQuery, Figma, Adobe Illustrator</p>
                 </div>
                 <div class="btnWrap">
-                    <button class="process">PROCESS</button>
-                    <button class="design">DESIGN</button>
+                    <div class="process"><a>PROCESS</a></div>
+                    <div class="design"><a>DESIGN</a></div>
                 </div>
             </div>
 
             <div class="box">
                 <div class="title">WORKS</div>
-                <strong>프로젝트03</strong>
+                <strong>캐스퍼 (클론코딩)</strong>
                 <div class="percentage">
                     <span>프로젝트 참여도</span>
                     <p>개인 작업 100%</p>
@@ -204,11 +204,11 @@
                 </div>
                 <div class="tool">
                     <span>Tool</span>
-                    <p>tool1, tool2, tool3, tool4</p>
+                    <p>HTML, CSS, jQuery</p>
                 </div>
                 <div class="btnWrap">
-                    <button class="process">PROCESS</button>
-                    <button class="design">DESIGN</button>
+                    <div class="process"><a>PROCESS</a></div>
+                    <div class="design"><a>DESIGN</a></div>
                 </div>
             </div>
 
@@ -228,8 +228,8 @@
                     <p>tool1, tool2, tool3, tool4</p>
                 </div>
                 <div class="btnWrap">
-                    <button class="process">PROCESS</button>
-                    <button class="design">DESIGN</button>
+                    <div class="process"><a>PROCESS</a></div>
+                    <div class="design"><a href="project_1/namu_main.html">DESIGN</a></div>
                 </div>
             </div>
 
@@ -249,17 +249,17 @@
                     <p>tool1, tool2, tool3, tool4</p>
                 </div>
                 <div class="btnWrap">
-                    <button class="process">PROCESS</button>
-                    <button class="design">DESIGN</button>
+                    <div class="process"><a>PROCESS</a></div>
+                    <div class="design"><a>DESIGN</a></div>
                 </div>
             </div>
         </div>
 
         <div class="slideArea">
             <div class="imgSlider" id="imgSlider">
-                <div><img src="images/simple_mockup.png" alt=""></div>
-                <div><img src="images/simple_mockup.png" alt=""></div>
-                <div><img src="images/simple_mockup.png" alt=""></div>
+                <div><a href="project_1/namu_main.html"><img src="images/simple_mockup.png" alt=""></a></div>
+                <div><a href="project_2/library_main.html"><img src="images/simple_mockup.png" alt=""></a></div>
+                <div><a href="project_3/casper_main.html"><img src="images/simple_mockup.png" alt=""></a></div>
                 <div><img src="images/simple_mockup.png" alt=""></div>
                 <div><img src="images/simple_mockup.png" alt=""></div>
             </div>
@@ -271,7 +271,7 @@
     </section>
 
     <!--Contents Section-->
-    <section class="contents">
+    <section class="contents" id="contents">
         <div class="contentsWrap">
             <div>
                 <img src="images/contents01-dark.png" alt="">

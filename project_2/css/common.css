@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic:wght@400;700;800&display=swap');
 
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
 body{
     font-family: 'Nanum Gothic', sans-serif;
     color: #232323;
@@ -228,4 +230,125 @@ section h2{
 }
 .footer .footerWrap .icoWrap .instagram{
     background-image: url("../images/instagram-icon.png");
+}
+
+
+/*SideMenu Common*/
+/*SubmenuCommon*/
+.subMenuCommon{
+    /*height: 100vh;*/
+    margin-top: 150px;
+    padding: 100px 0;
+}
+.subMenuCommon .inner{
+    position: relative;
+}
+.subMenuCommon .sideMenu{
+    width: 365px;
+}
+.subMenuCommon .sideMenu .currentMenu{
+    width: 100%;
+    height: 65px;
+    box-sizing: border-box;
+    background: #f0f0f0;
+    margin-bottom: 20px;
+
+    font-size: 28px;
+    font-weight: 700;
+    color: #444444;
+    text-align: center;
+    line-height: 65px;
+}
+.subMenuCommon .sideMenu .menuAccordion{
+    border: 2px solid #c0c0c0;
+    border-bottom: 0;
+    background: #fff;
+}
+.subMenuCommon .sideMenu .menuAccordion li{}
+.subMenuCommon .sideMenu .menuAccordion li .menu{
+    padding: 10px 20px;
+    height: 50px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #c0c0c0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+.subMenuCommon .sideMenu .menuAccordion li .menu strong{
+    font-size: 18px;
+    font-weight: 700;
+}
+.subMenuCommon .sideMenu .menuAccordion li .menu i{
+    color: #2b2b2b;
+    transition: 0.3s;
+}
+.subMenuCommon .sideMenu .menuAccordion li .menu i.active{
+    transform: rotate(180deg);
+}
+.subMenuCommon .sideMenu .menuAccordion li .subMenu{
+    padding: 20px;
+    border-bottom: 2px solid #c0c0c0;
+    display: none;
+}
+.subMenuCommon .sideMenu .menuAccordion li .subMenu:active{}
+.subMenuCommon .sideMenu .menuAccordion li .subMenu ul{}
+.subMenuCommon .sideMenu .menuAccordion li .subMenu ul li{
+    margin-bottom: 10px;
+    height: 16px;
+    line-height: 20px;
+    background: #fff;
+}
+.subMenuCommon .sideMenu .menuAccordion li .subMenu ul li:last-child{
+    margin-bottom: 0;
+}
+.subMenuCommon .sideMenu .menuAccordion li .subMenu ul li:before{
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: #2b2b2b;
+    border-radius: 50%;
+    margin-right: 10px;
+    transform: translateY(-100%);
+}
+.subMenuCommon .sideMenu .menuAccordion li .subMenu ul li a{
+    font-size: 14px;
+}
+
+
+/*BreadCrumbs*/
+.subMenuCommon {
+    height: 1500px;
+}
+.subMenuCommon .container{
+    width: 1135px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.subMenuCommon .container .breadCrumbs{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background: #f0f0f0;
+    color: #444444;
+    margin-bottom: 20px;
+}
+.subMenuCommon .container .breadCrumbs strong{
+    font-size: 28px;
+    font-weight: 700;
+}
+.subMenuCommon .container .breadCrumbs div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.subMenuCommon .container .breadCrumbs div span {
+    font-size: 12px;
 }

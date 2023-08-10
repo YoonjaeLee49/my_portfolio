@@ -7,7 +7,7 @@ $(function (){
     const $imgModal = $(".layerPop .imgModal")
 
     $contentsWrap.find("button").on("click", function (){
-       $("body").addClass("popupOn");
+        $("body").addClass("popupOn");
 
         const $imgSrc = $(this).siblings("img").attr("src").replace("-dark", "");
         console.log($imgSrc);
@@ -16,7 +16,7 @@ $(function (){
         const index = $(this).closest("div").index();
         if (index === 8 || index === 9){
             $imgModal.find("img").css({
-               width: 270 + "px",
+                width: 270 + "px",
             });
         } else {
             $imgModal.find("img").css({
@@ -27,9 +27,10 @@ $(function (){
         $imgModal.show();
     });
 
+
     $imgModal.find(".close").on("click", function (){
-       $("body").removeClass("popupOn");
-       $imgModal.hide();
+        $("body").removeClass("popupOn");
+        $imgModal.hide();
     });
 
     $works.find("#imgSlider").on("init", function (event, slick){
@@ -46,7 +47,7 @@ $(function (){
     }, 1000);
 
     setTimeout(function (){
-       $(".intro").addClass("on");
+        $(".intro").addClass("on");
     }, 1000);
 
     $(".textCard .card").on("mouseenter", function() {
@@ -57,6 +58,7 @@ $(function (){
 
     $imgSlider.slick({
         arrows:false,
+
         variableWidth: true,
         slidesToShow: 2,
     });
@@ -84,13 +86,13 @@ $(function (){
         }
 
         $win.on("mousemove", function (event){
-           mousePos.x = event.clientX;
-           mousePos.y = event.clientY;
+            mousePos.x = event.clientX;
+            mousePos.y = event.clientY;
 
-           $cursor.css({
-              left: mousePos.x,
-              top: mousePos.y,
-           });
+            $cursor.css({
+                left: mousePos.x,
+                top: mousePos.y,
+            });
         });
     }
     mousemoveEvent();

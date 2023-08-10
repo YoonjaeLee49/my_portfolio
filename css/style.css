@@ -25,7 +25,6 @@ main{
 }
 
 
-
 /*LayerPop*/
 .layerPop{
     display: none;
@@ -607,7 +606,7 @@ section .infoBtm.ani.on{
 .works .textArea .box .tool,
 .works .textArea .box .process,
 .works .textArea .box .design{
-    transform: translateY(30px);
+    /*transform: translateY(30px);*/
     opacity: 0;
 }
 
@@ -617,23 +616,30 @@ section .infoBtm.ani.on{
 .works .textArea .box.active .tool,
 .works .textArea .box.active .process,
 .works .textArea .box.active .design{
-    transform: translateY(0);
+    /*transform: translateY(0);*/
     opacity: 1;
     transition: 0.5s;
 }
-.works .textArea .box .btnWrap button{
+.works .textArea .box .btnWrap div{
     width: 90px;
     border-radius: 50px;
     padding: 7px 10px;
     box-sizing: border-box;
     border: none;
     background: #F95700;
+    display: inline-block;
+    z-index: 99999999;
+}
+.works .textArea .box .btnWrap div a{
     color: #fff;
+    font-size: 14px;
     font-weight: 500;
+    display: block;
+    text-align: center;
     cursor: pointer;
 }
-.works .textArea .box .btnWrap button.process{
-    margin-right: 10px;
+.works .textArea .box .btnWrap div.process{
+    margin-right: 15px;
 }
 
 .works .textArea .box.active strong{transition-delay: 0.2s}

@@ -6,7 +6,7 @@ $(function (){
 
 
     $event.find($eventSlider).on("init", function (event, slick){
-       $event.find(".paging").text((slick.currentSlide+1) + "/" + slick.slideCount);
+        $event.find(".paging").text((slick.currentSlide+1) + "/" + slick.slideCount);
     });
 
     $eventSlider.slick({

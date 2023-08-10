@@ -11,30 +11,25 @@ $(function (){
         });
 
         $headerBtm.on("mouseleave", function (){
-           $(this).removeClass("active");
+            $(this).removeClass("active");
             // $depth2.removeClass("active");
         });
     }
 
     hoverHeaderEvent();
 
-    // $headerBtm.mouseenter(function (){
-    //     $depth2.css("display", "block");
-    //     $depth2.slideDown(400);
-    // })
 
+    $(function (){
+        const accordion = $(".subMenuCommon .menuAccordion");
+
+        accordion.find("li .menu").on("click", function (){
+            const li = $(this).closest("li");
+            li.find(".subMenu").slideToggle();
+            li.siblings().find(".subMenu").slideUp();
+            li.find("i").toggleClass("active");
+            li.siblings().find("i").removeClass("active");
+            $(this).addClass("on");
+            li.siblings().find(".menu").removeClass("on");
+        })
+    });
 });
-
-// function hoverHeaderEvent() {
-//     const $headerGnb= $(".headerBottom");
-//
-//     // $headerBottom.find(".headerGnb").css("display", "inline-block");
-//     $headerGnb.on("mouseenter", function () {
-//         $(this).addClass("active");
-//         // $(".headerBottom").addClass("active");
-//     });
-//     $headerGnb.on("mouseleave", function () {
-//         $(this).removeClass("active");
-//         // $(".headerBottom").removeClass("active");
-//     });
-// }
