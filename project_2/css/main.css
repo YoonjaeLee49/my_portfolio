@@ -236,6 +236,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 .recommend .slideArea{
     display: flex;
@@ -350,6 +351,7 @@
     background-image: url("../images/ico-plus.png");
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
 }
 .libraryInfo .txtWrap{
     width: 100%;
