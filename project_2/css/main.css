@@ -341,10 +341,6 @@
     background: #ffda4e;
     font-weight: 700;
 }
-.libraryInfo .btnWrap button:hover{
-    background: #FF9500;
-    color: #fff;
-}
 .libraryInfo .btnWrap .more{
     width: 21px;
     height: 21px;
