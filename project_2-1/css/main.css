@@ -2,43 +2,26 @@
 
 /*BookSearch Section*/
 .mainSection{
-    margin-top: 150px;
-    height: 438px;
-    background-image: url("../images/background_img.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
+    margin-top: 130px;
+    background: #efefef;
     display: flex;
     align-items: center;
     box-sizing: border-box;
 }
 .mainSection .inner{}
-.mainSection .textArea{}
-.mainSection .textArea h2{
-    font-size: 44px;
-    color: #fff;
-    margin-bottom: 39px;
-}
-.mainSection .textArea p{
-    font-size: 22px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 39px;
-}
 .mainSection .searchArea{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 35px;
 }
 .mainSection .searchArea input{
-    width: 611px;
-    height: 75px;
+    width: 500px;
+    height: 50px;
     padding: 10px;
     box-sizing: border-box;
     background: #fff;
-    border: 5px solid #FF9500;
-    border-radius: 20px;
+    border: 2px solid #FF9500;
     margin-right: 14px;
 }
 .mainSection .searchArea input::placeholder{
@@ -47,16 +30,122 @@
     color: #444444;
 }
 .mainSection .searchArea button{
-    width: 98px;
-    height: 75px;
+    width: 55px;
+    height: 50px;
     padding: 10px;
     box-sizing: border-box;
     background: #fff;
-    border: 5px solid #FF9500;
-    border-radius: 20px;
+    border: 2px solid #FF9500;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 14px;
     color: #444444;
+}
+
+.mainSection .contentsArea{
+    display: flex;
+}
+.mainSection .contentsArea .slideArea{
+    position: relative;
+    width: 70%;
+}
+.mainSection .contentsArea .slideArea .eventSlider{
+    cursor: grab;
+}
+.mainSection .contentsArea .slideArea .eventSlider .slick-slide{}
+.mainSection .contentsArea .slideArea .eventSlider div img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.mainSection .contentsArea .arrowWrap .prevArrow,
+.mainSection .contentsArea .arrowWrap .pauseBtn,
+.mainSection .contentsArea .arrowWrap .nextArrow{
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2px;
+    cursor: pointer;
+}
+.mainSection .contentsArea .arrowWrap{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+}
+.mainSection .contentsArea .arrowWrap .prevArrow{
+    background-image: url("../images/chevron-left.png");
+}
+.mainSection .contentsArea .arrowWrap .pauseBtn{
+    background-image: url("../images/pause-circle.png");
+    margin: 0 5px;
+}
+.mainSection .contentsArea .arrowWrap .nextArrow{
+    background-image: url("../images/chevron-right.png");
+}
+.mainSection .contentsArea .paging{
+    position: absolute;
+    right: 100px;
+    bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 24px;
+    line-height: 24px;
+}
+.mainSection .contentsArea .libraryInfo{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+.mainSection .contentsArea .libraryInfo .infoTop,
+.mainSection .contentsArea .libraryInfo .infoBtm{
+    width: 100%;
+    border-radius: 10px;
+    height: 160px;
+}
+.mainSection .contentsArea .libraryInfo .infoTop{
+    background: #FFD024;
+    display: flex;
+}
+.mainSection .contentsArea .libraryInfo .infoTop .time,
+.mainSection .contentsArea .libraryInfo .infoTop .close{
+    width: 50%;
+    text-align: center;
+    color: #232323;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.mainSection .contentsArea .libraryInfo .infoTop strong,
+.mainSection .contentsArea .libraryInfo .infoBtm strong{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 22px;
+}
+.mainSection .contentsArea .libraryInfo .infoTop .ico,
+.mainSection .contentsArea .libraryInfo .infoBtm .ico{
+    width: 50px;
+    height: 50px;
+    background: #0b2c5f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 5px auto;
+}
+.mainSection .contentsArea .libraryInfo .infoTop .ico img,
+.mainSection .contentsArea .libraryInfo .infoBtm .ico img{
+   width: 25px;
+}
+.mainSection .contentsArea .libraryInfo .infoTop span,
+.mainSection .contentsArea .libraryInfo .infoBtm span{
+    font-size: 13px;
+    display: block;
+    line-height: 1.2;
+}
+.mainSection .contentsArea .libraryInfo .infoTop .close{}
+.mainSection .contentsArea .libraryInfo .infoBtm{
+    background: #d5d5d5;
 }
 
 
@@ -114,50 +203,50 @@
 .event .inner{
     width: 1400px;
 }
-.event .slideArea{
-    position: relative;
-}
-.event .slideArea .eventSlider{
-    cursor: grab;
-}
-.event .slideArea .eventSlider .slick-slide{}
-.event .slideArea .eventSlider div img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-.event .arrowWrap .prevArrow,
-.event .arrowWrap .pauseBtn,
-.event .arrowWrap .nextArrow{
-    width: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-}
-.event .arrowWrap{
-    position: absolute;
-    right: 45px;
-    bottom: 20px;
-    display: flex;
-}
-.event .arrowWrap .prevArrow{
-    background-image: url("../images/chevron-left.png");
-}
-.event .arrowWrap .pauseBtn{
-    background-image: url("../images/pause-circle.png");
-    margin: 0 5px;
-}
-.event .arrowWrap .nextArrow{
-    background-image: url("../images/chevron-right.png");
-}
-.event .paging{
-    position: absolute;
-    right: 150px;
-    bottom: 20px;
-    font-size: 22px;
-    font-weight: 700;
-}
+/*.event .slideArea{*/
+/*    position: relative;*/
+/*}*/
+/*.event .slideArea .eventSlider{*/
+/*    cursor: grab;*/
+/*}*/
+/*.event .slideArea .eventSlider .slick-slide{}*/
+/*.event .slideArea .eventSlider div img{*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    object-fit: cover;*/
+/*}*/
+/*.event .arrowWrap .prevArrow,*/
+/*.event .arrowWrap .pauseBtn,*/
+/*.event .arrowWrap .nextArrow{*/
+/*    width: 24px;*/
+/*    height: 24px;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center;*/
+/*    cursor: pointer;*/
+/*}*/
+/*.event .arrowWrap{*/
+/*    position: absolute;*/
+/*    right: 45px;*/
+/*    bottom: 20px;*/
+/*    display: flex;*/
+/*}*/
+/*.event .arrowWrap .prevArrow{*/
+/*    background-image: url("../images/chevron-left.png");*/
+/*}*/
+/*.event .arrowWrap .pauseBtn{*/
+/*    background-image: url("../images/pause-circle.png");*/
+/*    margin: 0 5px;*/
+/*}*/
+/*.event .arrowWrap .nextArrow{*/
+/*    background-image: url("../images/chevron-right.png");*/
+/*}*/
+/*.event .paging{*/
+/*    position: absolute;*/
+/*    right: 150px;*/
+/*    bottom: 20px;*/
+/*    font-size: 22px;*/
+/*    font-weight: 700;*/
+/*}*/
 
 
 /*QuickMenu Section*/
@@ -305,7 +394,7 @@
 
 /*libraryInfo Section*/
 .libraryInfo{
-    padding: 100px 0;
+    /*padding: 100px 0;*/
 }
 .libraryInfo .inner{
     display: flex;
