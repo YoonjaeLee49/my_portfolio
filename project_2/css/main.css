@@ -206,12 +206,12 @@
     color: #FF9500;
     margin-bottom: 45px;
 }
-.recommend .btnWrap{
+.recommend .tab{
     border-bottom: 2px solid #ff7500;
     position: relative;
     margin-bottom: 69px;
 }
-.recommend .btnWrap button{
+.recommend .tab button{
     border: none;
     background: #ffda4e;
     width: 100px;
@@ -222,7 +222,7 @@
     font-weight: 700;
     cursor: pointer;
 }
-.recommend .btnWrap button:hover{
+.recommend .tab button:hover{
     background: #FF9500;
     color: #fff;
 }
@@ -322,7 +322,7 @@
 .libraryInfo .notice{
     border-radius: 50px 0 0 0;
 }
-.libraryInfo .btnWrap{
+.libraryInfo .tab{
     width: 100%;
     height: 50px;
     border-bottom: 2px solid #ff9500;
@@ -331,7 +331,7 @@
     align-items: center;
     margin-bottom: 25px;
 }
-.libraryInfo .btnWrap button{
+.libraryInfo .tab button{
     width: 109px;
     height: 50px;
     padding: 10px;
@@ -341,7 +341,7 @@
     background: #ffda4e;
     font-weight: 700;
 }
-.libraryInfo .btnWrap .more{
+.libraryInfo .tab .more{
     width: 21px;
     height: 21px;
     background-image: url("../images/ico-plus.png");

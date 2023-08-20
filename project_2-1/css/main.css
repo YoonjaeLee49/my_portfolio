@@ -1,14 +1,15 @@
 @import url(common.css);
 
-/*BookSearch Section*/
+/*MainSection*/
 .mainSection{
     margin-top: 130px;
-    background: #efefef;
+    background: #fafafa;
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    padding: 80px 0 140px;
+    position: relative;
 }
-.mainSection .inner{}
 .mainSection .searchArea{
     display: flex;
     align-items: center;
@@ -21,7 +22,7 @@
     padding: 10px;
     box-sizing: border-box;
     background: #fff;
-    border: 2px solid #FF9500;
+    border: 2px solid #ff9500;
     margin-right: 14px;
 }
 .mainSection .searchArea input::placeholder{
@@ -35,12 +36,11 @@
     padding: 10px;
     box-sizing: border-box;
     background: #fff;
-    border: 2px solid #FF9500;
+    border: 2px solid #ff9500;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 14px;
     color: #444444;
 }
-
 .mainSection .contentsArea{
     display: flex;
 }
@@ -103,11 +103,10 @@
 .mainSection .contentsArea .libraryInfo .infoTop,
 .mainSection .contentsArea .libraryInfo .infoBtm{
     width: 100%;
-    border-radius: 10px;
     height: 160px;
 }
 .mainSection .contentsArea .libraryInfo .infoTop{
-    background: #FFD024;
+    background: #ffda4e;
     display: flex;
 }
 .mainSection .contentsArea .libraryInfo .infoTop .time,
@@ -122,6 +121,7 @@
 .mainSection .contentsArea .libraryInfo .infoBtm strong{
     font-family: 'Black Han Sans', sans-serif;
     font-size: 22px;
+    color: #0b2c5f;
 }
 .mainSection .contentsArea .libraryInfo .infoTop .ico,
 .mainSection .contentsArea .libraryInfo .infoBtm .ico{
@@ -131,7 +131,7 @@
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    margin: 5px auto;
+    margin: 8px auto;
 }
 .mainSection .contentsArea .libraryInfo .infoTop .ico img,
 .mainSection .contentsArea .libraryInfo .infoBtm .ico img{
@@ -141,128 +141,56 @@
 .mainSection .contentsArea .libraryInfo .infoBtm span{
     font-size: 13px;
     display: block;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 .mainSection .contentsArea .libraryInfo .infoTop .close{}
 .mainSection .contentsArea .libraryInfo .infoBtm{
-    background: #d5d5d5;
-}
-
-
-/*OpenInfo Section*/
-.openInfo{
-    width: 100%;
+    background: #eaeaea;
+    text-align: center;
     display: flex;
-}
-.openInfo .left,
-.openInfo .right{
-    width: 50%;
-    height: 100px;
-    padding-left: 200px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.openInfo .left .ico,
-.openInfo .right .ico{
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.openInfo .left{
-    background: #ffd024;
-}
-.openInfo .left .ico-time{
-    background-image: url("../images/ico-clock.png");
-}
-.openInfo .txtBox strong{
-    font-size: 14px;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 11px;
-}
-.openInfo .txtBox p{
-    font-size: 14px;
-    font-weight: 400;
-}
-.openInfo .right{
-    background: #FFE482;
-}
-.openInfo .right .ico-schedule{
-    background-image: url("../images/ico-schedule.png");
-}
-
-
-/*Event Section*/
-.event{
-    padding: 80px 0;
-}
-.event .inner{
-    width: 1400px;
-}
-/*.event .slideArea{*/
-/*    position: relative;*/
-/*}*/
-/*.event .slideArea .eventSlider{*/
-/*    cursor: grab;*/
-/*}*/
-/*.event .slideArea .eventSlider .slick-slide{}*/
-/*.event .slideArea .eventSlider div img{*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*    object-fit: cover;*/
-/*}*/
-/*.event .arrowWrap .prevArrow,*/
-/*.event .arrowWrap .pauseBtn,*/
-/*.event .arrowWrap .nextArrow{*/
-/*    width: 24px;*/
-/*    height: 24px;*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center;*/
-/*    cursor: pointer;*/
-/*}*/
-/*.event .arrowWrap{*/
-/*    position: absolute;*/
-/*    right: 45px;*/
-/*    bottom: 20px;*/
-/*    display: flex;*/
-/*}*/
-/*.event .arrowWrap .prevArrow{*/
-/*    background-image: url("../images/chevron-left.png");*/
-/*}*/
-/*.event .arrowWrap .pauseBtn{*/
-/*    background-image: url("../images/pause-circle.png");*/
-/*    margin: 0 5px;*/
-/*}*/
-/*.event .arrowWrap .nextArrow{*/
-/*    background-image: url("../images/chevron-right.png");*/
-/*}*/
-/*.event .paging{*/
-/*    position: absolute;*/
-/*    right: 150px;*/
-/*    bottom: 20px;*/
-/*    font-size: 22px;*/
-/*    font-weight: 700;*/
-/*}*/
 
 
 /*QuickMenu Section*/
 .quickMenu{
-    background: #eeeeb4;
-    padding: 68px 0;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .quickMenu .inner{}
+.quickMenu .menuWrap{
+    display: flex;
+    align-items: center;
+    background: #fae9bc;
+    padding: 40px 80px;
+}
+.quickMenu .menuWrap .title{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.quickMenu .menuWrap .title:after{
+    content: '';
+    width: 1px;
+    height: 80px;
+    background: #6e6e6e;
+    display: inline-block;
+    margin-left: 50px;
+}
 .quickMenu ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-grow: 3;
 }
 .quickMenu ul li{
     text-align: center;
-    margin-right: 100px;
+    margin-right: 50px;
     cursor: pointer;
 }
 .quickMenu ul li:last-child{
@@ -272,13 +200,14 @@
     transform: translateY(-5px);
 }
 .quickMenu ul li img{
-    width: 150px;
-    margin-bottom: 20px;
+    /*width: 80px;*/
+    height: 60px;
+    margin-bottom: 16px;
     transition: 0.2s;
 }
 .quickMenu ul li strong{
     display: block;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -286,32 +215,44 @@
 /*Recommend Section*/
 .recommend{
     width: 100%;
-    padding: 100px 0;
+    padding: 230px 0 70px;
 }
 .recommend .inner{}
+.recommend .topArea{
+    display: flex;
+    margin-bottom: 40px;
+}
 .recommend h2{
     text-align: center;
-    font-size: 44px;
+    font-size: 38px;
+    line-height: 38px;
     color: #FF9500;
-    margin-bottom: 45px;
+    /*margin-bottom: 45px;*/
+    margin-right: 30px;
+    width: 150px;
 }
-.recommend .btnWrap{
-    border-bottom: 2px solid #ff7500;
-    position: relative;
-    margin-bottom: 69px;
+.recommend .tab{
+    /*border-bottom: 2px solid #ff7500;*/
+    /*position: relative;*/
+    /*margin-bottom: 69px;*/
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.recommend .btnWrap button{
+.recommend .tab button{
     border: none;
     background: #ffda4e;
     width: 100px;
-    height: 50px;
+    /*height: 50px;*/
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 15px 15px 0 0;
+    /*border-radius: 15px 15px 0 0;*/
     font-weight: 700;
+    margin-right: 12px;
     cursor: pointer;
 }
-.recommend .btnWrap button:hover{
+.recommend .tab button:hover{
     background: #FF9500;
     color: #fff;
 }
@@ -321,13 +262,19 @@
     background-image: url("../images/ico-plus.png");
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
     cursor: pointer;
 }
 .recommend .slideArea{
+    display: flex;
+    justify-content: center;
+    /*position: relative;*/
+}
+.recommend .slideArea .contentsWrap{
+    width: 90%;
     display: flex;
     justify-content: center;
     position: relative;
@@ -342,11 +289,11 @@
 }
 .recommend .bookSlider .box{
     text-align: center;
-    margin: 0 40px;
+    margin-right: 60px;
 }
 .recommend .bookSlider .imgBox{}
 .recommend .bookSlider .imgBox img{
-    width: auto;
+    width: 100%;
     height: 288px;
     object-fit: cover;
     margin-bottom: 20px;
@@ -365,7 +312,7 @@
     font-size: 14px;
 }
 .recommend .bookSlider .txtBox p{
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: 700;
 }
 .recommend .bookSlider .txtBox span{
@@ -384,102 +331,79 @@
 }
 .recommend .slideArea .prevArrow{
     background-image: url("../images/ico-prev.png");
-    left: 170px;
+    left: 0;
 }
 .recommend .slideArea .nextArrow{
     background-image: url("../images/ico-next.png");
-    right: 170px;
+    right: 0;
 }
 
 
 /*libraryInfo Section*/
-.libraryInfo{
-    /*padding: 100px 0;*/
+.board{
+    padding: 70px 0;
 }
-.libraryInfo .inner{
+.board .inner{
     display: flex;
     justify-content: space-between;
 }
-.libraryInfo .notice,
-.libraryInfo .faq{
-    width: 740px;
-    height: 400px;
-    padding: 30px 60px;
+.board .notice,
+.board .faq{
+    width: 600px;
     box-sizing: border-box;
-    background: #feeeb4;
 }
-.libraryInfo .notice{
-    border-radius: 50px 0 0 0;
-}
-.libraryInfo .btnWrap{
+.board .tab{
     width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #ff9500;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
 }
-.libraryInfo .btnWrap button{
-    width: 109px;
-    height: 50px;
+.board .tab h3{
     padding: 10px;
     box-sizing: border-box;
     border: none;
-    border-radius: 10px 10px 0 0;
-    background: #ffda4e;
+    background: none;
+    font-size: 22px;
     font-weight: 700;
+    color: #2b2b2b;
+    border-bottom: 2px solid #ff9500;
 }
-.libraryInfo .btnWrap .more{
-    width: 21px;
-    height: 21px;
+.board .tab .more{
+    width: 15px;
+    height: 15px;
     background-image: url("../images/ico-plus.png");
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
 }
-.libraryInfo .txtWrap{
+.board .txtWrap{
     width: 100%;
-    height: 267px;
-    background: #fff;
-    padding: 20px 20px;
-    box-sizing: border-box;
-    border-radius: 20px;
 }
-.libraryInfo .notice .txtWrap ul{}
-.libraryInfo .txtWrap ul li{
+.board .txtWrap ul li{
+    display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #e2e2e2;
-    vertical-align: center;
-    height: 30px;
+    height: 35px;
 }
-.libraryInfo .txtWrap ul li p{
+.board .txtWrap ul li p{
     font-size: 14px;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 35px;
     white-space: pre-wrap;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
-}
-.libraryInfo .notice .txtWrap ul li{
-    display: flex;
-}
-.libraryInfo .notice .txtWrap ul li p{
-    width: 482px;
-}
-.libraryInfo .notice .txtWrap ul li p a{}
-.libraryInfo .notice .txtWrap ul li span{
-    text-align: right;
-    font-size: 14px;
-    display: inline-block;
-    line-height: 30px;
-}
-.libraryInfo .faq{
-    border-radius: 0 0 50px 0;
-}
-.libraryInfo .faq .txtWrap ul li{
     width: 100%;
+}
+.board .txtWrap ul li span{
+    color: #0b2c5f;
+    display: block;
+    line-height: 35px;
+    margin-right: 30px;
+    font-size: 14px;
+}
+.board .notice .txtWrap ul li span {
+    width: 100px;
 }

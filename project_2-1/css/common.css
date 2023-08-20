@@ -10,7 +10,7 @@ body{
 .inner{
     width: 1320px;
     margin: 0 auto;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     box-sizing: border-box;
 }
 
