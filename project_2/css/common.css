@@ -8,8 +8,10 @@ body{
 }
 
 .inner{
-    width: 1520px;
+    width: 1320px;
     margin: 0 auto;
+    /*border: 2px solid red;*/
+    box-sizing: border-box;
 }
 
 a{
@@ -36,7 +38,7 @@ section h2{
 }
 .header .headerWrap{}
 .header .headerWrap .headerTop{
-    height: 70px;
+    height: 50px;
     background: #ffda4e;
 }
 .header .headerWrap .headerTop .inner.top{
@@ -44,20 +46,6 @@ section h2{
     position: relative;
     display: flex;
     justify-content: right;
-}
-.header .headerWrap .headerTop .logo{
-    position: absolute;
-    left: 0;
-    top: 10px;
-}
-.header .headerWrap .headerTop .logo a{
-    display: block;
-    width: 200px;
-    height: 60px;
-    background-image: url("../images/logo-img.png");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 100% auto;
 }
 .header .headerWrap .headerTop .utilList{
     display: inline-block;
@@ -69,11 +57,11 @@ section h2{
 }
 .header .headerWrap .headerTop .utilList li a{
     display: block;
-    font-size: 14px;
-    font-weight: 700;
-    width: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    width: 80px;
     height: 44px;
-    padding-top: 30px;
+    padding-top: 16px;
     box-sizing: border-box;
 }
 .header .headerWrap .headerBtm{
@@ -84,10 +72,24 @@ section h2{
     height: 100%;
     position: relative;
 }
-.header .headerWrap .headerBtm nav{
+.header .headerWrap .headerBtm .logo{
     position: absolute;
     left: 0;
-    top: 22px;
+    top: 10px;
+}
+.header .headerWrap .headerBtm .logo a{
+    display: block;
+    width: 200px;
+    height: 60px;
+    background-image: url("../images/logo-img.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100% auto;
+}
+.header .headerWrap .headerBtm nav{
+    position: absolute;
+    right: 0;
+    top: 29px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,15 +103,15 @@ section h2{
 }
 .header .headerWrap .headerBtm nav .gnb li .depth1{
     display: block;
-    width: 350px;
+    width: 230px;
     font-family: 'Black Han Sans', sans-serif;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 400;
     color: #FF9500;
 }
 .header .headerWrap .headerBtm nav .gnb .depth2{
     position: absolute;
-    width: 350px;
+    width: 230px;
     height: 440px;
     overflow: hidden;
     padding-top: 30px;
@@ -124,13 +126,14 @@ section h2{
     display: block;
 }
 .header .headerWrap .headerBtm nav .gnb .depth2 li a{
-    font-size: 16px;
+    font-size: 14px;
     color: #2b2b2b;
     font-weight: 400;
 }
 .header .headerWrap .headerBtm .menuIco{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 20px;
+    margin-left: 100px;
     background-image: url("../images/menu-01.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -233,18 +236,15 @@ section h2{
 }
 
 
-/*SideMenu Common*/
 /*SubmenuCommon*/
 .subMenuCommon{
-    /*height: 100vh;*/
-    margin-top: 150px;
-    padding: 100px 0;
+    padding: 70px 0;
 }
 .subMenuCommon .inner{
     position: relative;
 }
 .subMenuCommon .sideMenu{
-    width: 365px;
+    width: 260px;
 }
 .subMenuCommon .sideMenu .currentMenu{
     width: 100%;
@@ -253,14 +253,14 @@ section h2{
     background: #f0f0f0;
     margin-bottom: 20px;
 
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     color: #444444;
     text-align: center;
     line-height: 65px;
 }
 .subMenuCommon .sideMenu .menuAccordion{
-    border: 2px solid #c0c0c0;
+    border: 1px solid #c0c0c0;
     border-bottom: 0;
     background: #fff;
 }
@@ -269,7 +269,7 @@ section h2{
     padding: 10px 20px;
     height: 50px;
     box-sizing: border-box;
-    border-bottom: 2px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -319,11 +319,11 @@ section h2{
 
 
 /*BreadCrumbs*/
-.subMenuCommon {
+.subMenuCommon{
     height: 1500px;
 }
 .subMenuCommon .container{
-    width: 1135px;
+    width: 1035px;
     position: absolute;
     right: 0;
     top: 0;
@@ -341,7 +341,7 @@ section h2{
     margin-bottom: 20px;
 }
 .subMenuCommon .container .breadCrumbs strong{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
 }
 .subMenuCommon .container .breadCrumbs div{

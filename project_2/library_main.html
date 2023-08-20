@@ -23,7 +23,6 @@
         <div class="headerWrap">
             <div class="headerTop">
                 <div class="inner top">
-                    <h1 class="logo"><a href="library_main.html"></a></h1>
                     <ul class="utilList">
                         <li><a href="#">로그인</a></li>
                         <li><a href="#">회원가입</a></li>
@@ -35,6 +34,7 @@
 
             <div class="headerBtm">
                 <div class="inner btm">
+                    <h1 class="logo"><a href="library_main.html"></a></h1>
                     <nav>
                         <ul class="gnb">
                             <li>
@@ -98,264 +98,281 @@
 
     <!--Main-->
     <main class="main">
-        <!--bookSearch Section-->
-        <section class="bookSearch">
+        <!--MainSection Section-->
+        <section class="mainSection">
             <div class="inner">
-                <div class="textArea">
-                    <h2>통합검색</h2>
-                    <p>서울도서관에서 소장하고 있는 국내외 자료를 통합검색할 수 있습니다.</p>
-                </div>
                 <div class="searchArea">
                     <input type="search" id="search" placeholder="검색어를 입력하세요.">
                     <button>검색</button>
                 </div>
-            </div>
-        </section>
 
-        <!--openInfo Section-->
-        <section class="openInfo">
-            <div class="left">
-                <div class="ico ico-time"></div>
-                <div class="txtBox">
-                    <strong>운영시간</strong>
-                    <p>화~금 09:00~21:00 / 토, 일 09:00~18:00 / 월요일, 공휴일 휴관</p>
-                </div>
-            </div>
-            <div class="right">
-                <div class="ico ico-schedule"></div>
-                <div class="txtBox">
-                    <strong>운영시간</strong>
-                    <p>화~금 09:00~21:00 / 토, 일 09:00~18:00 / 월요일, 공휴일 휴관</p>
-                </div>
-            </div>
-        </section>
+                <div class="contentsArea">
+                    <div class="slideArea">
+                        <div class="eventSlider" id="eventSlider">
+                            <div><img src="images/banner01.jpg" alt=""></div>
+                            <div><img src="images/banner02.jpg" alt=""></div>
+                            <div><img src="images/banner03.png" alt=""></div>
+                            <div><img src="images/banner04.jpg" alt=""></div>
+                            <div><img src="images/banner05.png" alt=""></div>
+                        </div>
 
-        <!--Event Section-->
-        <section class="event">
-            <div class="inner">
-                <div class="slideArea">
-                    <div class="eventSlider" id="eventSlider">
-                        <div><img src="images/banner01.jpg" alt=""></div>
-                        <div><img src="images/banner02.jpg" alt=""></div>
-                        <div><img src="images/banner03.png" alt=""></div>
-                        <div><img src="images/banner04.jpg" alt=""></div>
-                        <div><img src="images/banner05.png" alt=""></div>
+                        <div class="arrowWrap">
+                            <div class="prevArrow"></div>
+                            <div class="pauseBtn"></div>
+                            <div class="nextArrow"></div>
+                        </div>
+
+                        <div class="paging"></div>
                     </div>
 
-                    <div class="arrowWrap">
-                        <div class="prevArrow"></div>
-                        <div class="pauseBtn"></div>
-                        <div class="nextArrow"></div>
+                    <div class="libraryInfo">
+                        <div class="infoTop">
+                            <div class="time">
+                                <strong>운영시간</strong>
+                                <div class="ico"><img src="images/ico-open.svg" alt=""></div>
+                                <span>화~금 09:00~21:00</span>
+                                <span>토, 일 09:00~18:00</span>
+                            </div>
+                            <div class="close">
+                                <strong>이번 달 휴관일</strong>
+                                <div class="ico"><img src="images/ico-location2.svg" alt=""></div>
+                                <span>6일, 12일, 19일, 26일</span>
+                                <span>월요일, 공휴일 휴관</span>
+                            </div>
+                        </div>
+                        <div class="infoBtm">
+                            <strong>서울도서관 위치 안내</strong>
+                            <div class="ico"><img src="images/ico-location2.svg" alt=""></div>
+                            <span>서울특별시 중구 세종대로 110</span>
+                            <span>시청역 5번 출구</span>
+                        </div>
                     </div>
-
-
-                    <div class="paging"></div>
                 </div>
             </div>
         </section>
+
 
         <!--quickMenu Section-->
         <section class="quickMenu">
             <div class="inner">
-                <ul>
-                    <li>
-                        <img src="images/ico-myBook.png" alt="">
-                        <strong>희망도서 신청</strong>
-                    </li>
+                <div class="menuWrap">
+                    <div class="title">
+                        <span>Quick Menu</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <img src="images/ico-myBook-noBg.png" alt="">
+                            <strong>희망도서 신청</strong>
+                        </li>
 
-                    <li>
-                        <img src="images/ico-program.png" alt="">
-                        <strong>프로그램 신청</strong>
-                    </li>
+                        <li>
+                            <img src="images/ico-program-noBg.png" alt="">
+                            <strong>프로그램 신청</strong>
+                        </li>
 
-                    <li>
-                        <img src="images/ico-idCard.png" alt="">
-                        <strong>회원증 발급</strong>
-                    </li>
+                        <li>
+                            <img src="images/ico-idCard-noBg.png" alt="">
+                            <strong>회원증 발급</strong>
+                        </li>
 
-                    <li>
-                        <img src="images/ico-faq.png" alt="">
-                        <strong>문의하기</strong>
-                    </li>
+                        <li>
+                            <img src="images/ico-faq-noBg.png" alt="">
+                            <strong>문의하기</strong>
+                        </li>
 
-                    <li>
-                        <img src="images/ico-location.png" alt="">
-                        <strong>위치 안내</strong>
-                    </li>
-                </ul>
+                        <li>
+                            <img src="images/ico-location-noBg.png" alt="">
+                            <strong>위치 안내</strong>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <!--Recommend Section-->
         <section class="recommend">
             <div class="inner">
-                <h2>추천도서</h2>
-
-                <div class="btnWrap">
-                    <button>신착도서</button>
-                    <button>인기도서</button>
-                    <button>사서추천도서</button>
-                    <div class="more"></div>
+                <div class="topArea">
+                    <h2>추천도서</h2>
+                    <div class="tab">
+                        <div>
+                            <button>신착도서</button>
+                            <button>인기도서</button>
+                            <button>사서추천도서</button>
+                        </div>
+                        <div class="more"></div>
+                    </div>
                 </div>
 
+
                 <div class="slideArea">
-                    <div class="bookSlider" id="bookSlider">
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="images/book_img01.png" alt="">
+                    <div class="contentsWrap">
+                        <div class="bookSlider" id="bookSlider">
+                            <div class="box">
+                                <div class="imgBox">
+                                    <img src="images/book_img01.png" alt="">
+                                </div>
+                                <div class="txtBox">
+                                    <p>소년이 온다: 한강 장편소설</p>
+                                    <span>한강</span>
+                                </div>
                             </div>
-                            <div class="txtBox">
-                                <p>소년이 온다: 한강 장편소설</p>
-                                <span>한강</span>
+
+                            <div class="box">
+                                <div class="imgBox">
+                                    <img src="images/book_img02.png" alt="">
+                                </div>
+                                <div class="txtBox">
+                                    <p>나미야 잡화점의 기적 :히가시노 게이고 장편소설</p>
+                                    <span>히가시노 게이고</span>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="imgBox">
+                                    <img src="images/book_img03.png" alt="">
+                                </div>
+                                <div class="txtBox">
+                                    <p>여행의 이유 :김영하 산문</p>
+                                    <span>김영하</span>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="imgBox">
+                                    <img src="images/book_img04.png" alt="">
+                                </div>
+                                <div class="txtBox">
+                                    <p>파친코 :이민진 장편소설 .1</p>
+                                    <span>이민진</span>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="imgBox">
+                                    <img src="images/book_img05.gif" alt="">
+                                </div>
+                                <div class="txtBox">
+                                    <p>미드나잇 라이브러리</p>
+                                    <span>매트 헤이그</span>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="imgBox">
+                                    <img src="images/book_img06.png" alt="">
+                                </div>
+                                <div class="txtBox">
+                                    <p>바깥은 여름 :김애란 소설</p>
+                                    <span>김애란</span>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="imgBox">
+                                    <img src="images/book_img07.png" alt="">
+                                </div>
+                                <div class="txtBox">
+                                    <p>불편한 편의점 :김호연 장편소설</p>
+                                    <span>김호연</span>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="imgBox">
+                                    <img src="images/book_img08.png" alt="">
+                                </div>
+                                <div class="txtBox">
+                                    <p>(인생을 바꾸는 자기 혁명) 몰입 :"생각하고 집중하고 몰입하라 =Think Hard</p>
+                                    <span>황농문</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="images/book_img02.png" alt="">
-                            </div>
-                            <div class="txtBox">
-                                <p>나미야 잡화점의 기적 :히가시노 게이고 장편소설</p>
-                                <span>히가시노 게이고</span>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="images/book_img03.png" alt="">
-                            </div>
-                            <div class="txtBox">
-                                <p>여행의 이유 :김영하 산문</p>
-                                <span>김영하</span>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="images/book_img04.png" alt="">
-                            </div>
-                            <div class="txtBox">
-                                <p>파친코 :이민진 장편소설 .1</p>
-                                <span>이민진</span>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="images/book_img05.gif" alt="">
-                            </div>
-                            <div class="txtBox">
-                                <p>미드나잇 라이브러리</p>
-                                <span>매트 헤이그</span>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="images/book_img06.png" alt="">
-                            </div>
-                            <div class="txtBox">
-                                <p>바깥은 여름 :김애란 소설</p>
-                                <span>김애란</span>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="images/book_img07.png" alt="">
-                            </div>
-                            <div class="txtBox">
-                                <p>불편한 편의점 :김호연 장편소설</p>
-                                <span>김호연</span>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <div class="imgBox">
-                                <img src="images/book_img08.png" alt="">
-                            </div>
-                            <div class="txtBox">
-                                <p>(인생을 바꾸는 자기 혁명) 몰입 :"생각하고 집중하고 몰입하라 =Think Hard</p>
-                                <span>황농문</span>
-                            </div>
-                        </div>
+                        <div class="prevArrow"></div>
+                        <div class="nextArrow"></div>
                     </div>
-
-                    <div class="prevArrow"></div>
-                    <div class="nextArrow"></div>
                 </div>
             </div>
         </section>
 
-        <!--libraryInfo Section-->
-        <section class="libraryInfo">
+        <!--Board Section-->
+        <section class="board">
             <div class="inner">
                 <div class="notice">
-                    <div class="btnWrap">
-                        <button>공지사항</button>
+                    <div class="tab">
+                        <h3>공지사항</h3>
                         <div class="more"></div>
                     </div>
 
                     <div class="txtWrap">
                         <ul>
                             <li>
-                                <p><a href="#">서울도서관 시간선택제임기제공무원 1차 서류전형 합격자 발표 및 2차 면접시험 안내</a></p>
                                 <span>2023-08-03</span>
+                                <p><a href="#">서울도서관 시간선택제임기제공무원 1차 서류전형 합격자 발표 및 2차 면접시험 안내</a></p>
                             </li>
                             <li>
+                                <span>2023-08-01</span>
                                 <p><a href="#">2023년 서울도서관 오디오북(오디언) 입고 안내</a></p>
-                                <span>2023-08-01</span>
                             </li>
                             <li>
+                                <span>2023-08-01</span>
                                 <p><a href="#">서울도서관 알라딘 전자책 입고 안내(인기 대출 도서 추가 구매, 이용자 희망 전자책, 신간 전자책)</a></p>
-                                <span>2023-08-01</span>
                             </li>
                             <li>
+                                <span>2023-08-01</span>
                                 <p><a href="#">복사 및 인쇄 서비스 변경 사항 안내</a></p>
-                                <span>2023-08-01</span>
                             </li>
                             <li>
-                                <p><a href="#">가족회원제 변경사항 안내</a></p>
                                 <span>2023-07-31</span>
+                                <p><a href="#">가족회원제 변경사항 안내</a></p>
                             </li>
                             <li>
-                                <p><a href="#">방송통신대학교 교재 관외대출 시행 안내(8.1.~)</a></p>
                                 <span>2023-07-19</span>
+                                <p><a href="#">방송통신대학교 교재 관외대출 시행 안내(8.1.~)</a></p>
                             </li>
                             <li>
-                                <p><a href="#">서울도서관 시간선택제임기제공무원 채용시험계획 공고</a></p>
                                 <span>2023-07-14</span>
+                                <p><a href="#">서울도서관 시간선택제임기제공무원 채용시험계획 공고</a></p>
                             </li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="faq">
-                    <div class="btnWrap">
-                        <button>자주묻는질문</button>
+                    <div class="tab">
+                        <h3>자주묻는질문</h3>
                         <div class="more"></div>
                     </div>
 
                     <div class="txtWrap">
                         <ul>
                             <li>
+                                <span>Q</span>
                                 <p><a href="#">온라인 회원증 발급 신청이 미승인됐어요.</a></p>
                             </li>
                             <li>
+                                <span>Q</span>
                                 <p><a href="#">자동대출반납기로 대출(or 반납)했는데 책이 일부만 대출(or 반납)되거나 아예 안 됩니다.</a></p>
                             </li>
                             <li>
+                                <span>Q</span>
                                 <p><a href="#">전자잡지 이용 FAQ</a></p>
                             </li>
                             <li>
+                                <span>Q</span>
                                 <p><a href="#">서울도서관 전자책은 e-book 리더기를 지원하나요?</a></p>
                             </li>
                             <li>
+                                <span>Q</span>
                                 <p><a href="#">PC에서는 로그인이 되는데 모바일에서는 안 됩니다.</a></p>
                             </li>
                             <li>
+                                <span>Q</span>
                                 <p><a href="#">서울도서관 전자책 이용 방법</a></p>
                             </li>
                             <li>
+                                <span>Q</span>
                                 <p><a href="#">회원증 발급 관련 자주하는 질문 모음</a></p>
                             </li>
                         </ul>

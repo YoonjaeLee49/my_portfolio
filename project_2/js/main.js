@@ -1,18 +1,18 @@
 $(function (){
-    const $event = $(".event");
-    const $eventSlider = $(".event #eventSlider");
+    const $mainSection = $(".mainSection");
+    const $eventSlider = $(".mainSection #eventSlider");
     const $recommend = $(".recommend");
     const $bookSlider = $(".recommend #bookSlider");
 
 
-    $event.find($eventSlider).on("init", function (event, slick){
-        $event.find(".paging").text((slick.currentSlide+1) + "/" + slick.slideCount);
+    $mainSection.find($eventSlider).on("init", function (event, slick){
+        $mainSection.find(".paging").text((slick.currentSlide+1) + "/" + slick.slideCount);
     });
 
     $eventSlider.slick({
         arrows: true,
-        prevArrow: $event.find(".prevArrow"),
-        nextArrow: $event.find(".nextArrow"),
+        prevArrow: $mainSection.find(".prevArrow"),
+        nextArrow: $mainSection.find(".nextArrow"),
 
         autoplay: true,
         infinite: true,
@@ -29,7 +29,7 @@ $(function (){
         variableWidth: true,
     });
 
-    $event.find($eventSlider).on("beforeChange", function (event, slick, current, next){
-        $event.find(".paging").text((next+1) + "/" + slick.slideCount);
+    $mainSection.find($eventSlider).on("beforeChange", function (event, slick, current, next){
+        $mainSection.find(".paging").text((next+1) + "/" + slick.slideCount);
     });
 });
