@@ -231,28 +231,23 @@
     margin-right: 30px;
     width: 150px;
 }
-.recommend .btnWrap{
-    /*border-bottom: 2px solid #ff7500;*/
-    /*position: relative;*/
-    /*margin-bottom: 69px;*/
+.recommend .tab{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.recommend .btnWrap button{
+.recommend .tab button{
     border: none;
     background: #ffda4e;
     width: 100px;
-    /*height: 50px;*/
     padding: 10px;
     box-sizing: border-box;
-    /*border-radius: 15px 15px 0 0;*/
     font-weight: 700;
     margin-right: 12px;
     cursor: pointer;
 }
-.recommend .btnWrap button:hover{
+.recommend .tab button:hover{
     background: #FF9500;
     color: #fff;
 }
@@ -262,16 +257,11 @@
     background-image: url("../images/ico-plus.png");
     background-repeat: no-repeat;
     background-position: center;
-    /*position: absolute;*/
-    /*right: 0;*/
-    /*top: 50%;*/
-    /*transform: translateY(-50%);*/
     cursor: pointer;
 }
 .recommend .slideArea{
     display: flex;
     justify-content: center;
-    /*position: relative;*/
 }
 .recommend .slideArea .contentsWrap{
     width: 90%;
@@ -352,14 +342,14 @@
     width: 600px;
     box-sizing: border-box;
 }
-.board .btnWrap{
+.board .tab{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
 }
-.board .btnWrap h3{
+.board .tab h3{
     padding: 10px;
     box-sizing: border-box;
     border: none;
@@ -369,7 +359,7 @@
     color: #2b2b2b;
     border-bottom: 2px solid #ff9500;
 }
-.board .btnWrap .more{
+.board .tab .more{
     width: 15px;
     height: 15px;
     background-image: url("../images/ico-plus.png");
