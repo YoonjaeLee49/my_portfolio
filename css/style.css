@@ -618,10 +618,10 @@ section .infoBtm.ani.on{
     display: block;
     transition: 0.5s;
 }
-.works .textArea .box .tab{
+.works .textArea .box .btnWrap{
     display: flex;
 }
-.works .textArea .box .tab div{
+.works .textArea .box .btnWrap div{
     width: 90px;
     border-radius: 50px;
     padding: 7px 10px;
@@ -629,7 +629,7 @@ section .infoBtm.ani.on{
     border: none;
     background: #F95700;
 }
-.works .textArea .box .tab div a{
+.works .textArea .box .btnWrap div a{
     color: #fff;
     font-size: 14px;
     font-weight: 500;
@@ -637,7 +637,7 @@ section .infoBtm.ani.on{
     text-align: center;
     cursor: pointer;
 }
-.works .textArea .box .tab div.process{
+.works .textArea .box .btnWrap div.process{
     margin-right: 15px;
 }
 

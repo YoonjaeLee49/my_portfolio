@@ -231,7 +231,7 @@
     margin-right: 30px;
     width: 150px;
 }
-.recommend .tab{
+.recommend .btnWrap{
     /*border-bottom: 2px solid #ff7500;*/
     /*position: relative;*/
     /*margin-bottom: 69px;*/
@@ -240,7 +240,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.recommend .tab button{
+.recommend .btnWrap button{
     border: none;
     background: #ffda4e;
     width: 100px;
@@ -252,7 +252,7 @@
     margin-right: 12px;
     cursor: pointer;
 }
-.recommend .tab button:hover{
+.recommend .btnWrap button:hover{
     background: #FF9500;
     color: #fff;
 }
@@ -352,14 +352,14 @@
     width: 600px;
     box-sizing: border-box;
 }
-.board .tab{
+.board .btnWrap{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
 }
-.board .tab h3{
+.board .btnWrap h3{
     padding: 10px;
     box-sizing: border-box;
     border: none;
@@ -369,7 +369,7 @@
     color: #2b2b2b;
     border-bottom: 2px solid #ff9500;
 }
-.board .tab .more{
+.board .btnWrap .more{
     width: 15px;
     height: 15px;
     background-image: url("../images/ico-plus.png");
