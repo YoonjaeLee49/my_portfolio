@@ -157,7 +157,7 @@
 /*QuickMenu Section*/
 .quickMenu{
     position: absolute;
-    bottom: 10%;
+    bottom: -105px;
     left: 50%;
     transform: translateX(-50%);
 }
