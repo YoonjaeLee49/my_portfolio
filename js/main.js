@@ -123,20 +123,14 @@ $(function (){
         }
     }
 
+    $(".popupBtn").on("click", function () {
+        $(".popupBtn").toggleClass("on");
+        $(".menuPop").fadeToggle();
+    });
+
+    $(".menuPop ul li").on("click", function (){
+       $(".menuPop").fadeOut();
+       $(".popupBtn").removeClass("on");
+    });
+
 });
-
-
-// const imgSrc = $(this).siblings("img").attr("src").replace("-dark", "");
-// // "../images/contents04-dark.png";
-// $imgModal.find("img").attr("src", imgSrc);
-
-// const index = $(this).closest("div").index();
-// if (index === 8 || index === 9) {
-//     $imgModal.find("img").css({
-//         width: 270 + "px",
-//     })
-// } else {
-//     $imgModal.find("img").css({
-//         width: "",
-//     })
-// }

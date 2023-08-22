@@ -130,9 +130,9 @@ section .infoBtm.ani.on{
 
 .headerWrap {
     position: relative;
-    /*height: 120px;*/
     margin: 0 80px;
     text-align: right;
+    height: inherit;
 }
 
 .headerWrap .logo {
@@ -184,7 +184,95 @@ section .infoBtm.ani.on{
 @keyframes rotateImg {
     100%{transform: rotate(360deg);}
 }
+.header .popupBtn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 
+    display: none;
+    width: 22px;
+    height: 18px;
+    z-index: 100;
+    cursor: pointer;
+}
+.header .popupBtn span {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: white;
+    transition: 0.5s;
+}
+.header .popupBtn span:nth-child(1){
+    top: 0;
+}
+.header .popupBtn span:nth-child(2),
+.header .popupBtn span:nth-child(3){
+    top: 50%;
+}
+.header .popupBtn span:nth-child(4){
+    top: 100%;
+}
+.header .popupBtn.on span:nth-child(1){
+    opacity: 0;
+}
+.header .popupBtn.on span:nth-child(2){
+    transform: rotate(45deg);
+}
+.header .popupBtn.on span:nth-child(3){
+    transform: rotate(-45deg);
+}
+.header .popupBtn.on span:nth-child(4){
+    opacity: 0;
+}
+
+.header .menuPop {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.73);
+}
+
+.header .menuPop ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.header .menuPop ul li {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+    animation: menuPop 0.5s linear 1 both;
+}
+.header .menuPop ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.header .menuPop ul li:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.header .menuPop ul li:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.header .menuPop ul li:nth-child(4) {
+    animation-delay: 0.5s;
+}
+@keyframes menuPop {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 
 /*Intro Section*/
@@ -548,12 +636,16 @@ section .infoBtm.ani.on{
 .works{
     padding: 100px 0;
 }
+.works .slideArea{
+    margin-left: 785px;
+    position: relative;
+}
 .works .textArea{
     width: 485px;
     height: 626px;
     position: absolute;
-    left: 300px;
-
+    left: -50%;
+    top: 0;
 }
 .works .textArea .box{
     width: 100%;
@@ -647,10 +739,10 @@ section .infoBtm.ani.on{
 .works .textArea .box.active .process{transition-delay: 0.4s}
 .works .textArea .box.active .design{transition-delay: 0.5s}
 
-.works .slideArea{
-    margin-left: 785px;
-    position: relative;
-}
+/*.works .slideArea{*/
+/*    margin-left: 785px;*/
+/*    position: relative;*/
+/*}*/
 .works .slideArea .imgSlider{
     cursor: grab;
 }
@@ -860,12 +952,6 @@ section .infoBtm.ani.on{
     }
 
 
-    /*RollingBanner*/
-    .rollingBanner .textWrap div{
-        font-size: 96px;
-    }
-
-
     /*TextCard Section*/
     .textCard {
         padding: 80px 60px;
@@ -895,11 +981,18 @@ section .infoBtm.ani.on{
 
 
 
+    /*RollingBanner*/
+    .rollingBanner .textWrap div{
+        font-size: 96px;
+    }
+
+
+
     /*Works Section*/
     .works .textArea{
         height: 426px;
         width: 400px;
-        left: 70px;
+        left: -72%;
     }
     .works .textArea .box{
         padding: 20px 10px;
@@ -960,5 +1053,224 @@ section .infoBtm.ani.on{
 
 /*Media 768*/
 @media (max-width: 768px) {
-    
+    /*Header*/
+    .header{
+        height: 80px;
+    }
+    .headerWrap .logo {
+        top: 20px;
+    }
+    .header nav{
+        display: none;
+    }
+    .headerWrap .headerIco img{
+        display: none;
+    }
+    .header .popupBtn{
+        display: block;
+    }
+
+
+
+    /*Intro Section*/
+    .intro{
+        padding: 0 40px;
+        height: 340px;
+    }
+    .intro .introBg {
+        width: 768px;
+        height: auto;
+    }
+    .intro .textWrap span {
+        font-size: 24px;
+    }
+    .intro .textWrap strong {
+        font-size: 56px;
+        margin-bottom: 20px;
+    }
+    .intro .textWrap p {
+        font-size: 28px;
+    }
+    .intro .shakeImg{
+        position: absolute;
+        left: 50%;
+        top: 7%;
+    }
+    .intro .shakeImg img{
+        width: 70px;
+        height: 70px;
+    }
+
+
+    /*About Section*/
+    .about{
+        box-sizing: border-box;
+        padding: 70px 40px;
+    }
+    .aboutContents .profileImgBox {
+        margin-right: 40px;
+    }
+    .profileImgBox img {
+        height: 280px;
+    }
+    .aboutContents .rightBox {
+        height: 280px;
+    }
+    .aboutContents .rightBox em {
+        font-size: 56px;
+    }
+    .aboutContents .rightBox .textWrap strong {
+        font-size: 18px;
+    }
+    .aboutContents .rightBox .textWrap .contactList li {
+        font-size: 14px;
+        background-size: 18px 18px;
+        padding-left: 22px;
+        line-height: 18px;
+    }
+    .aboutContents .rightBox .textWrap .contactList li:nth-child(2) {
+        margin-top: 7px;
+    }
+    .aboutContents .rightBox .textWrap p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+
+    /*nfoArea Section*/
+    .infoArea {
+        padding: 50px 60px;
+    }
+    .infoArea .inner {
+        width: 100%;
+    }
+    .infoArea strong {
+        font-size: 18px;
+    }
+    .infoTop {
+        margin-bottom: 30px;
+    }
+    .infoTop ul li {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .infoBtm .tools ul {
+        display: flex;
+    }
+    .infoBtm .tools ul li img {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    /*TextCard Section*/
+    .textCard {
+        padding: 70px 40px;
+    }
+    .textCard .cardWrap {
+        width: 100%;
+    }
+    .textCard .cardWrap .card{
+        width: 210px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .textCard .cardWrap .card .cardImg {
+        height: 210px;
+    }
+    .textCard .cardWrap .card .cardTxt {
+        width: 180px;
+    }
+    .textCard .cardWrap .card span {
+        font-size: 28px;
+    }
+    .textCard .cardWrap .card p {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+
+
+
+    /*RollingBanner*/
+    .rollingBanner .textWrap div{
+        font-size: 72px;
+    }
+
+
+    /*Works Section*/
+    .works{
+        height: 950px;
+        padding: 70px 0;
+    }
+    .works .textArea{
+        height: 426px;
+        width: 400px;
+        top: 110%;
+        left: 0;
+    }
+    .works .textArea .box{
+        padding: 20px 10px;
+    }
+    .works .textArea .box .title{
+        font-size: 62px;
+        margin-bottom: 20px;
+    }
+    .works .textArea .box strong{
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+    .works .textArea .box span{
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+    .works .textArea .box p{
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .works .textArea .box .percentage,
+    .works .textArea .box .desc{
+        margin-bottom: 14px;
+    }
+    .works .textArea .box .tool{
+        margin-bottom: 20px;
+    }
+    .works .slideArea{
+        margin-left: 40px;
+    }
+    .works .slideArea .imgSlider .slick-slide{
+        margin-right: 40px;
+    }
+    .works .slideArea .imgSlider .slick-slide img {
+        height: 326px;
+        width: 418px;
+        object-fit: cover;
+    }
+    .works .progressBar{
+        left: 40px;
+        width: 90%;
+    }
+
+
+    /*Contents Section*/
+    .contents{
+        padding: 40px 0;
+    }
+    .contents .contentsWrap {
+        width: 580px;
+    }
+
+
+    /*Footer*/
+    .footer{
+        padding: 0 40px;
+    }
+    .footer .footLeft{
+        font-size: 72px;
+        font-weight: 800;
+    }
+    .footer .footRight{
+        font-size: 12px;
+    }
 }
