@@ -80,12 +80,7 @@
 .event .eventImg img{
     width: 100%;
 }
-.event .titleArea{
-    /*position: absolute;*/
-    /*left: 50%;*/
-    /*top: 50%;*/
-    /*transform: translateY(-50%);*/
-}
+.event .titleArea{}
 .event .titleArea h3{
     font-size:  36px;
     font-weight: 600;
@@ -100,12 +95,17 @@
 }
 .event .right .btnBox button{
     color: #fff;
+    font-weight: 500;
     width: 150px;
     height: 35px;
     border: 1px solid #fff;
     border-radius: 300px;
     background: transparent;
     box-sizing: border-box;
+    cursor: pointer;
+}
+.event .right .btnBox button:hover{
+    font-weight: 700;
 }
 
 
@@ -183,6 +183,7 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
 }
+
 
 
 /*News Section*/
