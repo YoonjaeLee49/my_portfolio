@@ -1,6 +1,6 @@
 $(function (){
 
-    const $imgSlider = $("#imgSlider");
+    const $Slider = $("#slider");
     const $works = $("#works");
 
     const $contentsWrap = $(".contents .contentsWrap")
@@ -56,26 +56,22 @@ $(function (){
         $(this).removeClass("on");
     });
 
-    $imgSlider.slick({
+    $Slider.slick({
         arrows:false,
 
-        // variableWidth: true,
-
         centerMode: true,
+        variableWidth: true,
         initialize: 1,
-        // centerPadding: "300px",
-        // centerPadding: "200px",
+
+        infinite: true,
+        focusOnSelect: true,
 
         dots: true,
         appendDots: $(".works").find(".dotsWrap"),
         dotsClass: "customDots",
     });
 
-    // $(".contents").find(".contentsWrap").slick({
-    //     centerMode: true,
-    //     slidesToShow: 3,
-    //     centerPadding: "10px",
-    // });
+
 
     $works.find("#imgSlider").on("beforeChange", function (event, slick, current, next){
         $works.find(".textArea .box").eq(next).addClass("active");
