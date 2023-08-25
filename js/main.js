@@ -59,10 +59,11 @@ $(function (){
     $imgSlider.slick({
         arrows:false,
 
-        variableWidth: true,
+        // variableWidth: true,
 
         centerMode: true,
         initialize: 1,
+        // centerPadding: "300px",
         // centerPadding: "200px",
 
         dots: true,
