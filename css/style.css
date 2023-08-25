@@ -824,16 +824,6 @@ section .infoBtm.ani.on{
     margin: 0 auto;
     padding: 100px 0;
 }
-.works .title{
-    width: 100%;
-    margin-bottom: 50px;
-}
-.works .title h2{
-    font-size: 9vw;
-    font-style: italic;
-    font-weight: 700;
-    opacity: 20%;
-}
 .works .slideArea{}
 .works .slideArea .imgSlider{
     margin-bottom: 60px;
