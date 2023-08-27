@@ -39,13 +39,13 @@ $(function (){
         $(this).find("i").toggleClass("active");
     });
 
-    $works.find("#imgSlider").on("init", function (event, slick){
-        $works.find(".textArea .box").eq(slick.currentSlide).addClass("active");
-
-        $works.find(".progress").css({
-            width:( (slick.currentSlide+1) / slick.slideCount) * 100 + "%",
-        });
-    });
+    // $works.find("#imgSlider").on("init", function (event, slick){
+    //     $works.find(".textArea .box").eq(slick.currentSlide).addClass("active");
+    //
+    //     $works.find(".progress").css({
+    //         width:( (slick.currentSlide+1) / slick.slideCount) * 100 + "%",
+    //     });
+    // });
 
 
     setTimeout(function (){

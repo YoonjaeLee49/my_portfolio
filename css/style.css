@@ -1159,7 +1159,11 @@ section .infoBtm.ani.on{
     .works .slideArea .slider{
         margin-bottom: 30px;
     }
-    .works .slider .btmArea h4{
+    .works .slider .slick-slide .imgArea img{
+        width: 50%;
+        height: 50%;
+    }
+    .works .slider .btmArea{
         font-size: 14px;
     }
 
