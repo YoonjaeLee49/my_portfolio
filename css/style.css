@@ -893,13 +893,23 @@ section .infoBtm.ani.on{
 
 /*Media 768*/
 @media (max-width: 768px) {
+    .inner{
+        width: 90%;
+    }
+
     /*Header*/
     .header{
         height: 70px;
     }
     .header .headerWrap{
         margin: 0 40px;
-        border: 1px solid #fff;
+    }
+    .header .headerWrap .logo{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .header .headerWrap .logo a{
+        font-size: 32px;
     }
     .header .headerWrap nav .gnb{
         display: none;
@@ -912,8 +922,6 @@ section .infoBtm.ani.on{
     }
 
 
-
-
     /*Intro Section*/
     .intro .shakeImg{
         position: absolute;
@@ -924,27 +932,35 @@ section .infoBtm.ani.on{
 
     /*About Section*/
     .aboutContents .rightBox .textWrap strong{
-        font-size: 22px;
+        font-size: 18px;
     }
     .aboutContents .rightBox .textWrap .contactList li{
-        font-size: 16px;
-        background-size: 20px 20px;
-        line-height: 20px;
+        font-size: 14px;
+        background-size: 16px 16px;
+        line-height: 16px;
+        padding-left: 24px;
     }
     .aboutContents .rightBox .textWrap .contactList li:nth-child(2) {
         margin-top: 7px;
     }
     .aboutContents .rightBox .textWrap p{
-        font-size: 16px;
+        font-size: 14px;
     }
 
 
     /*nfoArea Section*/
     .infoArea strong {
-        font-size: 22px;
+        font-size: 18px;
     }
     .infoTop {
         margin-bottom: 40px;
+    }
+    .infoTop  ul li{
+        font-size: 14px;
+    }
+    .infoBtm .tools ul li img{
+        width: 30px;
+        height: 30px;
     }
 
 
@@ -953,18 +969,21 @@ section .infoBtm.ani.on{
         padding: 80px 0;
     }
     .textCard .cardWrap .card{
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
     .textCard .cardWrap .card span {
-        font-size: 24px;
+        font-size: 22px;
+    }
+    .textCard .cardWrap .card p{
+        font-size: 12px;
     }
 
 
 
     /*RollingBanner*/
     .rollingBanner .textWrap div{
-        font-size: 96px;
+        font-size: 72px;
     }
 
 
@@ -972,6 +991,10 @@ section .infoBtm.ani.on{
     /*Works Section*/
     .works{
         padding: 80px 0;
+    }
+    .works .slider .slick-slide .imgArea img{
+        width: 50%;
+        height: 50%;
     }
 
 
