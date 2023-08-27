@@ -1067,7 +1067,7 @@ section .infoBtm.ani.on{
     .main{
         margin-top: 70px;
     }
-    .followCursor{
+    .followCursor {
         display: none;
     }
 
