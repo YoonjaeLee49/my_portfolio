@@ -79,12 +79,22 @@ $(function (){
 
 
 
-    $works.find("#imgSlider").on("beforeChange", function (event, slick, current, next){
-        $works.find(".textArea .box").eq(next).addClass("active");
-        $works.find(".textArea .box").eq(next).siblings().removeClass("active");
+    $Slider.on("beforeChange", function (e, s, c, n){
+        if (c !== n){
+            $(".slick-current + .slick-cloned").each(function (i, v){
+                const item = $(v);
+                setTimeout(function (){
+                    item.addClass("slick-current");
+                    item.addClass("slick-active");
+                });
+            });
+        }
+
+        $works.find(".textArea .box").eq(n).addClass("active");
+        $works.find(".textArea .box").eq(n).siblings().removeClass("active");
 
         $works.find(".progress").css({
-            width:( (next+1) / slick.slideCount) * 100 + "%",
+            width:( (n+1) / s.slideCount) * 100 + "%",
         });
     });
 
