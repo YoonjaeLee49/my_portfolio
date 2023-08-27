@@ -16,7 +16,7 @@ $(function (){
         const index = $(this).closest("div").index();
         if (index === 8 || index === 9){
             $imgModal.find("img").css({
-                width: 270 + "px",
+                width: 220 + "px",
             });
         } else {
             $imgModal.find("img").css({

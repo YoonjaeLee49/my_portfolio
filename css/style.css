@@ -741,22 +741,34 @@ section .infoBtm.ani.on{
 
 /*Contents Section*/
 .contents{
-    width: 100%;
+    /*width: 100%;*/
     padding: 100px 0;
-}
-.contents .contentsWrap{
-    display: flow-root;
-    width: 1450px;
+
+    max-width: 100%;
     margin: 0 auto;
 }
+.contents .contentsWrap{
+    /*display: flow-root;*/
+    /*width: 1450px;*/
+    /*margin: 0 auto;*/
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
 .contents .contentsWrap div{
-    float: left;
-    margin: 15px;
-    overflow: hidden;
+    /*float: left;*/
+    /*margin: 15px;*/
+    /*overflow: hidden;*/
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    min-height: 260px;
+    flex-basis: 150px;
+    flex-grow: 0;
 }
 
 .contents .contentsWrap div:hover button{
@@ -875,9 +887,7 @@ section .infoBtm.ani.on{
 
 
     /*Contents Section*/
-    .contents .contentsWrap {
-        width: 870px;
-    }
+
 
     /*Footer*/
     .footer{
@@ -993,22 +1003,26 @@ section .infoBtm.ani.on{
         padding: 80px 0;
     }
     .works .slider .slick-slide .imgArea img{
-        width: 50%;
-        height: 50%;
+        width: 70%;
+        height: 70%;
+        margin: 0 auto;
     }
-
+    .works .dotsWrap .customDots li{
+        width: 8px;
+        height: 8px;
+    }
 
     /*Contents Section*/
-    .contents .contentsWrap {
-        width: 870px;
-    }
 
     /*Footer*/
     .footer{
-        padding: 0 70px;
+        padding: 0 40px;
     }
     .footer .footLeft{
-        font-size: 90px;
+        font-size: 72px;
         font-weight: 800;
+    }
+    .footer .footRight span{
+        font-size: 12px;
     }
 }
