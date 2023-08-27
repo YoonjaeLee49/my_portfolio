@@ -33,6 +33,12 @@ $(function (){
         $imgModal.hide();
     });
 
+    $(".contents").find(".show").click(function (e){
+        e.preventDefault();
+        $(".contentsWrap").slideToggle();
+        $(this).find("i").toggleClass("active");
+    });
+
     $works.find("#imgSlider").on("init", function (event, slick){
         $works.find(".textArea .box").eq(slick.currentSlide).addClass("active");
 
