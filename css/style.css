@@ -1137,9 +1137,9 @@ body.lightMode .contents .show{
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 440px) {
     .inner {
-        width: 440px;
+        width: 100%;
     }
 
     .main {
