@@ -848,6 +848,7 @@ body.lightMode .contents .show{
 }
 .contents .show i{
     margin-left: 15px;
+    font-size: 14px;
 }
 .contents .show i.active{
     transform: rotate(180deg);
