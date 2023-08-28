@@ -33,7 +33,7 @@ a {
 }
 
 main{
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 
@@ -136,25 +136,26 @@ section .infoBtm.ani.on{
     left: 0;
     top: 0;
     width: 100%;
-    background-color: #000;
     z-index: 1000;
 }
-
+body.lightMode .header{
+    background: #fff;
+}
 .headerWrap {
     position: relative;
     margin: 0 80px;
     text-align: right;
-    height: inherit;
+    height: 100px;
 }
 
 .headerWrap .logo {
     position: absolute;
     left: 0;
-    top: 30px;
+    top: 20px;
 }
 
 .headerWrap .logo a {
-    font-size: 44px;
+    font-size: 36px;
     font-weight: 800;
     display: block;
 }
@@ -173,7 +174,7 @@ section .infoBtm.ani.on{
 .headerWrap nav .gnb li a {
     display: block;
     height: 120px;
-    padding-top: 55px;
+    padding-top: 33px;
     box-sizing: border-box;
     width: 160px;
 }
@@ -187,7 +188,7 @@ section .infoBtm.ani.on{
     height: 18px;
     display: inline-block;
     position: relative;
-    top: -66px;
+    top: -86px;
     right: 140px;
     border-radius: 30px;
     background-color: transparent;
@@ -233,6 +234,11 @@ section .infoBtm.ani.on{
     display: block;
     animation: rotateImg 6s linear infinite;
     transform-origin: 50% 50%;
+    width: 70px;
+    height: 70px;
+}
+body.lightMode .headerIco img {
+    content: url("../images/header-ico-light.png");
 }
 
 @keyframes rotateImg {
@@ -258,6 +264,9 @@ section .infoBtm.ani.on{
     height: 1px;
     background: white;
     transition: 0.5s;
+}
+body.lightMode .header .popupBtn span{
+    background: #000;
 }
 .header .popupBtn span:nth-child(1){
     top: 0;
@@ -331,7 +340,6 @@ section .infoBtm.ani.on{
 
 /*Intro Section*/
 .intro {
-    background-color: #000;
     width: 100%;
 
     /*height: 850px;*/
@@ -357,7 +365,11 @@ section .infoBtm.ani.on{
     visibility: visible;
     transition: all 1.2s;
 }
-.intro.on .introBg{
+body.lightMode .intro .introBg {
+    content: url("../images/intro-bg-light.png");
+}
+.intro.on .introBg,
+body.lightMode .intro.on .introBg{
     transform: scale(1);
     opacity: 1;
     visibility: visible;
@@ -665,6 +677,9 @@ section .infoBtm.ani.on{
 .rollingBanner .textWrap{
     white-space: nowrap;
 }
+body.lightMode .rollingBanner .textWrap div{
+    -webkit-text-stroke: 1px #000;
+}
 .rollingBanner .textWrap div{
     font-size: 8vw;
     line-height: 1.3;
@@ -764,6 +779,9 @@ section .infoBtm.ani.on{
     border-radius: 30px;
     font-size: 1vw;
 }
+body.lightMode .works .slideArea .btnWrap div{
+    border: 1px solid #000;
+}
 .works .slideArea .btnWrap div:hover{
     color: #F95700;
 }
@@ -784,7 +802,13 @@ section .infoBtm.ani.on{
     margin-right: 12px;
     cursor: pointer;
 }
+body.lightMode .works .dotsWrap .customDots li{
+    background: #9f9f9f;
+}
 .works .dotsWrap .customDots li.slick-active{
+    background: #F95700FF;
+}
+body.lightMode .works .dotsWrap .customDots li.slick-active{
     background: #F95700FF;
 }
 .works .dotsWrap .customDots li button{
@@ -816,6 +840,9 @@ section .infoBtm.ani.on{
     border-radius: 8px;
     margin-bottom: 30px;
     box-sizing: border-box;
+}
+body.lightMode .contents .show{
+    background: #e0e0e0;
 }
 .contents .show i{
     margin-left: 15px;
