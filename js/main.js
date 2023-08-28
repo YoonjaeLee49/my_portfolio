@@ -104,6 +104,8 @@ $(function (){
     let $winH = $(window).innerHeight();
     let scrollH = 0;
 
+
+
     function mousemoveEvent(){
         const $cursor = $(".followCursor");
         const mousePos = {
@@ -149,6 +151,7 @@ $(function (){
         }
     }
 
+
     $(".popupBtn").on("click", function () {
         $(".popupBtn").toggleClass("on");
         $(".menuPop").fadeToggle();
@@ -160,19 +163,20 @@ $(function (){
     });
 
 
-    if(matchMedia("screen and (max-width: 480px)").matches){
-        console.log("mobile");
-        // $(".contents").find(".contentsWrap").slick();
-    }else if (matchMedia("screen and (max-width: 768px)").matches){
-        console.log("tablet");
-    } else if(matchMedia("screen and (max-width: 1024px)").matches){
-        console.log("laptop");
-    }else if(matchMedia("screen and (min-width: 1025px)").matches){
-        console.log("desktop");
-    }
-
     window.onresize = function(){
         document.location.reload();
     };
+
+    // if(window.matchMedia("(min-width: 1024px)").matches) {
+    //     mousemoveEvent();
+    //     scrollEvent();
+    // } else {
+    //     console.log("size not pc");
+    // }
+
+    // if ($winW >= 1024) {
+    //     mousemoveEvent();
+    //     scrollEvent();
+    // }
 
 });
