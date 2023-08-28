@@ -1265,14 +1265,15 @@ body.lightMode .contents .show{
     .works .slideArea .slider {
         margin-bottom: 30px;
     }
-
     .works .slider .slick-slide .imgArea img {
         width: 50%;
         height: 50%;
     }
-
-    .works .slider .btmArea {
+    .works .slider .btmArea h4{
         font-size: 14px;
+    }
+    .works .slider .btmArea .btnWrap div{
+        font-size: 12px;
     }
 
 

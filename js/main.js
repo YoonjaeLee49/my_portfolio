@@ -1,4 +1,39 @@
 $(function (){
+    // dark mode
+    const $body = $("body");
+    const $toggle = $(".toggleSwitch");
+    // const $toggleBtn = $(".toggleButton");
+    const colorMode = localStorage.getItem('colorMode');
+
+    if (colorMode === 'dark') {
+        setDark();
+    } else {
+        setLight();
+    }
+
+    $toggle.on('click', function () {
+        changeMode();
+    });
+
+    function changeMode() {
+        if ($body.hasClass('lightMode')) {
+            localStorage.setItem('colorMode', 'light');
+            setLight();
+        } else {
+            localStorage.setItem('colorMode', 'dark');
+            setDark();
+        }
+    }
+
+    function setDark() {
+        $body.addClass('lightMode');
+        $toggle.prop('checked', true);
+    }
+
+    function setLight() {
+        $body.removeClass('lightMode');
+        $toggle.prop('checked', false);
+    }
 
     const $Slider = $("#slider");
     const $works = $("#works");
