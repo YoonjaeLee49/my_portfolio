@@ -1144,7 +1144,7 @@ body.lightMode .contents .show{
 
 @media (max-width: 440px) {
     .inner {
-        width: 100%;
+        width: 400px;
     }
 
     .main {
@@ -1282,7 +1282,7 @@ body.lightMode .contents .show{
     }
 
     .contents .inner {
-        width: 440px;
+        width: 400px;
     }
 
     .contents h3 {
@@ -1308,11 +1308,11 @@ body.lightMode .contents .show{
     }
 
     .footer .footLeft {
-        font-size: 42px;
+        font-size: 34px;
         font-weight: 800;
     }
 
     .footer .footRight span {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
