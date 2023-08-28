@@ -651,14 +651,15 @@ body.lightMode .intro.on .introBg{
     display: block;
     margin-bottom: 15px;
 }
-
 .textCard .cardWrap .card p {
     font-size: 14px;
     line-height: 1.5;
     font-weight: 300;
     /*white-space: pre-wrap;*/
 }
-
+body.lightMode .textCard .cardWrap .card p{
+    color: #fff;
+}
 .textCard .cardWrap .card.on:after{
     opacity: 1;
 }
@@ -1042,8 +1043,9 @@ body.lightMode .contents .show{
         display: block;
     }
     .headerWrap .toggleSwitch {
-        top: 50%;
-        transform: translateY(-50%);
+        /*top: 50%;*/
+        /*transform: translateY(-50%);*/
+        top: 40px;
         right: 50px;
     }
 
@@ -1100,6 +1102,7 @@ body.lightMode .contents .show{
     }
     .textCard .cardWrap .card span {
         font-size: 22px;
+        -webkit-text-stroke: 1px #F95700;
     }
     .textCard .cardWrap .card p{
         font-size: 12px;
