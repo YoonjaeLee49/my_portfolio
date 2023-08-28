@@ -2,7 +2,7 @@ $(function (){
     // dark mode
     const $body = $("body");
     const $toggle = $(".toggleSwitch");
-    const $toggleBtn = $(".toggleButton");
+    // const $toggleBtn = $(".toggleButton");
     const colorMode = localStorage.getItem('colorMode');
 
     if (colorMode === 'dark') {
