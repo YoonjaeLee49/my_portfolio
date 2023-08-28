@@ -1040,6 +1040,11 @@ body.lightMode .contents .show{
     .header .popupBtn{
         display: block;
     }
+    .headerWrap .toggleSwitch {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 50px;
+    }
 
 
     /*Intro Section*/
