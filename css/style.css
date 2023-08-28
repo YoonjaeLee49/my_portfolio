@@ -941,29 +941,6 @@ section .infoBtm.ani.on{
     }
 
 
-    /*Scroll Event Items*/
-    section .ani{
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    section .ani.on{
-        transform: translateY(0);
-        opacity: 1;
-        transition: 0.3s;
-    }
-
-    section .profileImgBox.ani.on{
-        transition-delay: 0S;
-    }
-    section .rightBox.ani.on{
-        transition-delay: 0s;
-    }
-    section .infoBtm.ani.on{
-        transition-delay: 0s;
-    }
-
-
 
     /*Header*/
     .header{
