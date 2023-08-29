@@ -1,85 +1,20 @@
+/* ----- Import URL ----- */
 @import url("../css/common.css");
 
-.history{
-    /*background: orange;*/
-    width: 100%;
-    padding: 250px 0 400px 0;
-}
-.history .inner{
-    width: 1420px;
-}
-.history h3{
-    text-align: center;
-    margin-bottom: 30px;
-}
-.history .line{
-    width: 1px;
-    height: 100px;
-    background: #0A8000;
-    margin: 0 auto 40px;
-}
-.history .titleArea{
-    padding: 40px 50px;
-    box-sizing: border-box;
-    background: #0A8000;
-    color: #fff;
-}
-.history .titleArea span{
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 52px;
-    display: block;
-    margin-bottom: 20px;
-}
-.history .titleArea p{
-    font-weight: 400;
-}
-.history .accordion{}
-.history .accordion li{}
-.history .accordion li .title{
-    padding: 30px 50px;
-    border-bottom: 1px solid #b5d183;
-    cursor: pointer;
-}
-.history .accordion li .title strong{
-    font-size: 36px;
-    font-weight: 700;
-    color: #4f4f4f;
-}
-.history .accordion li .title i{
-    float: right;
-    font-size: 23px;
-    color: #0A8000;
-    transition: .3s;
-}
-.history .accordion li .desc{
-    display: none;
-    padding: 30px 100px;
-    border-bottom: #cbcbcb;
-    border-bottom: 1px solid #cbcbcb;
-}
-.history .accordion li .desc ul{}
-.history .accordion li .desc ul li{
-    margin-bottom: 15px;
-    font-weight: 400;
-    line-height: 24px;
-}
-.history .accordion li .desc ul li:last-child{
-    margin-bottom: 0;
-}
-.history .accordion li .desc ul li:before{
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background: #0A8000;
-    border-radius: 50%;
-    margin-right: 8px;
-}
-
-.history .accordion li .title.on strong{
-    color: #0A8000;
-}
-.history .accordion li .title i.active{
-    transform: rotate(45deg);
-}
+/* ----- History Section ----- */
+.history {width: 100%; padding: 250px 0 400px 0;}
+.history .inner {width: 1420px;}
+.history h3 {text-align: center; margin-bottom: 30px;}
+.history .line {width: 1px; height: 100px; background: #0A8000; margin: 0 auto 40px;}
+.history .titleArea {padding: 40px 50px; box-sizing: border-box; background: #0A8000; color: #fff;}
+.history .titleArea span {font-size: 44px; font-weight: 700; line-height: 52px; display: block; margin-bottom: 20px;}
+.history .titleArea p {font-weight: 400;}
+.history .accordion li .title {padding: 30px 50px; border-bottom: 1px solid #b5d183; cursor: pointer;}
+.history .accordion li .title strong {font-size: 36px; font-weight: 700; color: #4f4f4f;}
+.history .accordion li .title i {float: right; font-size: 23px; color: #0A8000; transition: .3s;}
+.history .accordion li .desc {display: none; padding: 30px 100px; border-bottom: #cbcbcb; border-bottom: 1px solid #cbcbcb;}
+.history .accordion li .desc ul li {margin-bottom: 15px; font-weight: 400; line-height: 24px;}
+.history .accordion li .desc ul li:last-child {margin-bottom: 0;}
+.history .accordion li .desc ul li:before {content: ''; display: inline-block; width: 6px; height: 6px; background: #0A8000; border-radius: 50%; margin-right: 8px;}
+.history .accordion li .title.on strong {color: #0A8000;}
+.history .accordion li .title i.active {transform: rotate(45deg);}

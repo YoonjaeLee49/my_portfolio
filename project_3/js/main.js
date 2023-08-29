@@ -4,12 +4,19 @@ $(function() {
     const $secBest = $("section.best");
     const $secGuide = $("section.guide");
     const $secEvent = $("section.event");
-
     const $noticeModal = $(".layerPop .noticeModal");
     const $guideModal = $(".layerPop .guideModal");
-
     const saveChecked = JSON.parse(localStorage.getItem("checked"));
+    const $video = $guideModal.find("video").get(0);
+    const $noticeChk = $noticeModal.find("#chk");
+    let isChecked = false;
+    const floatingTop = $(".floatingTop");
+    const floatingBtm = $(".floatingBtm");
+    let $win = $(window);
+    let $winWidth = $win.innerWidth();
+    let scrollTop = 0;
 
+    // ---------- NoticeModal PopUp ---------- //
     if (saveChecked) {  // 1주일간 보지 않기 클릭이 되어있는 경우
         $("body").removeClass("popupOn");
         $noticeModal.hide();
@@ -18,12 +25,7 @@ $(function() {
         $noticeModal.show();
     }
 
-    const $video = $guideModal.find("video").get(0);
-    const $noticeChk = $noticeModal.find("#chk");
-
-    let isChecked = false;
-
-// 메인 팝업 체크 이벤트 발생시 로컬스토리지에 true/false 전달 기능
+    // 메인 팝업 체크 이벤트 발생시 로컬스토리지에 true/false 전달 기능
     $noticeChk.on("change", function() {
         isChecked = $(this).prop("checked");
         localStorage.setItem("checked", isChecked);
@@ -34,7 +36,7 @@ $(function() {
         $noticeModal.hide();
     });
 
-
+    // ---------- GuideModal PopUp ---------- //
     $secGuide.find(".guideImg").on("click", function() {
         $("body").addClass("popupOn");
         $guideModal.show();
@@ -80,8 +82,7 @@ $(function() {
         $video.requestFullscreen();
     });
 
-
-
+    // ---------- NoticeModal Slider ---------- //
     $noticeModal.find(".slider").slick({
         arrows: true,
         prevArrow: $noticeModal.find(".prevArrow"),
@@ -92,6 +93,7 @@ $(function() {
         dotsClass: "customDots"
     });
 
+    // ---------- Best Section Slider ---------- //
     $secBest.find(".slider").slick({
         centerMode: true,
         centerPadding: "23%",
@@ -117,7 +119,7 @@ $(function() {
         ]
     });
 
-
+    // ---------- Event Section Slider ---------- //
     $secEvent.find(".slider").slick({
         dots: true,
         appendDots: $secEvent.find(".dotsArea"),
@@ -128,14 +130,7 @@ $(function() {
         nextArrow: $secEvent.find(".nextArrow"),
     });
 
-
-    const floatingTop = $(".floatingTop");
-    const floatingBtm = $(".floatingBtm");
-
-    let $win = $(window);
-    let $winWidth = $win.innerWidth();
-    let scrollTop = 0;
-
+    // ---------- Header Event ---------- //
     // 윈도우에서 스크롤을 이동하면 발생되는 이벤트
     $(window).on("scroll", function() {
         // $(this).scrollTop(); // 스크롤 좌표를 px 단위로 알려준다.
@@ -187,6 +182,7 @@ $(function() {
         }
     }
 
+    // ---------- FloatingMenu ---------- //
     function showFloatingMenu() {
         if (scrollTop > 1000) {
             floatingTop.addClass("on");
@@ -196,17 +192,6 @@ $(function() {
             floatingBtm.removeClass("on");
         }
     }
-
-    // $(window).innerWidth();
-    // $(window).innerHeight();
-
-    // 윈도우 스크린 사이즈가 변경될때 실행되는 이벤트
-
-
-
-    // 윈도우에서 마우스를 이동하면 발생되는 이벤트
-    // $(window).on("mousemove", function() {});
-
 });
 
 

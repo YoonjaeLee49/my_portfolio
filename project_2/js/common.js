@@ -1,3 +1,4 @@
+// ---------- Header Hover Event ---------- //
 $(function (){
     const $headerBtm = $(".header .headerBtm");
     const $depth2 = $(".headerBtm .gnb .depth2");
@@ -18,7 +19,7 @@ $(function (){
 
     hoverHeaderEvent();
 
-
+// ---------- History SubMenu Accordion ---------- //
     $(function (){
         const accordion = $(".subMenuCommon .menuAccordion");
 

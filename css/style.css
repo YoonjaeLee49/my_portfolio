@@ -1,1323 +1,371 @@
+/* ----- Import URL ----- */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
-
+@import
+url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
-body {
-    background: black;
-    font-family: 'Noto Sans', sans-serif;
-    color: #fff;
-}
-body.darkMode{
-    background: black;
-    color: #fff;
-}
-body.lightMode {
-    background: #fff;
-    color: #000;
-}
-.inner{
-    width: 80%;
-    margin: 0 auto;
-}
-body.popupOn{overflow: hidden}
-body.popupOn .layerPop{display: block}
+/* ----- Settings ----- */
+body {background: black; font-family: 'Noto Sans', sans-serif; color: #fff;}
+body.darkMode {background: black; color: #fff;}
+body.lightMode {background: #fff; color: #000; }
+body.popupOn {overflow: hidden}
+body.popupOn .layerPop {display: block}
+.inner {width: 80%; margin: 0 auto;}
+header,section {box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+main {margin-top: 100px;}
 
-header,section{
-    /*border: 1px solid #fff;*/
-    box-sizing: border-box;
-}
+/* ----- LayerPop ----- */
+.layerPop {display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.7); z-index: 9999; box-sizing: border-box;}
+.layerPop .imgModal {display: none; width: 400px; margin: 0 auto; position: relative; top: 50%; transform: translateY(-50%);}
+.layerPop .imgModal .img {text-align: center;}
+.layerPop .imgModal .img img {width: 100%; max-width: 100%;}
+.layerPop .imgModal .close {background: rgba(0, 0, 0, 0.8); position: absolute; right: 10px; top: 10px; width: 50px; height: 25px; border-radius: 30px; color: #Fff; text-align: center; font-size: 12px; font-weight: 200; padding-top: 7px; box-sizing: border-box; cursor: pointer;}
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+/* ----- FollowCursor ----- */
+.followCursor {position: fixed; left: 0; top: 0; transform: translate(-50%, -50%); width: 23px; height: 23px; border-radius: 50%; background: #fff; transition: 120ms; mix-blend-mode: difference; pointer-events: none; z-index: 9999;}
 
-main{
-    margin-top: 100px;
-}
+/* -----Scroll Event Items -----*/
+section .ani {transform: translateY(200px); opacity: 0;}
+section .ani.on {transform: translateY(0); opacity: 1; transition: 0.3s;}
+section .profileImgBox.ani.on {transition-delay: 0.3s;}
+section .rightBox.ani.on {transition-delay: 0.4s;}
+section .infoBtm.ani.on {transition-delay: 0.4s;}
 
-
-/*LayerPop*/
-.layerPop{
-    display: none;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 9999;
-    box-sizing: border-box;
-}
-.layerPop .imgModal{
-    display: none;
-    width: 400px;
-    margin: 0 auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.layerPop .imgModal .img {
-    text-align: center;
-}
-
-.layerPop .imgModal .img img{
-    width: 100%;
-    max-width: 100%;
-}
-
-.layerPop .imgModal .close{
-    background: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 50px;
-    height: 25px;
-    border-radius: 30px;
-    color: #Fff;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 200;
-    padding-top: 7px;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-
-
-/*Scroll Event Items*/
-section .ani{
-    transform: translateY(200px);
-    opacity: 0;
-}
-
-section .ani.on{
-    transform: translateY(0);
-    opacity: 1;
-    transition: 0.3s;
-}
-
-section .profileImgBox.ani.on{
-    transition-delay: 0.3s;
-}
-section .rightBox.ani.on{
-    transition-delay: 0.6s;
-}
-section .infoBtm.ani.on{
-    transition-delay: 0.3s;
-}
-
-
-/*Page Indicator*/
-.pageIndicator{}
-
-
-/*Follow Cursor*/
-.followCursor{
-    position: fixed;
-    left: 0;
-    top: 0;
-    transform: translate(-50%, -50%);
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    background: #fff;
-    transition: 120ms;
-    mix-blend-mode: difference;
-    pointer-events: none;
-    z-index: 9999;
-}
-
-
-
-/*Header*/
-.header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-body.lightMode .header{
-    background: #fff;
-}
-.headerWrap {
-    position: relative;
-    margin: 0 80px;
-    text-align: right;
-    height: 100px;
-}
-
-.headerWrap .logo {
-    position: absolute;
-    left: 0;
-    top: 20px;
-}
-
-.headerWrap .logo a {
-    font-size: 36px;
-    font-weight: 800;
-    display: block;
-}
-
-.headerWrap nav .gnb {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.headerWrap nav .gnb li {
-    display: inline-block;
-}
-
-.headerWrap nav .gnb li a {
-    display: block;
-    height: 120px;
-    padding-top: 33px;
-    box-sizing: border-box;
-    width: 160px;
-}
-
-.headerWrap nav .gnb li a:hover {
-    color: #F95700;
-}
-
-.headerWrap .toggleSwitch {
-    width: 50px;
-    height: 18px;
-    display: inline-block;
-    position: relative;
-    top: -86px;
-    right: 140px;
-    border-radius: 30px;
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-}
-
-/* 토글 버튼 */
-.headerWrap .toggleSwitch .toggleButton {
-    /* 버튼은 토글보다 작아야함  */
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    top: 50%;
-    left: 4px;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-/* 체크박스가 체크되면 변경 이벤트 */
-#toggle:checked ~ .toggleSwitch {
-    background: #F95700;
-    border: 2px solid #F95700;
-}
-
-#toggle:checked ~ .toggleSwitch .toggleButton {
-    left: calc(100% - 18px);
-    background: #fff;
-}
-
-.toggleSwitch, .toggleButton {
-    transition: all 0.3s ease-in;
-}
-
-.headerWrap .headerIco {
-    position: absolute;
-    right: 0;
-    top: 10px;
-}
-
-.headerWrap .headerIco img {
-    display: block;
-    animation: rotateImg 6s linear infinite;
-    transform-origin: 50% 50%;
-    width: 70px;
-    height: 70px;
-}
-body.lightMode .headerIco img {
-    content: url("../images/header-ico-light.png");
-}
-
-@keyframes rotateImg {
-    100%{transform: rotate(360deg);}
-}
-.header .popupBtn {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-
-    display: none;
-    width: 22px;
-    height: 18px;
-    z-index: 100;
-    cursor: pointer;
-}
-.header .popupBtn span {
-    position: absolute;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: white;
-    transition: 0.5s;
-}
-body.lightMode .header .popupBtn span{
-    background: #000;
-}
-.header .popupBtn span:nth-child(1){
-    top: 0;
-}
+/* ----- Header -----*/
+.header {position: fixed; left: 0; top: 0; width: 100%; z-index: 1000;}
+body.lightMode .header {background: #fff;}
+.headerWrap {position: relative; margin: 0 80px; text-align: right; height: 100px;}
+.headerWrap .logo {position: absolute; left: 0; top: 20px;}
+.headerWrap .logo a {font-size: 36px; font-weight: 800; display: block;}
+.headerWrap nav .gnb {display: inline-block; text-align: center; width: 100%; margin: 0 auto;}
+.headerWrap nav .gnb li {display: inline-block;}
+.headerWrap nav .gnb li a {display: block; height: 120px; padding-top: 33px; box-sizing: border-box; width: 160px;}
+.headerWrap nav .gnb li a:hover {color: #F95700;}
+/*ColorMode Toggle*/
+.toggleSwitch {width: 50px; height: 18px; display: inline-block; position: relative; top: -86px; right: 140px; border-radius: 30px; background-color: transparent; border: 2px solid rgba(255, 255, 255, 0.5); cursor: pointer;}
+.toggleSwitch .toggleButton {width: 14px; height: 14px; position: absolute; top: 50%; left: 4px; transform: translateY(-50%); border-radius: 50%; background: rgba(255, 255, 255, 0.5);}
+.toggleSwitch.lightMode {background: transparent; border: 2px solid #F95700;}
+.toggleSwitch.lightMode .toggleButton {left: calc(100% - 18px); background: #F95700;}
+.toggleSwitch,
+.toggleButton {transition: all 0.3s ease-in;}
+#toggle:checked ~ .toggleSwitch {background: transparent; border: 2px solid #F95700;}
+#toggle:checked ~ .toggleSwitch .toggleButton {left: calc(100% - 18px); background: #F95700;}
+.headerWrap .headerIco {position: absolute; right: 0; top: 10px;}
+.headerWrap .headerIco img {display: block; animation: rotateImg 6s linear infinite; transform-origin: 50% 50%; width: 70px; height: 70px;}
+body.lightMode .headerIco img {content: url("../images/header-ico-light.png");}
+/*headerIco Keyframes*/
+@keyframes rotateImg {100%{transform: rotate(360deg);}}
+/*PopUp Menu*/
+.header .popupBtn {position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: none; width: 22px; height: 18px; z-index: 100; cursor: pointer;}
+.header .popupBtn span {position: absolute; left: 0; display: block; width: 100%; height: 1px; background: white; transition: 0.5s;}
+body.lightMode .header .popupBtn span {background: #000;}
+.header .popupBtn span:nth-child(1) {top: 0;}
 .header .popupBtn span:nth-child(2),
-.header .popupBtn span:nth-child(3){
-    top: 50%;
-}
-.header .popupBtn span:nth-child(4){
-    top: 100%;
-}
-.header .popupBtn.on span:nth-child(1){
-    opacity: 0;
-}
-.header .popupBtn.on span:nth-child(2){
-    transform: rotate(45deg);
-}
-.header .popupBtn.on span:nth-child(3){
-    transform: rotate(-45deg);
-}
-.header .popupBtn.on span:nth-child(4){
-    opacity: 0;
-}
-
-.header .menuPop {
-    display: none;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.73);
-}
-
-.header .menuPop ul {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-.header .menuPop ul li {
-    text-align: center;
-    font-size: 24px;
-    color: #fff;
-    padding: 10px;
-    animation: menuPop 0.5s linear 1 both;
-}
-.header .menuPop ul li:nth-child(1) {
-    animation-delay: 0.2s;
-}
-.header .menuPop ul li:nth-child(2) {
-    animation-delay: 0.3s;
-}
-.header .menuPop ul li:nth-child(3) {
-    animation-delay: 0.4s;
-}
-.header .menuPop ul li:nth-child(4) {
-    animation-delay: 0.5s;
-}
+.header .popupBtn span:nth-child(3) {top: 50%;}
+.header .popupBtn span:nth-child(4) {top: 100%;}
+.header .popupBtn.on span:nth-child(1) {opacity: 0;}
+.header .popupBtn.on span:nth-child(2) {transform: rotate(45deg);}
+.header .popupBtn.on span:nth-child(3) {transform: rotate(-45deg);}
+.header .popupBtn.on span:nth-child(4) {opacity: 0;}
+.header .menuPop {display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.73);}
+.header .menuPop ul {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.header .menuPop ul li {text-align: center; font-size: 24px; color: #fff; padding: 10px; animation: menuPop 0.5s linear 1 both;}
+.header .menuPop ul li:nth-child(1) {animation-delay: 0.2s;}
+.header .menuPop ul li:nth-child(2) {animation-delay: 0.3s;}
+.header .menuPop ul li:nth-child(3) {animation-delay: 0.4s;}
+.header .menuPop ul li:nth-child(4) {animation-delay: 0.5s;}
+/*PopUp Menu Keyframes*/
 @keyframes menuPop {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    0% {opacity: 0; transform: translateX(-50px);}
+    100% {opacity: 1; transform: translateX(0);}
 }
 
-
-/*Intro Section*/
-.intro {
-    width: 100%;
-
-    /*height: 850px;*/
-    display: flex;
-    align-items: center;
-    padding: 10% 0;
-
-    position: relative;
-    transition: all 0.8s;
-    overflow: hidden;
-}
-
-.intro .introBg{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100%;
-    object-fit: contain;
-    pointer-events: none;
-    transform: scale(1.2);
-    opacity: 0;
-    visibility: visible;
-    transition: all 1.2s;
-}
-body.lightMode .intro .introBg {
-    content: url("../images/intro-bg-light.png");
-}
+/* ----- Intro Section -----*/
+.intro {width: 100%; display: flex; align-items: center; padding: 10% 0; position: relative; transition: all 0.8s; overflow: hidden;}
+.intro .introBg {position: absolute; left: 0; top: 0; width: 100vw; height: 100%; object-fit: contain; pointer-events: none; transform: scale(1.2); opacity: 0; visibility: visible; transition: all 1.2s;}
+body.lightMode .intro .introBg {content: url("../images/intro-bg-light.png");}
 .intro.on .introBg,
-body.lightMode .intro.on .introBg{
-    transform: scale(1);
-    opacity: 1;
-    visibility: visible;
-}
-
-.intro .textWrap {
-    position: relative;
-}
-
-.intro .textWrap span {
-    font-size: 4vw;
-    font-weight: 200;
-    display: block;
-    margin-bottom: 20px;
-    transition-delay: 0.1s;
-}
-
-.intro .textWrap strong {
-    font-size: 6vw;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 90px;
-    transition-delay: 0.3s;
-}
-
-.intro .textWrap p {
-    font-size: 3vw;
-    font-weight: 200;
-    line-height: 1.5;
-    transition-delay: 0.5s;
-}
-
+body.lightMode .intro.on .introBg {transform: scale(1); opacity: 1; visibility: visible;}
+.intro .textWrap {position: relative;}
+.intro .textWrap span {font-size: 4vw; font-weight: 200; display: block; margin-bottom: 20px; transition-delay: 0.1s;}
+.intro .textWrap strong {font-size: 6vw; font-weight: 700; display: block; margin-bottom: 90px; transition-delay: 0.3s;}
+.intro .textWrap p {font-size: 3vw; font-weight: 200; line-height: 1.5; transition-delay: 0.5s;}
 .intro .textWrap span,
 .intro .textWrap strong,
-.intro .textWrap p{
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: 0.8s;
-}
-
+.intro .textWrap p{opacity: 0; transform: translateX(-100%); transition: 0.8s;}
 .intro .textWrap.on span,
 .intro .textWrap.on strong,
-.intro .textWrap.on p{
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.intro .shakeImg{
-    position: absolute;
-    left: 54%;
-    top: 15%;
-}
-
-.intro .shakeImg img{
-    width: 6vw;
-    animation: shake 1s;
-    animation-iteration-count: infinite;
-}
-
+.intro .textWrap.on p{opacity: 1; transform: translateX(0);}
+.intro .shakeImg{position: absolute; left: 54%; top: 15%;}
+.intro .shakeImg img{width: 6vw; animation: shake 1s; animation-iteration-count: infinite;}
+/*ShakeImg Keyframes*/
 @keyframes shake {
     0%{transform: translate(0px, 8px) rotate(0deg)}
     50%{transform: translate(0px, 0px) rotate(0deg)}
     100%{transform: translate(0px, 8px) rotate(0deg)}
 }
 
+/* ----- About Section ----- */
+.about {width: 100%; padding: 100px 0;}
+.aboutContents {display: flex;}
+.aboutContents .profileImgBox {width: 40%; margin-right: 60px;}
+.profileImgBox img {width: 100%; height: auto; object-fit: cover;}
+.aboutContents .rightBox {width: 60%; display: flex; flex-flow: column; justify-content: space-between; box-sizing: border-box;}
+.aboutContents .rightBox .bgText {display: flex; justify-content: right;}
+.aboutContents .rightBox em {font-size: 9vw; font-weight: 800; opacity: 20%; font-style: italic; padding-right: 40px;}
+.aboutContents .rightBox .textWrap {display: flex; flex-flow: column; justify-content: space-between; gap: 30px;}
+.aboutContents .rightBox .textWrap strong {font-size: 32px; font-weight: 600; color: #F95700; display: block; margin: 0;}
+.aboutContents .rightBox .textWrap .contactList li {font-size: 18px; background-repeat: no-repeat; background-size: 30px 30px; padding-left: 38px; line-height: 30px;}
+.aboutContents .rightBox .textWrap .contactList li:nth-child(1) {background-image: url("../images/phone-solid 1.png");}
+.aboutContents .rightBox .textWrap .contactList li:nth-child(2) {background-image: url("../images/envelope-regular 1.png"); margin-top: 10px;}
+.aboutContents .rightBox .textWrap p {font-size: 18px; font-weight: 300; line-height: 1.4; text-align: justify;}
 
-/*About Section*/
-.about {
-    width: 100%;
-    padding: 100px 0;
-}
+/* ----- InfoArea Section ----- */
+.infoArea .inner {width: 70%; margin: 0 auto;}
+.infoArea strong {font-size: 32px; color: #F95700; font-weight: 600; margin-bottom: 30px; display: block;}
+.infoTop {display: flex; flex-wrap: wrap; margin-bottom: 50px; justify-content: space-between; gap: 70px;}
+.infoTop ul li {font-size: 16px; font-weight: 200; line-height: 1.8;}
+.infoBtm {display: flex; justify-content: left;}
+.infoBtm .tools ul {display: flex;}
+.infoBtm .tools ul li {margin-right: 30px;}
+.infoBtm .tools ul li img {width: 50px; height: 50px;}
 
-.aboutContents {
-    display: flex;
-}
+/* ----- TextCard Section ----- */
+.textCard {padding: 100px 0;}
+.textCard .inner {width: 80%; margin: 0 auto;}
+.textCard .cardWrap {display: flex; flex-wrap: wrap; justify-content: space-between;}
+.textCard .cardWrap .card {position: relative; width: 350px; height: 350px; cursor: pointer;}
+.textCard .cardWrap .card:after {content: ""; display: block; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); opacity: 0; border-radius: 50%; transition: 0.5s;}
+.textCard .cardWrap .card .cardImg {height: 100%; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.textCard .cardWrap .card:nth-child(1) .cardImg {background-image: url("../images/about-card-img01.png");}
+.textCard .cardWrap .card:nth-child(2) .cardImg {background-image: url("../images/about-card-img02.png");}
+.textCard .cardWrap .card:nth-child(3) .cardImg {background-image: url("../images/about-card-img02-1.png");}
+.textCard .cardWrap .card .cardTxt {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 10; text-align: center; opacity: 0; transition: 0.5s; width: 100%; padding: 0 10px; box-sizing: border-box;}
+.textCard .cardWrap .card span {font-size: 40px; font-weight: 700; color: transparent; -webkit-text-stroke: 2px #F95700; display: block; margin-bottom: 15px;}
+.textCard .cardWrap .card p {font-size: 14px; line-height: 1.5; font-weight: 300;}
+body.lightMode .textCard .cardWrap .card p {color: #fff;}
+.textCard .cardWrap .card.on:after {opacity: 1;}
+.textCard .cardWrap .card.on .cardTxt {opacity: 1;}
 
-.aboutContents .profileImgBox {
-    width: 40%;
-    margin-right: 60px;
-}
-
-.profileImgBox img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.aboutContents .rightBox {
-    width: 60%;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-
-.aboutContents .rightBox .bgText {
-    display: flex;
-    justify-content: right;
-}
-
-.aboutContents .rightBox em {
-    font-size: 9vw;
-    font-weight: 800;
-    opacity: 20%;
-    font-style: italic;
-    padding-right: 40px;
-}
-
-.aboutContents .rightBox .textWrap {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.aboutContents .rightBox .textWrap strong {
-    font-size: 32px;
-    font-weight: 600;
-    color: #F95700;
-    display: block;
-    margin: 0;
-}
-
-.aboutContents .rightBox .textWrap .contactList {
-}
-
-.aboutContents .rightBox .textWrap .contactList li {
-    font-size: 18px;
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
-    padding-left: 38px;
-    line-height: 30px;
-}
-
-.aboutContents .rightBox .textWrap .contactList li:nth-child(1) {
-    background-image: url("../images/phone-solid 1.png");
-}
-
-.aboutContents .rightBox .textWrap .contactList li:nth-child(2) {
-    background-image: url("../images/envelope-regular 1.png");
-    margin-top: 10px;
-}
-
-.aboutContents .rightBox .textWrap p {
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 1.3;
-}
-
-
-
-/*nfoArea Section*/
-.infoArea {}
-
-.infoArea .inner {
-    width: 70%;
-    margin: 0 auto;
-}
-
-.infoArea strong {
-    font-size: 32px;
-    color: #F95700;
-    font-weight: 600;
-    margin-bottom: 30px;
-    display: block;
-}
-
-.infoTop {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-    justify-content: space-between;
-    /*width: 50%;*/
-    gap: 70px;
-    /*margin: 0 auto;*/
-}
-
-.infoTop .experience {}
-
-.infoTop ul li {
-    font-size: 16px;
-    font-weight: 200;
-    line-height: 1.8;
-}
-
-.infoBtm {
-    display: flex;
-    justify-content: left;
-}
-
-.infoBtm .tools ul {
-    display: flex;
-}
-
-.infoBtm .tools ul li {
-    margin-right: 30px;
-}
-
-.infoBtm .tools ul li img {
-    width: 50px;
-    height: 50px;
-}
-
-
-/*TextCard Section*/
-.textCard {
-    padding: 100px 0;
-}
-.textCard .inner{
-    width: 80%;
-    margin: 0 auto;
-}
-
-.textCard .cardWrap {
-    /*width: 100%;*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /*margin: 0 auto;*/
-}
-
-.textCard .cardWrap .card {
-    position: relative;
-    width: 350px;
-    height: 350px;
-    /*margin: 30px;*/
-    /*box-sizing: border-box;*/
-    cursor: pointer;
-}
-.textCard .cardWrap .card:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-
-.textCard .cardWrap .card .cardImg {
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.textCard .cardWrap .card:nth-child(1) .cardImg {
-    background-image: url("../images/about-card-img01.png");
-}
-
-.textCard .cardWrap .card:nth-child(2) .cardImg {
-    background-image: url("../images/about-card-img02.png");
-}
-
-.textCard .cardWrap .card:nth-child(3) .cardImg {
-    background-image: url("../images/about-card-img02-1.png");
-}
-.textCard .cardWrap .card .cardTxt {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    text-align: center;
-    opacity: 0;
-    transition: 0.5s;
-    width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-.textCard .cardWrap .card span {
-    font-size: 40px;
-    font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: 2px #F95700;
-    display: block;
-    margin-bottom: 15px;
-}
-.textCard .cardWrap .card p {
-    font-size: 14px;
-    line-height: 1.5;
-    font-weight: 300;
-    /*white-space: pre-wrap;*/
-}
-body.lightMode .textCard .cardWrap .card p{
-    color: #fff;
-}
-.textCard .cardWrap .card.on:after{
-    opacity: 1;
-}
-
-.textCard .cardWrap .card.on .cardTxt{
-    opacity: 1;
-}
-
-
-
-/*RollingBanner Section*/
-.rollingBanner{
-    overflow: hidden;
-    padding: 50px 0;
-}
-.rollingBanner .textWrap{
-    white-space: nowrap;
-}
-body.lightMode .rollingBanner .textWrap div{
-    -webkit-text-stroke: 1px #000;
-}
-.rollingBanner .textWrap div{
-    font-size: 8vw;
-    line-height: 1.3;
-    font-weight: 700;
-    -webkit-text-stroke: 1px #fff;
-    color: transparent;
-}
-.rollingBanner .trackTop{
-    animation: textMoveRight 10s linear infinite;
-}
-.rollingBanner .trackBtm{
-    animation: textMoveLeft 10s linear infinite;
-}
-
+/* ----- RollingBanner Section ----- */
+.rollingBanner {overflow: hidden; padding: 50px 0;}
+.rollingBanner .textWrap{white-space: nowrap;}
+body.lightMode .rollingBanner .textWrap div {-webkit-text-stroke: 1px #000;}
+.rollingBanner .textWrap div {font-size: 8vw; line-height: 1.3; font-weight: 700; -webkit-text-stroke: 1px #fff; color: transparent;}
+.rollingBanner .trackTop {animation: textMoveRight 10s linear infinite;}
+.rollingBanner .trackBtm {animation: textMoveLeft 10s linear infinite;}
+/*TextRolling Keyframes*/
 @keyframes textMoveRight {
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-100%);}
 }
-
 @keyframes textMoveLeft {
-    0%{
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(0);
-    }
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(0);}
 }
 
-
-
-/*Works Section*/
-.works{
-    padding: 80px 0;
-}
-.works h3{
-    font-size: 5vw;
-    font-weight: 700;
-    /*opacity: 20%;*/
-    margin-bottom: 50px;
-}
-.works .slideArea .slider{
-    margin-bottom: 50px;
-}
-.works .slider .slick-slide{
-    overflow: hidden;
-    margin: 0 30px;
-}
-.works .slider .slick-slide .imgArea{
-    transform: scale(0.8);
-    transform-origin: 50% 50%;
-    transition: 0.6s;
-    margin-bottom: 30px;
-}
-.works .slider .slick-slide .imgArea img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.works .slider .slick-center .imgArea{
-    transform: scale(1);
-}
+/* ----- Works Section ----- */
+.works {padding: 80px 0;}
+.works h3 {font-size: 5vw; font-weight: 700; margin-bottom: 50px;}
+.works .slideArea {position: relative;}
+.works .slideArea .slider {margin-bottom: 50px;}
+.works .slider .slick-slide {overflow: hidden; margin: 0 30px;}
+.works .slider .slick-slide .imgArea {transform: scale(0.8); transform-origin: 50% 50%; transition: 0.6s; margin-bottom: 30px;}
+.works .slider .slick-slide .imgArea img {width: 100%; height: 100%; object-fit: cover;}
+.works .slider .slick-center .imgArea {transform: scale(1);}
 .works .slider .slick-slide .btmArea h4,
-.works .slider .slick-slide .btmArea .btnWrap div{
-    text-align: center;
-    opacity: 0;
-    transition: 0.4s;
-}
-.works .slider .slick-slide .btmArea h4{
-    transition-delay: 0.4s;
-}
-.works .slider .slick-slide .btmArea .btnWrap div{
-   transition-delay: 0.5s;
-}
+.works .slider .slick-slide .btmArea .btnWrap div {text-align: center; opacity: 0; transition: 0.4s;}
+.works .slider .slick-slide .btmArea h4 {transition-delay: 0.4s;}
+.works .slider .slick-slide .btmArea .btnWrap div {transition-delay: 0.5s;}
 .works .slider .slick-center .btmArea h4,
-.works .slider .slick-center .btmArea .btnWrap div{
-    opacity: 1;
-}
-.works .slideArea .btmArea h4{
-    font-size: 1.5vw;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-.works .slideArea .btmArea .btnWrap{
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-.works .slideArea .btnWrap div{
-    width: 30%;
-    border: 1px solid #fff;
-    padding: 12px 0;
-    text-align: center;
-    border-radius: 30px;
-    font-size: 1vw;
-    box-sizing: border-box;
-}
-body.lightMode .works .slideArea .btnWrap div{
-    border: 1px solid #000;
-}
-.works .slideArea .btnWrap div:hover{
-    color: #F95700;
-}
+.works .slider .slick-center .btmArea .btnWrap div {opacity: 1;}
+.works .slideArea .btmArea h4 {font-size: 1.5vw; font-weight: 700; margin-bottom: 30px;}
+.works .slideArea .btmArea .btnWrap {display: flex; gap: 15px; justify-content: center;}
+.works .slideArea .btnWrap div {width: 30%; border: 1px solid #fff; padding: 12px 0; text-align: center; border-radius: 30px; font-size: 1vw; box-sizing: border-box;}
+body.lightMode .works .slideArea .btnWrap div {border: 1px solid #000;}
+.works .slideArea .btnWrap div:hover {color: #F95700;}
+.works .dotsWrap {display: flex; justify-content: center;}
+.works .dotsWrap .customDots {font-size: 0;}
+.works .dotsWrap .customDots li {display: inline-block; width: 13px; height: 13px; background: #fff; border-radius: 50%; margin-right: 12px; cursor: pointer;}
+body.lightMode .works .dotsWrap .customDots li {background: #9f9f9f;}
+.works .dotsWrap .customDots li.slick-active {background: #F95700FF;}
+body.lightMode .works .dotsWrap .customDots li.slick-active {background: #F95700FF;}
+.works .dotsWrap .customDots li button {display: none;}
+.works .arrow {position: absolute; top: 200px; transform: translateY(-50%); font-size: 30px; color: rgba(255, 255, 255, 0.5); cursor: pointer;}
+body.lightMode .works .arrow {color: rgba(0, 0, 0, 0.5);}
+.works .prevArrow {left: 25%;}
+.works .nextArrow{right: 25%;}
 
-.works .dotsWrap{
-    display: flex;
-    justify-content: center;
-}
-.works .dotsWrap .customDots{
-    font-size: 0;
-}
-.works .dotsWrap .customDots li{
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    background: #fff;
-    border-radius: 50%;
-    margin-right: 12px;
-    cursor: pointer;
-}
-body.lightMode .works .dotsWrap .customDots li{
-    background: #9f9f9f;
-}
-.works .dotsWrap .customDots li.slick-active{
-    background: #F95700FF;
-}
-body.lightMode .works .dotsWrap .customDots li.slick-active{
-    background: #F95700FF;
-}
-.works .dotsWrap .customDots li button{
-    display: none;
-}
+/* ----- Contents Section ----- */
+.contents {padding: 100px 0; max-width: 100%; margin: 0 auto;}
+.contents h3 {font-size: 5vw; font-weight: 700; margin-bottom: 50px;}
+.contents .show {display: none; background: #fff; width: 100%; padding: 10px; color: #000; text-align: center; font-size: 14px; border-radius: 8px; margin-bottom: 30px; box-sizing: border-box;}
+body.lightMode .contents .show {background: #e0e0e0;}
+.contents .show i {margin-left: 15px; font-size: 14px;}
+.contents .show i.active {transform: rotate(180deg);}
+.contents .contentsWrap {display: flex; justify-content: center; flex-wrap: wrap; gap: 1em;}
+.contents .contentsWrap div {position: relative; display: flex; justify-content: center; align-items: center; min-height: 260px; flex-basis: 150px; flex-grow: 0;}
+.contents .contentsWrap div:hover button {opacity: 1; height: 100%; width: 100%;}
+.contents .contentsWrap div button {position: absolute; width: 100%; height: 0; background: rgba(0, 0, 0, 0.8); bottom: 0; display: flex; align-items: center; justify-content: center; color: #fff; opacity: 0; border: none; transition: .5s; cursor: pointer;}
 
+/* ----- Footer ----- */
+.footer {width: 100%; padding: 0 80px; box-sizing: border-box; display: flex; justify-content: space-between;}
+.footer span {display: block;}
+.footer .footLeft {font-size: 9vw; font-weight: 800;}
+.footer .footRight {display: flex; flex-direction: column; justify-content: flex-end;}
 
-/*Contents Section*/
-.contents{
-    /*width: 100%;*/
-    padding: 100px 0;
-    max-width: 100%;
-    margin: 0 auto;
-}
-.contents h3{
-    font-size: 5vw;
-    font-weight: 700;
-    /*opacity: 20%;*/
-    margin-bottom: 50px;
-}
-.contents .show{
-    display: none;
-    background: #fff;
-    width: 100%;
-    padding: 10px;
-    color: #000;
-    text-align: center;
-    font-size: 14px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-sizing: border-box;
-}
-body.lightMode .contents .show{
-    background: #e0e0e0;
-}
-.contents .show i{
-    margin-left: 15px;
-    font-size: 14px;
-}
-.contents .show i.active{
-    transform: rotate(180deg);
-}
-.contents .contentsWrap{
-    /*display: flow-root;*/
-    /*width: 1450px;*/
-    /*margin: 0 auto;*/
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1em;
-}
-.contents .contentsWrap div{
-    /*float: left;*/
-    /*margin: 15px;*/
-    /*overflow: hidden;*/
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    min-height: 260px;
-    flex-basis: 150px;
-    flex-grow: 0;
-}
-
-.contents .contentsWrap div:hover button{
-    opacity: 1;
-    height: 100%;
-    width: 100%;
-}
-.contents .contentsWrap div button{
-    position: absolute;
-    width: 100%;
-    height: 0;
-    background: rgba(0, 0, 0, 0.8);
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    opacity: 0;
-    border: none;
-    transition: .5s;
-    cursor: pointer;
-}
-
-
-/*Footer*/
-.footer{
-    width: 100%;
-    padding: 0 80px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-}
-.footer span{
-    display: block;
-}
-.footer .footLeft{
-    font-size: 9vw;
-    font-weight: 800;
-}
-.footer .footRight {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-
-
-/*Media 1024*/
+/* -------------------- Media -------------------- */
+/* ----- Media 1024 ----- */
 @media (max-width: 1024px) {
     /*Header*/
-    .headerWrap{
-        margin: 0 40px;
-    }
-    .headerWrap nav .gnb li a {
-        width: 120px;
-    }
-
+    .headerWrap {margin: 0 40px;}
+    .headerWrap nav .gnb li a {width: 120px;}
 
     /*Intro Section*/
-    .intro .shakeImg{
-        position: absolute;
-        left: 50%;
-        top: 7%;
-    }
-
+    .intro .shakeImg {position: absolute; left: 50%; top: 7%;}
 
     /*About Section*/
-    .aboutContents .rightBox .textWrap strong{
-        font-size: 22px;
-    }
-    .aboutContents .rightBox .textWrap .contactList li{
-        font-size: 16px;
-        background-size: 20px 20px;
-        line-height: 20px;
-    }
-    .aboutContents .rightBox .textWrap .contactList li:nth-child(2) {
-        margin-top: 7px;
-    }
-    .aboutContents .rightBox .textWrap p{
-        font-size: 16px;
-    }
-
+    .aboutContents .rightBox .textWrap strong {font-size: 22px;}
+    .aboutContents .rightBox .textWrap .contactList li {font-size: 16px; background-size: 20px 20px; line-height: 20px;}
+    .aboutContents .rightBox .textWrap .contactList li:nth-child(2) {margin-top: 7px;}
+    .aboutContents .rightBox .textWrap p {font-size: 16px;}
 
     /*nfoArea Section*/
-    .infoArea strong {
-        font-size: 22px;
-    }
-    .infoTop {
-        margin-bottom: 40px;
-    }
-
+    .infoArea strong {font-size: 22px;}
+    .infoTop {margin-bottom: 40px;}
 
     /*TextCard Section*/
-    .textCard {
-        padding: 80px 0;
-    }
-    .textCard .cardWrap .card{
-        width: 200px;
-        height: 200px;
-    }
-    .textCard .cardWrap .card span {
-        font-size: 24px;
-    }
-
-
-
-    /*RollingBanner*/
-    .rollingBanner .textWrap div{
-        font-size: 96px;
-    }
-
-
-
-    /*Works Section*/
-
-
-    /*Contents Section*/
-
-
-    /*Footer*/
-    .footer{
-        padding: 0 70px;
-    }
-    .footer .footLeft{
-        font-size: 90px;
-        font-weight: 800;
-    }
-}
-
-
-
-/*Media 768*/
-@media (max-width: 768px) {
-    .inner{
-        width: 90%;
-    }
-    .main{
-        margin-top: 70px;
-    }
-    .followCursor{
-        display: none;
-    }
-
-
-
-    /*Header*/
-    .header{
-        height: 70px;
-    }
-    .header .headerWrap{
-        margin: 0 40px;
-    }
-    .header .headerWrap .logo{
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .header .headerWrap .logo a{
-        font-size: 32px;
-    }
-    .header .headerWrap nav .gnb{
-        display: none;
-    }
-    .header .headerWrap .headerIco{
-        display: none;
-    }
-    .header .popupBtn{
-        display: block;
-    }
-    .headerWrap .toggleSwitch {
-        /*top: 50%;*/
-        /*transform: translateY(-50%);*/
-        top: 40px;
-        right: 50px;
-    }
-
-
-    /*Intro Section*/
-    .intro .shakeImg{
-        position: absolute;
-        left: 50%;
-        top: 7%;
-    }
-
-
-    /*About Section*/
-    .aboutContents .rightBox .textWrap strong{
-        font-size: 18px;
-    }
-    .aboutContents .rightBox .textWrap .contactList li{
-        font-size: 14px;
-        background-size: 16px 16px;
-        line-height: 16px;
-        padding-left: 24px;
-    }
-    .aboutContents .rightBox .textWrap .contactList li:nth-child(2) {
-        margin-top: 7px;
-    }
-    .aboutContents .rightBox .textWrap p{
-        font-size: 14px;
-    }
-
-
-    /*nfoArea Section*/
-    .infoArea strong {
-        font-size: 18px;
-    }
-    .infoTop {
-        margin-bottom: 40px;
-    }
-    .infoTop  ul li{
-        font-size: 14px;
-    }
-    .infoBtm .tools ul li img{
-        width: 30px;
-        height: 30px;
-    }
-
-
-    /*TextCard Section*/
-    .textCard {
-        padding: 80px 0;
-    }
-    .textCard .cardWrap .card{
-        width: 180px;
-        height: 180px;
-    }
-    .textCard .cardWrap .card span {
-        font-size: 22px;
-        -webkit-text-stroke: 1px #F95700;
-    }
-    .textCard .cardWrap .card p{
-        font-size: 12px;
-    }
-
-
-
-    /*RollingBanner*/
-    .rollingBanner .textWrap div{
-        font-size: 72px;
-    }
-
-
-
-    /*Works Section*/
-    .works{
-        padding: 80px 0;
-    }
-    .works .slider .slick-slide .imgArea img{
-        width: 70%;
-        height: 70%;
-        margin: 0 auto;
-    }
-    .works .dotsWrap .customDots li{
-        width: 8px;
-        height: 8px;
-    }
-
-    /*Contents Section*/
-
-    /*Footer*/
-    .footer{
-        padding: 0 40px;
-    }
-    .footer .footLeft{
-        font-size: 72px;
-        font-weight: 800;
-    }
-    .footer .footRight span{
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 440px) {
-    .inner {
-        width: 400px;
-    }
-
-    .main {
-        margin-top: 70px;
-    }
-
-    .followCursor {
-        display: none;
-    }
-
-
-    /*Header*/
-    .header .headerWrap {
-        margin: 0 20px;
-    }
-
-
-    /*Intro Section*/
-    .intro .textWrap strong {
-        margin-bottom: 20px;
-    }
-
-
-    /*About Section*/
-    .about {
-        padding: 50px 0;
-    }
-
-    .aboutContents {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .aboutContents .profileImgBox {
-        width: 70%;
-        margin: 0 auto 30px;
-    }
-
-    .aboutContents .rightBox {
-        width: 100%;
-    }
-
-    .aboutContents .rightBox .textWrap {
-        gap: 15px;
-    }
-
-    .aboutContents .rightBox .textWrap strong {
-        font-size: 14px;
-    }
-
-    .aboutContents .rightBox .textWrap .contactList li {
-        font-size: 14px;
-    }
-
-    .aboutContents .rightBox .textWrap p {
-        font-size: 13px;
-    }
-
-
-    /*InfoArea Section*/
-    .infoArea .inner {
-        width: 400px;
-    }
-
-    .infoArea strong {
-        font-size: 14px;
-        margin-bottom: 15px;
-    }
-
-    .infoArea .infoTop {
-        gap: 30px;
-    }
-
-    .infoTop ul li {
-        font-size: 13px;
-    }
-
-    .infoBtm .tools ul li {
-        margin-right: 10px;
-    }
-
-
-    /*TextCard Section*/
-    .textCard {
-        padding: 60px 0;
-    }
-
-    .textCard .inner {
-        width: 440px;
-    }
-
-    .textCard .cardWrap {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .textCard .cardWrap .card:after {
-        opacity: 1;
-    }
-
-    .textCard .cardWrap .card .cardTxt {
-        opacity: 1;
-    }
-
+    .textCard {padding: 80px 0;}
+    .textCard .cardWrap .card {width: 200px; height: 200px;}
+    .textCard .cardWrap .card span {font-size: 24px;}
 
     /*RollingBanner Section*/
-    .rollingBanner {
-        padding: 20px 0;
-    }
-
+    .rollingBanner .textWrap div {font-size: 96px;}
 
     /*Works Section*/
-    .works {
-        padding: 50px 0;
-    }
-    .works .slideArea .slider {
-        margin-bottom: 30px;
-    }
-    .works .slider .slick-slide .imgArea img {
-        width: 50%;
-        height: 50%;
-    }
-    .works .slider .btmArea h4{
-        font-size: 14px;
-    }
-    .works .slider .btmArea .btnWrap div{
-        font-size: 12px;
-    }
-
-
-    /*Contents Section*/
-    .contents {
-        padding: 50px 0;
-    }
-
-    .contents .inner {
-        width: 400px;
-    }
-
-    .contents h3 {
-        margin-bottom: 20px;
-    }
-
-    .contents .show {
-        display: block;
-    }
-
-    .contents .contentsWrap {
-        display: none;
-    }
-
-    .contents .contentsWrap div {
-        margin: 20px;
-    }
-
+    .works .prevArrow {left: 5%;}
+    .works .nextArrow {right: 5%;}
 
     /*Footer*/
-    .footer {
-        padding: 0 20px;
-    }
+    .footer {padding: 0 70px;}
+    .footer .footLeft {font-size: 90px;font-weight: 800;}
+}
 
-    .footer .footLeft {
-        font-size: 34px;
-        font-weight: 800;
-    }
+/* ----- Media 768 ----- */
+@media (max-width: 768px) {
+    /*Settings*/
+    .inner {width: 90%;}
+    .main {margin-top: 70px;}
+    .followCursor {display: none;}
 
-    .footer .footRight span {
-        font-size: 10px;
-    }
+    /*Header*/
+    .header {height: 70px;}
+    .header .headerWrap {margin: 0 40px;}
+    .header .headerWrap .logo {top: 50%; transform: translateY(-50%);}
+    .header .headerWrap .logo a {font-size: 32px;}
+    .header .headerWrap nav .gnb {display: none;}
+    .header .headerWrap .headerIco {display: none;}
+    .header .popupBtn {display: block;}
+    .headerWrap .toggleSwitch {top: 40px; right: 50px;}
+
+    /*Intro Section*/
+    .intro .shakeImg {position: absolute; left: 50%; top: 7%;}
+
+    /*About Section*/
+    .aboutContents .rightBox .textWrap strong {font-size: 18px;}
+    .aboutContents .rightBox .textWrap .contactList li {font-size: 14px; background-size: 16px 16px; line-height: 16px; padding-left: 24px;}
+    .aboutContents .rightBox .textWrap .contactList li:nth-child(2) {margin-top: 7px;}
+    .aboutContents .rightBox .textWrap p {font-size: 14px;}
+
+    /*InfoArea Section*/
+    .infoArea strong {font-size: 18px;}
+    .infoTop {margin-bottom: 40px;}
+    .infoTop  ul li {font-size: 14px;}
+    .infoBtm .tools ul li img {width: 30px; height: 30px;}
+
+    /*TextCard Section*/
+    .textCard {padding: 80px 0;}
+    .textCard .cardWrap .card {width: 180px; height: 180px;}
+    .textCard .cardWrap .card span {font-size: 22px; -webkit-text-stroke: 1px #F95700;}
+    .textCard .cardWrap .card p {font-size: 12px;}
+
+    /*RollingBanner Section*/
+    .rollingBanner .textWrap div {font-size: 72px;}
+
+    /*Works Section*/
+    .works {padding: 80px 0;}
+    .works .slider .slick-slide .imgArea img {width: 70%; height: 70%; margin: 0 auto;}
+    .works .dotsWrap .customDots li {width: 8px; height: 8px;}
+    .works .arrow {font-size: 20px; top: 150px;}
+    .works .prevArrow {left: 10%;}
+    .works .nextArrow {right: 10%;}
+
+    /*Footer*/
+    .footer {padding: 0 40px;}
+    .footer .footLeft {font-size: 72px; font-weight: 800;}
+    .footer .footRight span {font-size: 12px;}
+}
+
+/* ----- Media 440 ----- */
+@media (max-width: 440px) {
+    /*Settings*/
+    .inner {width: 400px;}
+    .main {margin-top: 70px;}
+    .followCursor {display: none;}
+
+    /*Header*/
+    .header .headerWrap {margin: 0 20px;}
+
+    /*Intro Section*/
+    .intro .textWrap strong {margin-bottom: 20px;}
+
+    /*About Section*/
+    .about {padding: 50px 0;}
+    .aboutContents {flex-direction: column; gap: 15px;}
+    .aboutContents .profileImgBox {width: 70%; margin: 0 auto 30px;}
+    .aboutContents .rightBox {width: 100%;}
+    .aboutContents .rightBox .textWrap {gap: 15px;}
+    .aboutContents .rightBox .textWrap strong {font-size: 14px;}
+    .aboutContents .rightBox .textWrap .contactList li {font-size: 14px;}
+    .aboutContents .rightBox .textWrap p {font-size: 13px;}
+
+    /*InfoArea Section*/
+    .infoArea strong {font-size: 14px; margin-bottom: 15px;}
+    .infoArea .infoTop {gap: 30px;}
+    .infoTop ul li {font-size: 13px;}
+    .infoBtm .tools ul li {margin-right: 10px;}
+
+    /*TextCard Section*/
+    .textCard {padding: 60px 0;}
+    .textCard .inner {width: 440px;}
+    .textCard .cardWrap {flex-direction: column; align-items: center; gap: 30px;}
+    .textCard .cardWrap .card:after {opacity: 1;}
+    .textCard .cardWrap .card .cardTxt {opacity: 1;}
+
+    /*RollingBanner Section*/
+    .rollingBanner {padding: 20px 0;}
+
+    /*Works Section*/
+    .works {padding: 50px 0;}
+    .works .slideArea .slider {margin-bottom: 30px;}
+    .works .slider .slick-slide .imgArea img {width: 50%; height: 50%;}
+    .works .slider .btmArea h4 {font-size: 14px;}
+    .works .slider .btmArea .btnWrap div {font-size: 12px;}
+    .works .arrow {font-size: 15px; top: 110px;}
+    .works .prevArrow {left: 4%;}
+    .works .nextArrow {right: 4%;}
+
+    /*Contents Section*/
+    .contents {padding: 50px 0;}
+    .contents .inner {width: 400px;}
+    .contents h3 {margin-bottom: 20px;}
+    .contents .show {display: block;}
+    .contents .contentsWrap {display: none;}
+    .contents .contentsWrap div {margin: 20px;}
+
+    /*Footer*/
+    .footer {padding: 0 20px;}
+    .footer .footLeft {font-size: 34px; font-weight: 800;}
+    .footer .footRight span {font-size: 10px;}
 }

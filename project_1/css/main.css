@@ -1,329 +1,80 @@
+/* ----- Import URL ----- */
 @import "common.css";
 
-
-/*Visual Section*/
-.visual .videoArea{
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
-.visual .videoArea video{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    box-sizing: border-box;
-}
-.visual .titleArea{
-    color: #fff;
-    position: absolute;
-    left: 200px;
-    top: 50%;
-    transform: translateY(-50%);
-    box-sizing: border-box;
-}
-.visual .titleArea h2{
-    font-size: 58px;
-    margin-bottom: 42px;
-}
-.visual .titleArea p{
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.4;
-}
-.visual .scrollDown{
-    position: absolute;
-    left: 50%;
-    bottom: 35px;
-    /*transform: translateY(-100%);*/
-    text-align: center;
-}
-.visual .scrollDown img{
-    margin-bottom: 18px;
-    animation: shake 1s;
-    animation-iteration-count: infinite;
-}
-.visual .scrollDown span{
-    display: block;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 200;
-}
+/* ----- Visual Section ----- */
+.visual .videoArea {position: relative; height: 1080px; width: 100%; overflow: hidden;}
+.visual .videoArea video {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; box-sizing: border-box;}
+.visual .titleArea {color: #fff; position: absolute; left: 200px; top: 40%; transform: translateY(-50%); box-sizing: border-box;}
+.visual .titleArea h2 {font-size: 58px; margin-bottom: 42px;}
+.visual .titleArea p {font-size: 24px; font-weight: 400; line-height: 1.4;}
+.visual .scrollDown {position: absolute; left: 50%; bottom: 35px; text-align: center;}
+.visual .scrollDown img { margin-bottom: 18px; animation: shake 1s; animation-iteration-count: infinite;}
+.visual .scrollDown span {display: block; color: #fff; font-size: 12px; font-weight: 200;}
+/*ScrollDown Img Keyframes*/
 @keyframes shake {
     0%{transform: translate(0px, 6px) rotate(0deg)}
     50%{transform: translate(0px, 0px) rotate(0deg)}
     100%{transform: translate(0px, 6px) rotate(0deg)}
 }
 
-/*Event Section*/
-.event{
-    width: 100%;
-    position: relative;
-    background-image: url("../images/eventBanner.png");
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-}
-.event .inner{
-    display: flex;
-}
-.event .left{
-    width: 50%;
-}
-.event .right{
-    display: flex;
-    align-items: center;
-    width: 50%;
-    height: 400px;
-}
-.event .eventImg{}
-.event .eventImg img{
-    width: 100%;
-}
-.event .titleArea{}
-.event .titleArea h3{
-    font-size:  36px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.3;
-}
-.event .titleArea p{
-    font-size: 24px;
-    font-weight: 400;
-    color: #fff;
-    line-height: 2.5;
-}
-.event .right .btnBox button{
-    color: #fff;
-    font-weight: 500;
-    width: 150px;
-    height: 35px;
-    border: 1px solid #fff;
-    border-radius: 300px;
-    background: transparent;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-.event .right .btnBox button:hover{
-    font-weight: 700;
-}
+/* ----- Event Section ----- */
+.event {width: 100%; position: relative; background-image: url("../images/eventBanner.png"); background-repeat: no-repeat; background-size: auto 100%;}
+.event .inner {display: flex;}
+.event .left {width: 50%;}
+.event .right {display: flex; align-items: center; width: 50%; height: 400px;}
+.event .eventImg img {width: 100%;}
+.event .titleArea h3 {font-size:  36px; font-weight: 600; color: #fff; line-height: 1.3;}
+.event .titleArea p {font-size: 24px; font-weight: 400; color: #fff; line-height: 2.5;}
+.event .right .btnBox button {color: #fff; font-weight: 500; width: 150px; height: 35px; border: 1px solid #fff; border-radius: 300px; background: transparent; box-sizing: border-box; cursor: pointer;}
+.event .right .btnBox button:hover {font-weight: 700;}
 
-
-
-/*Service Section*/
-.service{
-    width: 100%;
-    text-align: center;
-    padding-top: 150px;
-    padding-bottom: 100px;
-}
-.service .titleArea{
-    margin-bottom: 80px;
-}
-.service .titleArea h2{
-    line-height: 2;
-}
-.service .titleArea p{
-    font-size: 24px;
-    line-height: 36px;
-    font-weight: 400;
-    color: #4f4f4f;
-
-    white-space: pre-wrap;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-
-.service .cardArea{
-    color: #4f4f4f;
-    display: flow-root;
-    width: 1005px;
-    margin: 0 auto;
-}
-.service .cardArea .card{
-    display: flex;
-    width: 265px;
-    height: 255px;
-    padding: 10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    float: left;
-    margin: 0 35px;
-    box-sizing: border-box;
-    cursor: pointer;
-}
+/* ----- Service Section ----- */
+.service {width: 100%; text-align: center; padding-top: 150px; padding-bottom: 100px;}
+.service .titleArea {margin-bottom: 80px;}
+.service .titleArea h2 {line-height: 2;}
+.service .titleArea p {font-size: 24px; line-height: 36px; font-weight: 400; color: #4f4f4f; white-space: pre-wrap; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;}
+.service .cardArea {color: #4f4f4f; display: flow-root; width: 1005px; margin: 0 auto;}
+.service .cardArea .card {display: flex; width: 265px; height: 255px; padding: 10px; flex-direction: column; justify-content: center; align-items: center; float: left; margin: 0 35px; box-sizing: border-box; cursor: pointer;}
 .service .cardArea .card:nth-child(1),
 .service .cardArea .card:nth-child(2),
-.service .cardArea .card:nth-child(3){
-    margin-bottom: 40px;
-}
-.service .cardArea .card .serviceIco{}
-.service .cardArea .card .serviceIco img{
-    width: 154px;
-    height: 86px;
-}
-.service .cardArea .card span{
-    font-size: 34px;
-    font-weight: 500;
-    display: block;
-    margin: 15px 0;
-}
-.service .cardArea .card p{
-    font-size: 14px;
-    line-height: 1.3;
+.service .cardArea .card:nth-child(3) {margin-bottom: 40px;}
+.service .cardArea .card .serviceIco img {width: 154px; height: 86px;}
+.service .cardArea .card span {font-size: 34px; font-weight: 500; display: block; margin: 15px 0;}
+.service .cardArea .card p {font-size: 14px; line-height: 1.3; white-space: pre-wrap; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;}
 
-    white-space: pre-wrap;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-}
-
-
-
-/*News Section*/
-.news{
-    position: relative;
-    padding: 150px 0;
-}
-.news .titleArea{
-    position: absolute;
-    left: 200px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 324px;
-    text-align: center;
-}
-.news .titleArea h2{
-    margin-bottom: 30px;
-}
-.news .titleArea p{
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    color: #4f4f4f;
-
-    white-space: pre-wrap;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-}
-
-.news .slideArea{
-    margin-left: 574px;
-}
-.news .slideArea .slider{}
-.news .slideArea .slider .slick-slide{
-    width: 360px;
-    margin-right: 50px;
-    cursor: pointer;
-}
-.news .slideArea .slider .slideImg{}
-.news .slideArea .slider .slideImg img{
-    width: 360px;
-    margin-bottom: 18px;
-}
-.news .slideArea .slider .slideTitle{}
-.news .slideArea .slider .slideTitle h3{
-    width: 100%;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 28px;
-    color: #696969;
-}
-
+/* ----- News Section ----- */
+.news {position: relative; padding: 150px 0;}
+.news .titleArea {position: absolute; left: 200px; top: 50%; transform: translateY(-50%); width: 324px; text-align: center;}
+.news .titleArea h2 {margin-bottom: 30px;}
+.news .titleArea p {font-size: 24px; font-weight: 700; line-height: 36px; color: #4f4f4f; white-space: pre-wrap; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;}
+.news .slideArea {margin-left: 574px;}
+.news .slideArea .slider .slick-slide{width: 360px; margin-right: 50px; cursor: pointer;}
+.news .slideArea .slider .slideImg img {width: 360px; margin-bottom: 18px;}
+.news .slideArea .slider .slideTitle h3 {width: 100%; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden; font-size: 22px; font-weight: 400; line-height: 28px; color: #696969;}
 .news .prevArrow,
-.news .nextArrow{
-    background-size: 40px auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: inline-block;
-    margin: 40px;
-    cursor: pointer;
-}
+.news .nextArrow {background-size: 40px auto; background-position: center; background-repeat: no-repeat; display: inline-block; margin: 40px; cursor: pointer;}
 
-
-
-/*Clients Section*/
-.clients{
-    padding: 100px 0;
-}
-.clients .titleArea{
-    margin-bottom: 50px;
-}
-.clients .titleArea h2{
-    text-align: center;
-}
-.clients .imgRolling{
-    overflow: hidden;
-}
-.clients .imgRolling div{
-    white-space: nowrap;
-}
-.clients .imgRolling .imgWrap div:nth-child(1){
-    animation: imgMoveRight 30s linear infinite;
-    margin-bottom: 20px;
-}
-.clients .imgRolling .imgWrap div:nth-child(2){
-    animation: imgMoveLeft 30s linear infinite;
-    margin-bottom: 20px;
-}
-.clients .imgRolling .imgWrap div:nth-child(3){
-    animation: imgMoveRight 30s linear infinite;
-}
-.clients .imgRolling div img{
-    width: 260px;
-    margin: 0 20px;
-}
-
+/* ----- Clients Section ----- */
+.clients {padding: 100px 0;}
+.clients .titleArea {margin-bottom: 50px;}
+.clients .titleArea h2 {text-align: center;}
+.clients .imgRolling {overflow: hidden;}
+.clients .imgRolling div {white-space: nowrap;}
+.clients .imgRolling .imgWrap div:nth-child(1) {animation: imgMoveRight 30s linear infinite; margin-bottom: 20px;}
+.clients .imgRolling .imgWrap div:nth-child(2) {animation: imgMoveLeft 30s linear infinite; margin-bottom: 20px;}
+.clients .imgRolling .imgWrap div:nth-child(3) {animation: imgMoveRight 30s linear infinite;}
+.clients .imgRolling div img {width: 260px; margin: 0 20px;}
+/*ImgRolling Keyframes*/
 @keyframes imgMoveRight {
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-100%);}
 }
 @keyframes imgMoveLeft {
-    0%{
-        transform: translateX(-100%);
-    }
-    100%{
-        transform: translateX(0);
-    }
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(0);}
 }
 
-
-
-/*Partner Section*/
-.partner{
-    width: 100%;
-    padding: 150px 0;
-    background: #2e2e2e;
-}
-.partner .titleArea{}
-.partner .titleArea h2{
-    text-align: center;
-    margin-bottom: 80px;
-    color: #fff;
-}
-.partner .imgWrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    align-self: stretch;
-}
-.partner .imgWrap img{}
+/* ----- Partner Section ----- */
+.partner {width: 100%; padding: 150px 0; background: #2e2e2e;}
+.partner .titleArea h2 {text-align: center; margin-bottom: 80px; color: #fff;}
+.partner .imgWrap {display: flex; justify-content: center; align-items: center; gap: 100px; align-self: stretch;}

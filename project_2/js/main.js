@@ -4,11 +4,12 @@ $(function (){
     const $recommend = $(".recommend");
     const $bookSlider = $(".recommend #bookSlider");
 
-
+    // ---------- EventSlider PageCounting ---------- //
     $mainSection.find($eventSlider).on("init", function (event, slick){
         $mainSection.find(".paging").text((slick.currentSlide+1) + "/" + slick.slideCount);
     });
 
+    // ---------- EventSlider ---------- //
     $eventSlider.slick({
         arrows: true,
         prevArrow: $mainSection.find(".prevArrow"),
@@ -20,6 +21,7 @@ $(function (){
         autoplaySpeed : 2500,
     });
 
+    // ---------- Recommend Section BookSlider ---------- //
     $bookSlider.slick({
         arrows: true,
         prevArrow: $recommend.find(".prevArrow"),

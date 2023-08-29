@@ -1,27 +1,11 @@
-@font-face {
-    src: url("../font/HyundaiL.ttf");
-    font-style: normal;
-    font-weight: 200;
-    font-family: "Hyundai";
-}
+/*font-weight: 200*/
+@font-face {src: url("../font/HyundaiL.ttf");  font-style: normal;  font-weight: 200;  font-family: "Hyundai";  }
 
-@font-face {
-    src: url("../font/HyundaiR.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 300;
-    font-family: "Hyundai";
-}
+/*font-weight: 300*/
+@font-face {  src: url("../font/HyundaiR.woff2") format("woff2");  font-style: normal;  font-weight: 300;  font-family: "Hyundai";  }
 
-@font-face {
-    src: url("../font/HyundaiM.ttf");
-    font-style: normal;
-    font-weight: 500;
-    font-family: "Hyundai";
-}
+/*font-weight: 500*/
+@font-face {  src: url("../font/HyundaiM.ttf");  font-style: normal;  font-weight: 500;  font-family: "Hyundai";  }
 
-@font-face {
-    src: url("../font/HyundaiB.ttf");
-    font-style: normal;
-    font-weight: 700;
-    font-family: "Hyundai";
-}
+/*font-weight: 700*/
+@font-face {  src: url("../font/HyundaiB.ttf");  font-style: normal;  font-weight: 700;  font-family: "Hyundai";  }

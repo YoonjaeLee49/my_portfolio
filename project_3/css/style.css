@@ -1,14 +1,12 @@
-/*css 공통파일 import*/
+/* ----- css 공통파일 import ----- */
 @import "common.css";
 
-
-/*Body*/
+/* ----- Body -----*/
 body{font-family: "Hyundai", sans-serif; font-weight: 300}
 body.popupOn{overflow: hidden}
 body.popupOn .layerPop{display: block}
 
-
-/*Layer Popup*/
+/* ----- Layer Popup ----- */
 .layerPop{display: none; position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 9999; padding-top: 50px; box-sizing: border-box}
 .layerPop .noticeModal{display: none; width: 450px; margin: 0 auto}
 .layerPop .noticeModal .modalBody{position: relative}
@@ -28,7 +26,7 @@ body.popupOn .layerPop{display: block}
 .layerPop .guideModal .videoArea{position: relative}
 .layerPop .guideModal .videoArea .videoWrap{font-size: 0}
 .layerPop .guideModal .videoArea .videoWrap video{width: 100%}
-.layerPop .guideModal .videoArea .close{background: #000; position: absolute; right: 0; top: 0; width: 50px; height: 50px; color: #fff; cursor: pointer}
+.layerPop .guideModal .videoArea .close{position: absolute; right: 0; top: 0; width: 50px; height: 50px; line-height: 50px; text-align: center; cursor: pointer}
 .layerPop .guideModal .btnArea{display: flex; justify-content: space-between}
 .layerPop .guideModal .btnArea div{display: flex;}
 .layerPop .guideModal .btnArea div button{border: 0; background: none; cursor: pointer}
@@ -36,15 +34,13 @@ body.popupOn .layerPop{display: block}
 .layerPop .guideModal .btnArea div button.next,
 .layerPop .guideModal .btnArea div button.list{cursor: not-allowed}
 
-
-/*Setting*/
+/* ----- Setting ----- */
 button{font-family: "Hyundai", sans-serif; font-weight: 300}
 a{text-decoration: none; color: #222}
 .inner{width: 1200px; margin: 0 auto}
 .layout{overflow: hidden; max-width: 1920px; min-width: 1200px; margin: 0 auto}
 
-
-/*Main*/
+/* ----- Main ----- */
 section{position: relative}
 section .titleArea{text-align: center}
 section .titleArea h2{font-size: 50px; font-weight: 700}
@@ -52,8 +48,7 @@ section .titleArea .subText{margin-top: 16px}
 section .titleArea .subText p{font-size: 16px; font-weight: 300}
 section .titleArea .more{margin-top: 37px}
 
-
-/*slick dots*/
+/* ----- slick dots ----- */
 .noticeModal .dotsArea{position: absolute; left: 0; bottom: 0; width: 100%; padding: 5px 0}
 .dotsArea .customDots{font-size: 0; text-align: center}
 .dotsArea .customDots li{display: inline-block; width: 8px; height: 8px; background: #ddd; border-radius: 50%; cursor: pointer; margin-right: 8px}
@@ -61,8 +56,7 @@ section .titleArea .more{margin-top: 37px}
 .dotsArea .customDots li:last-child{margin-right: 0}
 .dotsArea .customDots li button{display: none}
 
-
-/*More Link Item*/
+/* ----- More Link Item ----- */
 section a.more{line-height: 1.2}
 section a.more:after{content: ''; display: inline-block; vertical-align: middle; width: 6px; height: 6px; border: 1px solid #2b8ab0; border-left: 0; border-top: 0; margin-left: 3px; transform: rotate(-45deg)}
 section a.more span{display: inline-block; font-size: 15px; color: #2b8ab0}
@@ -74,8 +68,7 @@ section.guide .stepList a.more{font-size: 15px}
 section.guide .stepList a.more:after{width: 5px; height: 5px; border-color: #000}
 section.guide .stepList a.more span{color: #000}
 
-
-/*Visual Section*/
+/* ----- Visual Section ----- */
 .visual .videoArea{position: relative; height: 100vh; overflow: hidden}
 .visual .videoArea video{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; height: auto; min-width: 100%; min-height: 100%}
 .visual .titleArea{color: #fff; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; box-sizing: border-box}
@@ -90,8 +83,7 @@ section.guide .stepList a.more span{color: #000}
 .visual .downArrow{position: absolute; left: 50%; transform: translateX(-50%); bottom: 34px}
 .visual .downArrow img{display: block}
 
-
-/*Best Section*/
+/* ----- Best Section ----- */
 .best{padding: 110px 0 122px}
 .best .titleArea{margin-bottom: 82px}
 .best .slideArea{position: relative; margin-bottom: 84px}
@@ -117,8 +109,7 @@ section.guide .stepList a.more span{color: #000}
 .best .optionList li.price div{font-size: 34px; font-weight: 500; color: #0b2c5f}
 .best .optionList li.price div small{font-size: 16px; font-weight: 300}
 
-
-/*Benefit Section*/
+/* ----- Benefit Section ----- */
 .benefit{background: #f4f4f4; padding: 112px 0 108px}
 .benefit .contentsArea{display: flex; margin-top: 68px}
 .benefit .contentsArea .box{width: 285px; height: 412px; box-sizing: border-box; background: #fff; margin-right: 20px; text-align: center; padding-top: 37px}
@@ -133,8 +124,7 @@ section.guide .stepList a.more span{color: #000}
 .benefit .contentsArea .box .boxText p{line-height: 1.2}
 .benefit .contentsArea .box .moreLink{margin-top: 25px}
 
-
-/*Guide Section*/
+/* ----- Guide Section ----- */
 .guide{padding: 110px 0 80px}
 .guide .titleArea .moreLink{margin-top: 37px}
 .guide .guideImg{position: relative; margin-top: 65px}
@@ -152,8 +142,7 @@ section.guide .stepList a.more span{color: #000}
 .guide .stepListArea .stepList li:nth-child(6) .stepIcon{background-position: -189px 0; width: 50px}
 .guide .stepListArea .stepList li .stepLink a{font-weight: 300}
 
-
-/*Event Section*/
+/* ----- Event Section ----- */
 .event{background: #f4f4f4; padding: 110px 0 126px}
 .event .slideArea{position: relative; margin-top: 62px}
 .event .slideArea .prevArrow,
@@ -166,8 +155,7 @@ section.guide .stepList a.more span{color: #000}
 .event .slideArea .nextArrow:after{transform: rotate(135deg)}
 .event .dotsArea{margin-top: 62px}
 
-
-/*Recommend Section*/
+/* ----- Recommend Section ----- */
 .recommend{padding: 115px 50px 165px}
 .recommend .contentsArea{display: flex; margin-top: 86px}
 .recommend .contentsArea .box{width: 590px}
@@ -179,8 +167,7 @@ section.guide .stepList a.more span{color: #000}
 .recommend .contentsArea .box .cardContents .cardDesc p{letter-spacing: -0.5px; line-height: 1.6; font-weight: 300; white-space: pre-wrap}
 .recommend .contentsArea .box .cardContents .moreLink a{font-size: 14px; color: #2b8ab0}
 
-
-/*Floating Menu*/
+/* ----- Floating Menu ----- */
 .floatingTop,
 .floatingBtm{display: none}
 .floatingTop.on,
@@ -197,97 +184,43 @@ section.guide .stepList a.more span{color: #000}
 .floatingBtm ul .topBtn a{display: block; width: 100%; height: 100%}
 .floatingBtm ul li a{color: #fff}
 
-
-/*Pos*/
+/* ----- Pos ----- */
 .pos{display: none; position: fixed; left: 0; top: 0; width: 200px; height: 50px; line-height: 50px; text-align: center; background: red; color: #fff; font-size: 30px; z-index: 9999999}
 
-
-/*Media*/
+/* -------------------- Media -------------------- */
+/* ----- Media 768 -----*/
 @media (max-width: 768px){
     /*Floating Side Menu*/
     .floatingTop,
     .floatingBtm {display: none;}
 
-
     /*Layer Pop*/
     .layerPop{padding: 70px 20px 0}
     .layerPop .noticeModal{width: 100%}
     .layerPop .guideModal{width: 100%}
-    .layerPop .guideModal .videoArea .videoWrap{
-        position: relative;
-        height: calc(100vh - 180px);
-        overflow: hidden;
-    }
-    .layerPop .guideModal .videoArea .videoWrap video{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: auto;
-        height: auto;
-        min-width: 100%;
-        min-height: 100%;
-        object-fit: cover;
-    }
-    .layerPop .guideModal .btnArea div button img{
-        width: 30px;
-        height: 30px;
-    }
+    .layerPop .guideModal .videoArea .videoWrap{position: relative; height: calc(100vh - 180px); overflow: hidden;}
+    .layerPop .guideModal .videoArea .videoWrap video{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: auto; height: auto; min-width: 100%; min-height: 100%; object-fit: cover;}
+    .layerPop .guideModal .btnArea div button img{width: 30px; height: 30px;}
 
-
-
+    /*Settings*/
     .layout{min-width: auto}
-
-
-
-    .inner{
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-
+    .inner{width: 100%; padding: 0 20px; box-sizing: border-box;}
     section .titleArea{text-align: center;}
-    section .titleArea h2{
-        font-size: 26px;
-        font-weight: 700;
-    }
+    section .titleArea h2{font-size: 26px; font-weight: 700;}
     section .titleArea .subText{margin-top: 10px;}
-    section .titleArea .subText p{
-        font-size: 14px;
-        font-weight: 300;
-    }
+    section .titleArea .subText p{font-size: 14px; font-weight: 300;}
     section .titleArea .more{margin-top: 32px;}
 
-
-
     /* Visual Section */
-    .visual .titleArea{
-        width: 100%;
-        padding: 0 20px;
-    }
-    .visual .titleArea h2{
-        font-size: 34px;
-        margin-bottom: 10px;
-    }
+    .visual .titleArea{width: 100%; padding: 0 20px;}
+    .visual .titleArea h2{font-size: 34px; margin-bottom: 10px;}
     .visual .titleArea .subText{margin-bottom: 28px;}
-    .visual .titleArea .subText p{
-        font-size: 16px;
-        font-weight: 300;
-    }
+    .visual .titleArea .subText p{font-size: 16px; font-weight: 300;}
     .visual .titleArea .linkWrap a.btn,
-    .visual .titleArea .linkWrap a{
-        width: 160px;
-        height: 40px;
-        box-sizing: border-box;
-        line-height: 40px;
-        font-size: 14px;
-        border: 2px solid #fff;
-    }
+    .visual .titleArea .linkWrap a{width: 160px; height: 40px; box-sizing: border-box; line-height: 40px; font-size: 14px; border: 2px solid #fff;}
     .visual .titleArea .linkWrap a:nth-child(2){display: none;}
     .visual .titleArea .linkWrap a.btn{margin-right: 14px;}
     .visual .titleArea .linkWrap a:not(.btn):after{display: none;}
-
-
 
     /* Best Section */
     .best{padding: 60px 25px 65px;}
@@ -296,106 +229,48 @@ section.guide .stepList a.more span{color: #000}
     .best .slideArea .nextArrow{right: 0;}
     .best .slider .slick-slide .slideTitle {margin-bottom: 0;}
     .best .slider .slick-slide .slideTitle .rank {margin-bottom: 12px;}
-    .best .slider .slick-slide .slideTitle .rank strong {
-        font-size: 14px;
-        padding: 4px 16px;
-    }
-    .best .slider .slick-slide .slideTitle h3 {
-        font-size: 18px;
-        font-weight: 500;
-    }
+    .best .slider .slick-slide .slideTitle .rank strong {font-size: 14px; padding: 4px 16px;}
+    .best .slider .slick-slide .slideTitle h3 {font-size: 18px; font-weight: 500;}
     .best .slider .slick-slide .slideImg img {width: 100%;}
     .best .optionArea {margin-bottom: 30px;}
     .best .optionList {flex-direction: column;}
-    .best .optionList li {
-        border: 0;
-        margin-right: 0;
-        padding-right: 0;
-        margin-bottom: 14px;
-    }
+    .best .optionList li {border: 0; margin-right: 0; padding-right: 0; margin-bottom: 14px;}
     .best .optionList li:nth-child(3) {margin-bottom: 16px;}
     .best .optionList li:last-child {margin-bottom: 0;}
-
     .best .optionList li div.colorChip {display: none;}
-    .best .optionList li div strong {
-        display: inline-block;
-        margin-right: 20px;
-        margin-bottom: 0;
-    }
+    .best .optionList li div strong {display: inline-block; margin-right: 20px; margin-bottom: 0;}
     .best .optionList li div span {color: #9d9c83;}
     .best .optionList li.price div {font-size: 24px;}
     .best .optionList li.price div small {font-size: 14px;}
-    .best .more {
-        width: 100%;
-        height: 40px;
-        line-height: 40px;
-        background-color: #0b2c5f;
-        padding-left: 10px;
-        box-sizing: border-box;
-        margin-bottom: 20px;
-    }
+    .best .more {width: 100%; height: 40px; line-height: 40px; background-color: #0b2c5f; padding-left: 10px; box-sizing: border-box; margin-bottom: 20px;}
     .best .more a span {color: #fff;}
     .best a.more:after {border-color: #fff;}
 
-
-
     /*Benefit Section*/
     .benefit{padding: 60px 0 65px;}
-    .benefit .contentsArea{
-        margin-top: 42px;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .benefit .contentsArea .box{
-        width: 48%;
-        height: auto;
-        padding: 32px 0 25px;
-        margin: 0 0 16px 0;
-    }
+    .benefit .contentsArea{margin-top: 42px; flex-wrap: wrap; justify-content: space-between;}
+    .benefit .contentsArea .box{width: 48%; height: auto; padding: 32px 0 25px; margin: 0 0 16px 0;}
     .benefit .contentsArea .box:nth-child(3),
     .benefit .contentsArea .box:nth-child(4){margin-bottom: 0;}
     .benefit .contentsArea .box:nth-child(4) .boxText{padding: 0 40px;}
     .benefit .contentsArea .box .boxTitle span{font-size: 13px;}
     .benefit .contentsArea .box .boxTitle strong{font-size: 17px;}
-    .benefit .contentsArea .box .circleImg{
-        width: 75px;
-        height: 75px;
-        background-size: auto 100%;
-    }
+    .benefit .contentsArea .box .circleImg{width: 75px; height: 75px; background-size: auto 100%;}
     .benefit .contentsArea .box:nth-child(2) .circleImg{background-position: -75px 0}
     .benefit .contentsArea .box:nth-child(3) .circleImg{background-position: -150px 0}
     .benefit .contentsArea .box:nth-child(4) .circleImg{background-position: -225px 0}
-    .benefit .contentsArea .box .boxText{
-        padding: 0 24px;
-        margin-bottom: 10px;
-    }
-    .benefit .contentsArea .box .boxText p{
-        font-size: 14px;
-        line-height: 1.6;
-    }
+    .benefit .contentsArea .box .boxText{padding: 0 24px; margin-bottom: 10px;}
+    .benefit .contentsArea .box .boxText p{font-size: 14px; line-height: 1.6;}
     .benefit .contentsArea .box .boxText p br{display: none;}
-
-
 
     /*Guide Section*/
     .guide{padding: 60px 0 65px;}
     .guide .guideImg{margin-top: 42px;}
     .guide .stepListArea{margin-top: 22px;}
     .guide .stepListArea .stepList::-webkit-scrollbar{display: none;}
-    .guide .stepListArea .stepList{
-        white-space: nowrap;
-        overflow-x: auto;
-    }
-    .guide .stepListArea .stepList li{
-        width: 130px;
-        box-sizing: border-box;
-        margin-right: 12px;
-        padding: 20px 0;
-        background-color: #f4f4f4;
-    }
+    .guide .stepListArea .stepList{white-space: nowrap; overflow-x: auto;}
+    .guide .stepListArea .stepList li{width: 130px; box-sizing: border-box; margin-right: 12px; padding: 20px 0; background-color: #f4f4f4;}
     .guide .stepListArea .stepList li:last-child{margin-right: 0;}
-
-
 
     /*Event Section*/
     .event{padding: 60px 0 65px;}
@@ -403,27 +278,13 @@ section.guide .stepList a.more span{color: #000}
     .event .slideArea .slider .slick-slide img{height: 200px;}
     .event .dotsArea{margin-top: 32px;}
 
-
-
     /*Recommend Section*/
     .recommend{padding: 60px 20px 65px;}
-    .recommend .contentsArea{
-        flex-wrap: wrap;
-        margin-top: 40px;
-    }
-    .recommend .contentsArea .box .cardImg img{
-        width: 100%;
-        height: auto;
-    }
+    .recommend .contentsArea{flex-wrap: wrap; margin-top: 40px; justify-content: center;}
+    .recommend .contentsArea .box .cardImg img{width: 100%; height: auto;}
     .recommend .contentsArea .box:nth-child(2){margin: 40px 0;}
     .recommend .contentsArea .box .cardContents{margin-top: 20px;}
     .recommend .contentsArea .box .cardContents .cardTitle{font-size: 18px;}
-    .recommend .contentsArea .box .cardContents .cardDesc{
-        margin: 20px 0 30px;
-        -webkit-line-clamp: 3;
-    }
-    .recommend .contentsArea .box .cardContents .cardDesc p{
-        font-size: 14px;
-        white-space: normal;
-    }
+    .recommend .contentsArea .box .cardContents .cardDesc{margin: 20px 0 30px; -webkit-line-clamp: 3;}
+    .recommend .contentsArea .box .cardContents .cardDesc p{font-size: 14px; white-space: normal;}
 }

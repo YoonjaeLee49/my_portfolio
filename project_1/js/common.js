@@ -1,10 +1,10 @@
-
 $(function() {
 
     let $win = $(window);
     let $winWidth = $win.innerWidth();
     let scrollTop = 0;
 
+    // ---------- Header Event ----------//
     $(window).on("scroll", function() {
         scrollTop = $(this).scrollTop();
         scrollHeaderEvent();
@@ -43,5 +43,4 @@ $(function() {
             $(".header").removeClass("on");
         }
     }
-
 });

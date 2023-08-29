@@ -1,228 +1,48 @@
+/* ----- Import URL ----- */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap');
-
 @import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
-body{
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 300;
-    color: #2b2b2b;
-}
-button{
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 300;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-.inner{
-    width: 1520px;
-    margin: 0 auto;
-}
-.layout{
-    overflow: hidden;
-    max-width: 1920px;
-    min-width: 1200px;
-    margin: 0 auto;
-}
-section h2{
-    font-size: 44px;
-    line-height: 1.2;
-    font-weight: 700;
-}
-section h3{
-    font-size: 36px;
-    line-height: 1.2;
-    font-weight: 700;
-}
+/* ----- Settings ----- */
+body {font-family: "Noto Sans", sans-serif; font-weight: 300; color: #2b2b2b;}
+button {font-family: "Noto Sans", sans-serif; font-weight: 300;}
+a {text-decoration: none; color: inherit;}
+.inner {width: 1520px; margin: 0 auto;}
+section h2 {font-size: 44px; line-height: 1.2; font-weight: 700;}
+section h3 {font-size: 36px; line-height: 1.2; font-weight: 700;}
 
-/*Header*/
-.header{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    box-sizing: border-box;
-    transition: 0.3s;
-    z-index: 1000;
-}
-.header:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 70px;
-    height: 0;
-    width: 100%;
-    background: #fff;
-    transition: height 0.4s ease-out;
-    box-sizing: border-box;
-}
-.header .headerWrap{
-    position: relative;
-    height: 70px;
-    text-align: center;
-    margin: 0 100px;
-}
-.header .logo{
-    position: absolute;
-    left: 0;
-    top: 23px;
-}
-.header .logo a{
-    display: block;
-    width: 121px;
-    height: 49px;
-    background-image: url("../images/logo 1.png");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: 100% auto;
-    transition: 0.3s;
-}
-.header nav{
-    display: inline-block;
-    text-align: center;
-}
-.header nav .gnb{
-    font-size: 0;
-}
-.header nav .gnb > li{
-    display: inline-block;
-}
-.header nav .gnb > li > a{
-    display: block;
-    width: 200px;
-    height: 70px;
-    padding-top: 30px;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-weight: 500;
-    /*color: #fff;*/
-}
-.header nav .gnb .depth2{
-    position: absolute;
-    width: 200px;
-    height: 0;
-    overflow: hidden;
-    padding-top: 10px;
-    box-sizing: border-box;
-    transition: height 0.3s 0.02s;
-}
-.header nav .gnb .depth2 li{
-    padding: 12px 0;
-    text-align: center;
-}
-.header nav .gnb .depth2 li a{
-    font-size: 15px;
-    color: #000;
-}
-.header .iconMenu{
-    position: absolute;
-    right: 0;
-    top: 30px;
-    display: flex;
-}
-.header .iconMenu div a{
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-repeat: no-repeat;
-    transition: 0.3s;
-}
-.header .iconMenu .icon1 a{
-    background-image: url("../images/ico-language.png");
-    margin-right: 30px;
-}
-.header .iconMenu .icon2 a{
-    background-image: url("../images/ico-search.png");
-}
-
+/* ----- Header ----- */
+.header {position: fixed; left: 0; top: 0; width: 100%; box-sizing: border-box; transition: 0.3s; z-index: 1000;}
+.header:before {content: ''; position: absolute; left: 0; top: 70px; height: 0; width: 100%; background: #fff; transition: height 0.4s ease-out; box-sizing: border-box;}
+.header .headerWrap {position: relative; height: 70px; text-align: center; margin: 0 100px;}
+.header .logo {position: absolute; left: 0; top: 23px;}
+.header .logo a {display: block; width: 121px; height: 49px; background-image: url("../images/logo 1.png"); background-repeat: no-repeat; background-position: left top; background-size: 100% auto; transition: 0.3s;}
+.header nav {display: inline-block; text-align: center;}
+.header nav .gnb {font-size: 0;}
+.header nav .gnb > li {display: inline-block;}
+.header nav .gnb > li > a {display: block; width: 200px; height: 70px; padding-top: 30px; box-sizing: border-box; font-size: 16px; font-weight: 500;}
+.header nav .gnb .depth2 {position: absolute; width: 200px; height: 0; overflow: hidden; padding-top: 10px; box-sizing: border-box; transition: height 0.3s 0.02s;}
+.header nav .gnb .depth2 li {padding: 12px 0; text-align: center;}
+.header nav .gnb .depth2 li a {font-size: 15px; color: #000;}
+.header .iconMenu {position: absolute; right: 0; top: 30px; display: flex;}
+.header .iconMenu div a {display: block; width: 24px; height: 24px; background-repeat: no-repeat; transition: 0.3s;}
+.header .iconMenu .icon1 a {background-image: url("../images/ico-language.png"); margin-right: 30px;}
+.header .iconMenu .icon2 a {background-image: url("../images/ico-search.png");}
 /*Header Hover*/
 .header.on,
-.header.active{
-    background: #fff;
-    border-bottom: 1px solid #0A8000;
-}
-.header.on:before{
-    border-bottom: 1px solid #0A8000;
-}
+.header.active {background: #fff; border-bottom: 1px solid #0A8000;}
+.header.on:before {border-bottom: 1px solid #0A8000;}
 .header.active:before,
-.header.active nav .gnb .depth2{
-    height: 240px;
-}
-/*.header.on .logo a,*/
-/*.header.active .logo a{*/
-/*    background-image: url("../images/logo 1.png");*/
-/*}*/
+.header.active nav .gnb .depth2 {height: 240px;}
 .header.on nav .gnb > li > a,
-.header.active nav .gnb > li > a{
-    color: inherit;
-}
-/*.header.on .iconMenu .icon1 a,*/
-/*.header.active .iconMenu .icon1 a{*/
-/*    background-image: url("../images/ico-language.png");*/
-/*}*/
-/*.header.on .iconMenu .icon2 a,*/
-/*.header.active .iconMenu .icon2 a{*/
-/*    background-image: url("../images/ico-search.png");*/
-/*}*/
+.header.active nav .gnb > li > a {color: inherit;}
 
-
-
-/*Footer*/
-.footer{
-    width: 100%;
-    background: #2e2e2e;
-    color: #fff;
-    font-size: 14px;
-    padding: 30px 0;
-    position: absolute;
-}
-.footer .inner{}
-.footer .footerWrap{}
-.footer .footerWrap .footerTop{
-    border-bottom: 1px solid #fff;
-    padding: 10px 0;
-    margin-bottom: 30px;
-}
-.footer .footerWrap .footerTop .logo{
-    width: 200px;
-    height: 29px;
-    background: url("../images/logo-white.png") no-repeat left top;
-}
-.footer .footerWrap .footerBtm span{
-    display: block;
-    margin-bottom: 10px;
-}
-.footer .footerWrap .footerBtm span a{
-    font-weight: 400;
-}
-.footer .footerWrap .footerBtm .companyInfo{
-    font-size: 0;
-}
-.footer .footerWrap .footerBtm .companyInfo li{
-    display: inline-block;
-    font-size: 14px;
-    margin: 0 14px 10px 0;
-}
-.footer .footerWrap .footerBtm .companyInfo li:nth-child(1){
-    display: block;
-}
-.footer .familySite{
-    position: absolute;
-    right: 10%;
-    top: 50%;
-    width: 240px;
-    height: 42px;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: transparent;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    color: #fff;
-    text-align: left;
-    cursor: pointer;
-
-    background-image: url("../images/chevron-up.png");
-    background-repeat: no-repeat;
-    background-position: right center;
-}
+/* ----- Footer ----- */
+.footer {width: 100%; background: #2e2e2e; color: #fff; font-size: 14px; padding: 30px 0; position: absolute;}
+.footer .footerWrap .footerTop {border-bottom: 1px solid #fff; padding: 10px 0; margin-bottom: 30px;}
+.footer .footerWrap .footerTop .logo {width: 200px; height: 29px; background: url("../images/logo-white.png") no-repeat left top;}
+.footer .footerWrap .footerBtm span {display: block; margin-bottom: 10px;}
+.footer .footerWrap .footerBtm span a {font-weight: 400;}
+.footer .footerWrap .footerBtm .companyInfo {font-size: 0;}
+.footer .footerWrap .footerBtm .companyInfo li {display: inline-block; font-size: 14px; margin: 0 14px 10px 0;}
+.footer .footerWrap .footerBtm .companyInfo li:nth-child(1) {display: block;}
+.footer .familySite {position: absolute; right: 10%; top: 50%; width: 240px; height: 42px; padding: 10px; box-sizing: border-box; background-color: transparent; border: 2px solid #fff; border-radius: 10px; color: #fff; text-align: left; cursor: pointer; background-image: url("../images/chevron-up.png"); background-repeat: no-repeat; background-position: right center;}

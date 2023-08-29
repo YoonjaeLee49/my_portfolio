@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!--Header-->
+
+<!-- Follow Cursor -->
+<div class="followCursor"></div>
+
+<!-- Header -->
 <header class="header">
     <div class="headerWrap">
         <h1 class="logo"><a href="#">Yoon.</a></h1>
@@ -24,6 +28,7 @@
             </ul>
         </nav>
 
+        <!-- ColorMode Toggle -->
         <input type="checkbox" id="toggle" hidden>
         <label for="toggle" class="toggleSwitch">
             <span class="toggleButton"></span>
@@ -33,13 +38,13 @@
             <img src="images/header-ico.png" alt="">
         </div>
 
+        <!-- Tablet/Mobile Menu -->
         <div class="popupBtn">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
         </div>
-
         <div class="menuPop">
             <ul>
                 <li><a href="#intro">INTRO</a></li>
@@ -51,14 +56,9 @@
     </div>
 </header>
 
-<!--Page Indicator-->
-<div class="pageIndicator"></div>
-
-<!--Follow Cursor-->
-<div class="followCursor"></div>
-
+<!-- Main -->
 <main class="main">
-    <!--Intro Section-->
+    <!-- Intro Section -->
     <section class="intro" id="intro">
         <div class="inner">
             <img class="introBg" src="images/intro-bg.png" alt="">
@@ -73,8 +73,7 @@
             </div>
         </div>
     </section>
-
-    <!--About Section-->
+    <!-- About Section -->
     <section class="about" id="about">
         <div class="inner">
             <div class="aboutContents">
@@ -89,14 +88,13 @@
                             <li>010 9021 5785</li>
                             <li>dldbswo5667@naver.com</li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aperiam aspernatur at cum cumque dolores ea eligendi eum excepturi, harum, hic id ipsum laboriosam libero minima minus necessitatibus nihil nulla obcaecati odio. Alias aliquam aperiam aspernatur at cum cumque libero minima minus necessitatibus</p>
+                        <p>안녕하세요, 콘텐츠 기획자에서 웹디자이너로의 새로운 도약을 향해 노력하는 이윤재입니다. 콘텐츠 기획자로서의 실전 경험을 통해 키운 기획력과 문제 해결 능력을 바탕으로, 빠르게 변화하는 웹 환경에서도 사용자의 니즈를 예측하고 반영하여 사용자들의 눈과 마음을 사로잡는 사용자 경험을 제공하는 웹디자이너가 되는 것을 목표로 하고 있으며, 팀원들과의 협업을 통해 최상의 결과물을 만들어갈 준비가 되어 있습니다.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!--infoArea Section-->
+    <!-- infoArea Section -->
     <section class="infoArea" id="infoArea">
         <div class="inner">
             <div class="infoTop ani">
@@ -134,8 +132,7 @@
             </div>
         </div>
     </section>
-
-    <!--TextCard Section-->
+    <!-- TextCard Section -->
     <section class="textCard" id="textCard">
         <div class="inner">
             <div class="cardWrap">
@@ -166,16 +163,13 @@
             </div>
         </div>
     </section>
-
-    <!--RollingBanner Section-->
+    <!-- RollingBanner Section -->
     <section class="rollingBanner">
         <div class="textWrap">
             <div class="trackTop">YOON'S 2023 PORTFOLIO YOON'S 2023 PORTFOLIO YOON'S 2023 PORTFOLIO YOON'S 2023 PORTFOLIO YOON'S 2023 PORTFOLIO YOON'S 2023 PORTFOLIO</div>
             <div class="trackBtm">YOON'S 2023 PORTFOLIO YOON'S 2023 PORTFOLIO YOON'S 2023 PORTFOLIO YOON'S 2023 PORTFOLIO YOON'S 2023 PORTFOLIO YOON'S 2023 PORTFOLIO </div>
         </div>
     </section>
-
-
     <!-- Works Section -->
     <section class="works" id="works">
         <div class="inner">
@@ -248,10 +242,16 @@
                 </div>
 
                 <div class="dotsWrap"></div>
+
+                <div class="prevArrow arrow">
+                    <i class="fa fa-chevron-left"></i>
+                </div>
+                <div class="nextArrow arrow">
+                    <i class="fa fa-chevron-right"></i>
+                </div>
             </div>
         </div>
     </section>
-
     <!--Contents Section-->
     <section class="contents" id="contents">
         <div class="inner">
@@ -318,6 +318,7 @@
     </section>
 </main>
 
+<!-- Contents-LayerPop -->
 <div class="layerPop">
     <div class="imgModal">
         <div class="img"><img src="images/contents01.png" alt=""></div>
@@ -325,7 +326,7 @@
     </div>
 </div>
 
-<!--Footer-->
+<!-- Footer -->
 <footer class="footer">
     <div class="footLeft">
         <span>THANK<br>YOU :)</span>
