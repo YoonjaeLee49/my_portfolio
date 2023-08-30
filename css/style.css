@@ -331,6 +331,7 @@ body.lightMode .contents .show {background: #e0e0e0;}
     .aboutContents .rightBox .textWrap p {font-size: 13px;}
 
     /*InfoArea Section*/
+    .infoArea .inner{width: 400px;}
     .infoArea strong {font-size: 14px; margin-bottom: 15px;}
     .infoArea .infoTop {gap: 30px;}
     .infoTop ul li {font-size: 13px;}
