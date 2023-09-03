@@ -15,7 +15,7 @@
 .solution .slideArea .subSlider .slideImg {width: 100%;}
 .solution .slideArea .subSlider .slideTitle {width: 100%; text-align: center;}
 .solution .slideArea .subSlider div .slideTitle span {font-size: 14px; font-weight: 700; color: #2e2e2e; display: block; margin-bottom: 7px;}
-.solution .slideArea .subSlider div .slideTitle p {font-size: 14px; font-weight: 400; color: #4f4f4f; line-height: 20px; white-space: pre-wrap; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;}
+.solution .slideArea .subSlider div .slideTitle p {font-size: 14px; font-weight: 400; color: #4f4f4f; line-height: 20px; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;}
 .solution .dotsWrap {position: absolute; left: 200px; top: 65%;}
 .solution .dotsWrap .customDots {font-size: 0;}
 .solution .dotsWrap .customDots li {display: inline-block; width: 13px; height: 13px; background: #d9d9d9; border-radius: 50%; margin-right: 8px; cursor: pointer;}
