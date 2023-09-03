@@ -170,7 +170,7 @@ body.lightMode .rollingBanner .textWrap div {-webkit-text-stroke: 1px #000;}
 .works h3 {font-size: 5vw; font-weight: 700; margin-bottom: 50px;}
 .works .slideArea {position: relative;}
 .works .slideArea .slider {margin-bottom: 50px;}
-.works .slider .slick-slide {overflow: hidden; margin: 0 30px;}
+.works .slider .slick-slide {overflow: hidden; margin: 0 30px; cursor: pointer;}
 .works .slider .slick-slide .imgArea {transform: scale(0.8); transform-origin: 50% 50%; transition: 0.6s; margin-bottom: 30px;}
 .works .slider .slick-slide .imgArea img {width: 100%; height: 100%; object-fit: cover;}
 .works .slider .slick-center .imgArea {transform: scale(1);}
