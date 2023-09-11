@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KEEN JASPER</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="jasper.css">
+</head>
+<body>
+    <!--Visual Section-->
+    <section class="visual">
+        <div class="videoArea">
+            <video src="video/visual-video.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="logo"><img src="images/logo.png" alt=""></div>
+        <div class="titleArea">JASPER</div>
+        <div class="textImg"><img src="images/15th-title.png" alt=""></div>
+    </section>
+    <!--About Section-->
+    <section class="about">
+        <img src="images/about-section.png" alt="">
+    </section>
+    <!--Photo Section-->
+    <section class="photo">
+        <div class="bgArea">
+            <img src="images/photo-bg.png" alt="">
+        </div>
+        <img class="shakeImg shakeImg1" src="images/jasper-noBg1.png" alt="">
+        <img class="shakeImg shakeImg2" src="images/jasper-noBg2.png" alt="">
+    </section>
+    <!--Point Section-->
+    <section class="point">
+        <img src="images/point-section.png" alt="">
+    </section>
+    <!--Product Section-->
+    <!--jasper-->
+    <section class="product">
+        <div class="jasper">
+            <strong>Jasper</strong>
+            <div class="slideArea">
+                <div class="slider">
+                    <div>
+                        <img src="images/jasper02.png" alt="" class="productImg">
+                    </div>
+                    <div>
+                        <img src="images/jasper03.png" alt="" class="productImg">
+                    </div>
+                    <div>
+                        <img src="images/jasper04.png" alt="" class="productImg">
+                    </div>
+                    <div>
+                        <img src="images/jasper05.png" alt="" class="productImg">
+                    </div>
+                    <div>
+                        <img src="images/jasper06.png" alt="" class="productImg">
+                    </div>
+                    <div>
+                        <img src="images/jasper07.png" alt="" class="productImg">
+                    </div>
+                    <div>
+                        <img src="images/jasper08.png" alt="" class="productImg">
+                    </div>
+                    <div>
+                        <img src="images/jasper09.png" alt="" class="productImg">
+                    </div>
+                </div>
+
+                <div class="productName">Sea Moss/KEEN Maple</div>
+                <div class="productName">Nighttime Paisley</div>
+                <div class="productName">Green Sulphur/Orange</div>
+                <div class="productName">Daytime Paisley</div>
+                <div class="productName">Brindle/Double Cream</div>
+                <div class="productName">Silver Mink</div>
+                <div class="productName">Cathay Spice/Orion Blue</div>
+                <div class="productName">Hairy Black/Black</div>
+            </div>
+            <div class="dotsWrap"></div>
+        </div>
+    </section>
+    <!--jasperRocks-->
+    <section class="product">
+        <div class="jasperRocks">
+            <strong>Jasper Rocks</strong>
+            <div class="slideArea">
+                <div class="slider">
+                    <div>
+                        <img src="images/jasper-rocks02.png" alt="" class="productImg">
+                    </div>
+                    <div>
+                        <img src="images/jasper-rocks03.png" alt="" class="productImg">
+                    </div>
+                    <div>
+                        <img src="images/jasper-rocks04.png" alt="" class="productImg">
+                    </div>
+                    <div>
+                        <img src="images/jasper-rocks05.png" alt="" class="productImg">
+                    </div>
+                </div>
+
+                <div class="productName">Phantasmal Red</div>
+                <div class="productName">Sky Captain/Curry</div>
+                <div class="productName">Cuban Beige</div>
+                <div class="productName">Safari/Fjord Blue</div>
+            </div>
+            <div class="dotsWrap"></div>
+        </div>
+    </section>
+    <!--PopUp Section-->
+    <section class="popUp">
+        <img src="images/popup-section.png" alt="">
+    </section>
+    <!--TextRolling-->
+    <div class="textRolling">
+        <div class="text">
+            KEEN 15TH ANNIVERSARY POP-UP STORE OPENED KEEN 15TH ANNIVERSARY POP-UP STORE OPENED KEEN 15TH ANNIVERSARY POP-UP STORE OPENED KEEN 15TH ANNIVERSARY POP-UP STORE OPENED KEEN 15TH ANNIVERSARY POP-UP STORE OPENED
+        </div>
+    </div>
+    <!--Footer-->
+    <footer class="footer">
+        <ul class="icoWrap">
+            <li class="homePage"><a href="#"></a></li>
+            <li class="share"><a href="#"></a></li>
+            <li class="sns"><a href="#"></a></li>
+        </ul>
+    </footer>
+
+
+    <!--Script-->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script>
+        $(function () {
+            $(".product").each(function () {
+                const $product = $(this);
+
+                $product.find(".slider").on("init", function (event, slick) {
+                    $product.find(".productName").eq(slick.currentSlide).addClass("active");
+                });
+
+                $product.find(".slider").slick({
+                    arrows: false,
+                    dots: true,
+                    appendDots: $product.find(".dotsWrap"),
+                    dotsClass: "custom",
+                    customPaging: function (slick, index) {
+                        let imgSrc = slick.$slides.eq(index).find("img").attr("src");
+                        return `<img src=${imgSrc} alt="">`;
+                    },
+                });
+
+                $product.find(".slider").on("beforeChange", function (event, slick, current, next) {
+                    $product.find(".productName").eq(next).addClass("active");
+                    $product.find(".productName").eq(next).siblings().removeClass("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

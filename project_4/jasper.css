@@ -1,0 +1,66 @@
+/* ----- Import URL ----- */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+/* ----- Settings ----- */
+body{font-family: 'Manrope', sans-serif; font-weight: 300;}
+
+/* ----- Visual Section ----- */
+.visual{position: relative;}
+.visual .videoArea{position: relative; height: 100vh; overflow: hidden;}
+.visual .videoArea video{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: auto; height: auto; min-width: 100%; min-height: 100%; object-fit: cover;}
+.visual .logo{position: absolute; left: 50%; top: 15%; transform: translateX(-50%); z-index: 10;}
+.visual .logo img{width: 202px; height: 80px;}
+.visual .titleArea{background: transparent; position: absolute; left: 0; right: 0; top: 0; bottom: 0; font-size: 22rem; font-weight: 900; color: #fd0; text-align: center; line-height: 100vh;}
+.visual .textImg{z-index: 20; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.visual .textImg img{width: 700px; height: auto;}
+
+/* ----- About Section ----- */
+.about{line-height: 0;}
+.about img{width: 100%;}
+
+/* ----- Photo Section ----- */
+.photo{position: relative;}
+.photo .bgArea{line-height: 0;}
+.photo .bgArea img{width: 100%;}
+.photo .shakeImg{position: absolute; width: 360px;}
+.photo  .shakeImg1{left: 268px; top: 465px; animation: shakeImg1 0.7s linear infinite alternate; transform-origin: 50% 50%;}
+.photo  .shakeImg2{right: 250px; bottom: 110px; animation: shakeImg2 0.7s linear infinite alternate; transform-origin: 50% 50%;}
+@keyframes shakeImg1 { 100%{transform: rotate(-7deg);} }
+@keyframes shakeImg2 { 100%{transform: rotate(7deg);} }
+
+/* ----- Point Section ----- */
+.point{line-height: 0;}
+.point img{width: 100%;}
+
+/* ----- Product Section ----- */
+.product{width: 1380px; margin: 0 auto; padding: 130px 0;}
+.product strong{font-size: 48px; font-weight: 800;}
+.product  .slideArea{padding: 30px 0 50px 0; position: relative;}
+.product .slideArea .slider .slick-slide{height: 400px; width: 100%; display: flex; justify-content: center; margin-top: 50px;}
+.product .slideArea .slider .slick-slide img {width: 700px; height: 100%; object-fit: cover;}
+.product .slideArea .productName{position: absolute; left: 0; top: 0; opacity: 0; transition: 0.3s; font-size: 24px; font-weight: 600; color: #6D6D6D; padding-top: 40px;}
+.product .slideArea .productName.active{opacity: 1;}
+.product .dotsWrap{margin-bottom: 40px;}
+.product .dotsWrap .custom{display: flex; justify-content: center;}
+.product .dotsWrap .custom li{width: 150px; height: 100px; margin: 0 20px; cursor: pointer; overflow: hidden;}
+.product .dotsWrap .custom li img{width: 100%; height: 100%; object-fit: cover;}
+.product .dotsWrap .custom li.slick-active{border-bottom: 3px solid #FD0;}
+
+/* ----- PopUp Section ----- */
+.popUp{line-height: 0;}
+.popUp img{width: 100%;}
+
+/* ----- TextRolling ----- */
+.textRolling{overflow: hidden; padding: 15px 0; background: #000;}
+.textRolling .text{white-space: nowrap; font-size: 80px; font-weight: 800; color: #fff; animation: textMove 10s linear infinite;}
+@keyframes textMove {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-100%);}
+}
+
+/* ----- Footer ----- */
+.footer{background: #000; padding: 70px 0;}
+.footer .icoWrap{display: flex; justify-content: center; gap: 50px;}
+.footer .icoWrap .homePage {background-image: url("images/logo.png"); background-size: 116px 34px; width: 116px; height: 34px;}
+.footer .icoWrap .share {background-image: url("images/ico-share.png"); background-size: 34px 34px; width: 34px; height: 34px;}
+.footer .icoWrap .sns {background-image: url("images/ico-sns.png"); background-size: 34px 34px; width: 34px; height: 34px;}
